@@ -27,6 +27,42 @@ function App() {
     setC3pos('center');
   }
 
+  const clickLeftCard = () => {
+    if (c1pos == 'center') {
+      setC1pos('right');
+      setC2pos('left');
+      setC3pos('center');
+    }
+    if (c2pos == 'center') {
+      setC1pos('center');
+      setC2pos('right');
+      setC3pos('left');
+    }
+    if (c3pos == 'center') {
+      setC1pos('left');
+      setC2pos('center');
+      setC3pos('right');
+    }
+  }
+
+  const clickRightCard = () => {
+    if (c1pos == 'center') {
+      setC1pos('left');
+      setC2pos('center');
+      setC3pos('right');
+    }
+    if (c2pos == 'center') {
+      setC1pos('right');
+      setC2pos('left');
+      setC3pos('center');
+    }
+    if (c3pos == 'center') {
+      setC1pos('center');
+      setC2pos('right');
+      setC3pos('left');
+    }
+  }
+
   let audio = new Audio(sound)
   let audiohuh = new Audio(huhsound)
   return (
@@ -45,9 +81,11 @@ function App() {
           <div onMouseDown={()=>{audio.play();}} className="main_button">Get Started</div>
         </div>
         <div className="cards_container">
+          <div className="card_click left"></div>
           <div onClick={clickC1} className={"card c1 "+c1pos}></div>
           <div onClick={clickC2} className={"card c2 "+c2pos}></div>
           <div onClick={clickC3} className={"card c3 "+c3pos}></div>
+          <div className="card_click right"></div>
         </div>
         
 

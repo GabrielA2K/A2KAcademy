@@ -64,7 +64,7 @@
 
 .navbar {
   z-index: 1;
-  height: 5rem;
+  height: calc(10vh + 1rem);
   width: 100%;
   border-radius: 0 0 2rem 2rem;
   background-color: rgba(255, 255, 255, 0.05);
@@ -75,14 +75,13 @@
 
 .logo {
   transition: 0.5s;
-  height: 2.7rem;
+  height: calc(4.5vh + 1rem);
   margin-left: 3rem;
   margin-top: 5px;
 }
 
 .links_container {
   width: 28%;
-  /* background-color: white; */
   display: flex;
   justify-content: space-between;
 }
@@ -94,7 +93,6 @@
 }
 
 .main_button {
-  /* width: fit-content; */
   transition: 0.5s;
   padding: 0.6rem 1.5rem;
   background-color: #2b2b2b66;
@@ -115,31 +113,21 @@
 
 .cards_container {
   border: black solid;
-  height: calc(100% - 5rem);
-  width: 50vh;
+  height: calc(90vh - 1rem);
+  width: 64vh;
   perspective: 16vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 15vh;
-  /* left: -5rem; */
+  margin-left: 10vh;
 }
 .card {
   position: absolute;
   height: 64vh;
   width: 38vh;
   border-radius: 6vh;
-  /* background: url(assets/react.svg); */
-  background-color: red;
   border: #7E7E7E solid 0.4vh;
-  /* box-shadow: ; */
 }
-
-/* .card:hover {
-  transition: 0.5s;
-  transform: rotateY(-25deg);
-  transform-style: preserve-3d;
-} */
 
 .card.c1 {
   transition: 0.7s;
@@ -166,8 +154,7 @@
   transition: 0.7s;
   transform: translateX(-28vh) rotateY(-20deg) scale(70%);
   transform-style: preserve-3d;
-  /* z-index: 1; */
-  opacity: 50%;
+  opacity: 40%;
   cursor: pointer;
 }
 
@@ -182,7 +169,22 @@
   transform: translateX(28vh) rotateY(20deg) scale(70%);
   transform-style: preserve-3d;
   /* z-index: 1; */
-  opacity: 50%;
+  opacity: 40%;
   cursor: pointer;
 }
 
+/* .card_click {
+  background-color: rgba(0, 0, 0, 0);
+  height: 60vh;
+  width: 10vh;
+  cursor: pointer;
+  z-index: 3;
+}
+.card_click.left {
+  margin-right: auto;
+  border-radius: 40% 5vh 5vh 40%;
+}
+.card_click.right {
+  margin-left: auto;
+  border-radius: 5vh 40% 40% 5vh;
+} */
