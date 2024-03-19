@@ -115,7 +115,7 @@
 
 .cards_container {
   border: black solid;
-  height: 85vh;
+  height: calc(100vh - 5rem);
   width: 50vh;
   perspective: 16vh;
   display: flex;
