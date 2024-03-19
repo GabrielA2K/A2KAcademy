@@ -71,7 +71,10 @@ function App() {
     <>
       <div className="bg_circle top-left"></div>
       <div className="bg_circle top-right"></div>
-      <div className="navbar">
+      <div className="background_image_container">
+        <div className="background_image"></div>
+      </div>
+      <div className="navbar blur">
           <img src={a2klogo} alt="A2K ACADEMY Logo" className="logo" />
           <div className="links_container">
             <p>Home</p>
@@ -81,7 +84,7 @@ function App() {
           </div>
           <div onMouseDown={()=>{audio.play();}} className="main_button">Get Started</div>
         </div>
-      <div className="blur_overlay">
+      <div className="blur_overlay blur">
         
         <div className="content">
           <div className="cards_container">
