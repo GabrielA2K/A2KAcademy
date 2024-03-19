@@ -59,23 +59,27 @@
   backdrop-filter: blur(80px);
   height: 100vh;
   width: 100vw;
+  overflow-y: scroll;
+  /* display: flex; */
   /* perspective: 23rem; */
 }
 
 .navbar {
   z-index: 1;
-  height: calc(10vh + 1rem);
+  height: 5rem;
   width: 100%;
   border-radius: 0 0 2rem 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #2c2c2caf;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  backdrop-filter: blur(80px);
 }
 
 .logo {
   transition: 0.5s;
-  height: calc(4.5vh + 1rem);
+  height: 2.8rem;
   margin-left: 3rem;
   margin-top: 5px;
 }
@@ -110,16 +114,26 @@
   transform-style: preserve-3d;
 }
 
+.content {
+  display: flex;
+  height: calc(90vh - 0rem);
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  width: 100%;
+  /* margin: 5rem auto 0 auto; */
+}
 
 .cards_container {
-  border: black solid;
+  /* border: black solid; */
   height: calc(90vh - 1rem);
-  width: 64vh;
+  min-width: 65vh;
   perspective: 16vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 10vh;
+  /* margin-left: 10vh; */
 }
 .card {
   position: absolute;
@@ -188,3 +202,32 @@
   margin-left: auto;
   border-radius: 5vh 40% 40% 5vh;
 } */
+
+.text_content {
+  /* margin: 2rem 0 0 2rem; */
+  margin-left: 2rem;
+  /* background-color: rgba(0, 0, 0, 0.253); */
+  width: 112vh;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1.heading {
+  font-family: ProductSansBlack;
+  font-size: 10vh;
+  color: #EA7000;
+}
+p.description {
+  font-family: ProductSans;
+  font-size: 4vh;
+  color: #B1B1B1;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  height: 10rem;
+  width: 5rem;
+  background-color: transparent;
+}

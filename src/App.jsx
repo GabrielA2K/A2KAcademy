@@ -65,12 +65,13 @@ function App() {
 
   let audio = new Audio(sound)
   let audiohuh = new Audio(huhsound)
+
+  // let carouselTimer = setInterval(clickRightCard, 5000);
   return (
     <>
       <div className="bg_circle top-left"></div>
       <div className="bg_circle top-right"></div>
-      <div className="blur_overlay">
-        <div className="navbar">
+      <div className="navbar">
           <img src={a2klogo} alt="A2K ACADEMY Logo" className="logo" />
           <div className="links_container">
             <p>Home</p>
@@ -80,15 +81,24 @@ function App() {
           </div>
           <div onMouseDown={()=>{audio.play();}} className="main_button">Get Started</div>
         </div>
-        <div className="cards_container">
-          <div className="card_click left"></div>
-          <div onClick={clickC1} className={"card c1 "+c1pos}></div>
-          <div onClick={clickC2} className={"card c2 "+c2pos}></div>
-          <div onClick={clickC3} className={"card c3 "+c3pos}></div>
-          <div className="card_click right"></div>
-        </div>
+      <div className="blur_overlay">
         
+        <div className="content">
+          <div className="cards_container">
+            <div className="card_click left"></div>
+            <div onClick={clickC1} className={"card c1 "+c1pos}></div>
+            <div onClick={clickC2} className={"card c2 "+c2pos}></div>
+            <div onClick={clickC3} className={"card c3 "+c3pos}></div>
+            <div className="card_click right"></div>
+          </div>
 
+          <div className="text_content">
+            <h1 className="heading">3D PRINTING</h1>
+            <p className="description">Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.</p>
+          </div>
+                
+        </div>
+        <div className="footer"></div> 
       </div>
       
     </>
