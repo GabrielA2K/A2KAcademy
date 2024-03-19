@@ -19,6 +19,33 @@
   -ms-user-select: none;
    user-select: none;
  }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5); 
+  border-radius: 10px;
+  border: rgb(78, 78, 78) solid 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.8); 
+}
+
+
+
+
 .blur {
   backdrop-filter: blur(80px);
 }
