@@ -114,20 +114,20 @@
 
 
 .cards_container {
-  /* border: black solid; */
-  height: 85%;
-  width: 45rem;
-  perspective: 100px;
+  border: black solid;
+  height: 85vh;
+  width: 50vh;
+  perspective: 16vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -5rem;
+  margin-left: 15vh;
   /* left: -5rem; */
 }
 .card {
   position: absolute;
-  height: 25rem;
-  width: 15rem;
+  height: 64vh;
+  width: 38vh;
   border-radius: 2rem;
   /* background: url(assets/react.svg); */
   background-color: red;
@@ -164,7 +164,7 @@
 
 .card.left {
   transition: 0.7s;
-  transform: translateX(-11rem) rotateY(-20deg) scale(70%);
+  transform: translateX(-28vh) rotateY(-20deg) scale(70%);
   transform-style: preserve-3d;
   /* z-index: 1; */
   opacity: 50%;
@@ -179,7 +179,7 @@
 
 .card.right {
   transition: 0.7s;
-  transform: translateX(11rem) rotateY(20deg) scale(70%);
+  transform: translateX(28vh) rotateY(20deg) scale(70%);
   transform-style: preserve-3d;
   /* z-index: 1; */
   opacity: 50%;
