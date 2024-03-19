@@ -37,10 +37,10 @@ function App() {
         <div className="navbar">
           <img src={a2klogo} alt="A2K ACADEMY Logo" className="logo" />
           <div className="links_container">
-            <p>About Us</p>
+            <p>Home</p>
+            <p>About</p>
             <p>Services</p>
             <p>Browse</p>
-            <p>{c1pos}</p>
           </div>
           <div onMouseDown={()=>{audio.play();}} className="main_button">Get Started</div>
         </div>

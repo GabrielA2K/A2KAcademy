@@ -128,10 +128,10 @@
   position: absolute;
   height: 64vh;
   width: 38vh;
-  border-radius: 2rem;
+  border-radius: 6vh;
   /* background: url(assets/react.svg); */
   background-color: red;
-  border: #7E7E7E solid 2px;
+  border: #7E7E7E solid 0.4vh;
   /* box-shadow: ; */
 }
 
