@@ -10,21 +10,27 @@ function App() {
   const [c1pos, setC1pos] = useState('left');
   const [c2pos, setC2pos] = useState('center');
   const [c3pos, setC3pos] = useState('right');
-
+  
+  let audio = new Audio(sound)
+  let audiohuh = new Audio(huhsound)
+  
   const clickC1 = () => {
     setC1pos('center');
     setC2pos('right');
     setC3pos('left');
+    audiohuh.play();
   }
   const clickC2 = () => {
     setC1pos('left');
     setC2pos('center');
     setC3pos('right');
+    audiohuh.play();
   }
   const clickC3 = () => {
     setC1pos('right');
     setC2pos('left');
     setC3pos('center');
+    audiohuh.play();
   }
 
   const clickLeftCard = () => {
@@ -62,10 +68,6 @@ function App() {
       setC3pos('left');
     }
   }
-
-  let audio = new Audio(sound)
-  let audiohuh = new Audio(huhsound)
-
   // let carouselTimer = setInterval(clickRightCard, 5000);
   return (
     <>
@@ -100,6 +102,9 @@ function App() {
             <p className="description">Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.</p>
           </div>
                 
+        </div>
+        <div className="content_bottom">
+          <div className="image1"></div>
         </div>
         <div className="footer"></div> 
       </div>

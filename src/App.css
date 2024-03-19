@@ -58,8 +58,8 @@
   left: 0;
   top: 0;
   height: 25rem;
-  width: 35rem;
-  animation: rotate_full 20s linear infinite;
+  width: 45rem;
+  animation: rotate_full 30s linear infinite;
   border-radius: 50%;
   margin: -10rem 0 0 -15rem;
 }
@@ -92,7 +92,7 @@
   height: 5rem;
   width: 100%;
   border-radius: 0 0 2rem 2rem;
-  background-color: #2c2c2caf;
+  background-color: #2c2c2c98;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -168,7 +168,7 @@
 
 .content {
   display: flex;
-  height: calc(90vh - 0rem);
+  height: calc(90vh - 1.5rem);
   margin-top: 5rem;
   justify-content: center;
   align-items: center;
@@ -188,6 +188,7 @@
   margin-left: 2rem;
 }
 .card {
+  transition: 1s;
   position: absolute;
   height: 64vh;
   width: 38vh;
@@ -196,28 +197,24 @@
 }
 
 .card.c1 {
-  transition: 0.7s;
   background: url(assets/hardwarecomputing.png);
   background-size: cover;
   background-position: center;
 }
 
 .card.c2 {
-  transition: 0.7s;
   background: url(assets/3dprint.png);
   background-size: cover;
   background-position: center;
 }
 
 .card.c3 {
-  transition: 0.7s;
   background: url(assets/codeblocks.png);
   background-size: cover;
   background-position: center;
 }
 
 .card.left {
-  transition: 0.7s;
   transform: translateX(-28vh) rotateY(-20deg) scale(70%);
   transform-style: preserve-3d;
   opacity: 40%;
@@ -225,13 +222,11 @@
 }
 
 .card.center {
-  transition: 0.7s;
   z-index: 1;
   opacity: 100%;
 }
 
 .card.right {
-  transition: 0.7s;
   transform: translateX(28vh) rotateY(20deg) scale(70%);
   transform-style: preserve-3d;
   /* z-index: 1; */
@@ -285,8 +280,16 @@ p.description {
   margin-bottom: 2rem;
 }
 
-.footer {
+.content_bottom {
+  height: 35rem;
+  width: 100%;
+  background-image: linear-gradient(to bottom, #1a1a1a00, #0000008c);
+}
+
+
+
+/* .footer {
   height: 10rem;
   width: 5rem;
   background-color: transparent;
-}
+} */
