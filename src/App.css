@@ -150,7 +150,7 @@
 .background_image {
   position: fixed;
   /* background-color: rgba(0, 0, 0, 0.308); */
-  background-image: url(assets/3dprint.png);
+  background-image: url(assets/3dprint2.jpg);
   width: 120vh;
   height: 50vh;
   background-size: cover;
@@ -197,13 +197,13 @@
 }
 
 .card.c1 {
-  background: url(assets/hardwarecomputing.png);
+  background: url(assets/hardwarecomputing2.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .card.c2 {
-  background: url(assets/3dprint.png);
+  background: url(assets/3dprint2.jpg);
   background-size: cover;
   background-position: center;
 }
