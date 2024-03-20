@@ -23,7 +23,7 @@
   display: none;
 }
 /* ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -32,7 +32,7 @@
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.5); 
   border-radius: 10px;
-  border: rgb(78, 78, 78) solid 2px;
+  border: rgb(78, 78, 78) solid 1px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.8); 
@@ -293,3 +293,29 @@ p.description {
   width: 5rem;
   background-color: transparent;
 } */
+
+
+@media only screen and (max-width: 600px) {
+  .content {
+    flex-direction: column;
+    display: flex;
+    height: calc(90vh - 1.5rem);
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    width: 90%;
+    margin: 10rem auto 0 auto;
+  }
+  .cards_container {
+    /* background-color: black; */
+    /* border: black solid; */
+    height: 100rem;
+    min-width: 65vh;
+    perspective: 16vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+  }
+}
