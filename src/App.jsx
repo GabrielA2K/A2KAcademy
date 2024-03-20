@@ -11,8 +11,15 @@ function App() {
   let touchendX = 0
 
   function checkDirection() {
-    if (touchendX < touchstartX) clickRightCard()
-    if (touchendX > touchstartX) clickLeftCard()
+    if (touchendX < touchstartX) {
+      clickRightCard();
+      alert(touchstartX-touchendX);
+    }
+    if (touchendX > touchstartX) {
+      clickLeftCard();
+      alert(touchstartX-touchendX);
+    }
+      
   }
 
 
