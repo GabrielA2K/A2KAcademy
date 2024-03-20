@@ -299,10 +299,10 @@ p.description {
   .bg_circle.top-left, .bg_circle.top-right {
     animation: none;
   }
-  .blur_overlay.blur {
+  /* .blur_overlay.blur {
     backdrop-filter: blur(0);
     background-image: linear-gradient(170deg, #632805, #632805, #1A1A1A, #1A1A1A, #131313);
-  }
+  } */
 
   .content {
     flex-direction: column;
