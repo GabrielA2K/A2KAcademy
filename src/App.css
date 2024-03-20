@@ -299,23 +299,71 @@ p.description {
   .content {
     flex-direction: column;
     display: flex;
-    height: calc(90vh - 1.5rem);
+    height: 110vh;
     margin-top: 5rem;
     justify-content: center;
     align-items: center;
     /* background-color: red; */
     width: 90%;
-    margin: 10rem auto 0 auto;
+    margin: 6rem auto 0 auto;
   }
   .cards_container {
     /* background-color: black; */
     /* border: black solid; */
-    height: 100rem;
+    min-height: 67vh;
     min-width: 65vh;
-    perspective: 16vh;
+    perspective: 24vw;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 0;
   }
+
+  .card {
+    transition: 1s;
+    position: absolute;
+    height: 80vw;
+    width: 50vw;
+    border-radius: 6vh;
+    border: #7E7E7E solid 0.4vh;
+  }
+  
+  .card.c1 {
+    background: url(assets/hardwarecomputing2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card.c2 {
+    background: url(assets/3dprint2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card.c3 {
+    background: url(assets/codeblocks.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card.left {
+    transform: translateX(-38vw) rotateY(-20deg) scale(70%);
+    transform-style: preserve-3d;
+    opacity: 40%;
+    cursor: pointer;
+  }
+  
+  .card.center {
+    z-index: 1;
+    opacity: 100%;
+  }
+  
+  .card.right {
+    transform: translateX(38vw) rotateY(20deg) scale(70%);
+    transform-style: preserve-3d;
+    /* z-index: 1; */
+    opacity: 40%;
+    cursor: pointer;
+  }
+
 }
