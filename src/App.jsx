@@ -35,38 +35,47 @@ function App() {
   
   const [aa, setAa] = useState(0);
   const [test, settest] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      settest(test => (test>10)? 0 : test + 1);
-      setAa(aa => ((aa==2)? 0: aa+1));
-      
 
-    }, 10000);
+  //15 SECS WAIT
+  const watingTime = 10;
+  let interval;
+  useEffect(() => {
+    interval = setInterval(() => {
+      if (test > ((watingTime/2)-1)) {
+        setAa(aa => ((aa==2)? 0: aa+1));
+      }
+      settest((test>((watingTime/2)-1))?0:test + (watingTime/2));
+    }, (watingTime/2)*1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }/*, []*/);
 
   // let carouselTimer = setInterval(clickRightCard, 10000);
 
   const clickC1 = () => {
     setAa(1);
+    settest(0);
     audiohuh.play();
   }
   const clickC2 = () => {
     setAa(0);
+    settest(0);
     audiohuh.play();
   }
   const clickC3 = () => {
     setAa(2);
+    settest(0);
     audiohuh.play();
   }
 
   function clickRightCard() {
     setAa(aa => (aa==2)?0:aa+1);
+    settest(0);
     
   }
   function clickLeftCard() {
     setAa(aa => (aa==0)?2:aa-1);
+    settest(0);
   }
 
 
@@ -85,7 +94,7 @@ function App() {
             <p>About</p>
             <p>Services</p>
             <p>Browse</p>
-            <p>{aa}</p>
+            <p>{test}</p>
           </div>
           <div onMouseDown={()=>{audio.play();}} className="main_button">Get Started</div>
         </div>
