@@ -11,13 +11,13 @@ function App() {
   let touchendX = 0
 
   function checkDirection() {
-    if (touchendX < touchstartX) {
+    if (touchendX < touchstartX && (touchstartX-touchendX) > 60 ) {
       clickRightCard();
-      alert(touchstartX-touchendX);
+      // alert(touchstartX-touchendX);
     }
-    if (touchendX > touchstartX) {
+    if (touchendX > touchstartX && (touchstartX-touchendX) < -60) {
       clickLeftCard();
-      alert(touchstartX-touchendX);
+      // alert(touchstartX-touchendX);
     }
       
   }
