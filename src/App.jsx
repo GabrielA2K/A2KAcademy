@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import a2klogo from './assets/images/A2KACADEMY.png'
 import sound from './assets/boom.mp3'
@@ -21,7 +21,7 @@ function App() {
     }
       
   }
-
+  
 
   const [c1pos, setC1pos] = useState('left');
   const [c2pos, setC2pos] = useState('center');
@@ -29,6 +29,7 @@ function App() {
   
   let audio = new Audio(sound)
   let audiohuh = new Audio(huhsound)
+  // let manInterval = setInterval(() => {console.log('triggered')}, 5000);
   
   const clickC1 = () => {
     setC1pos('center');
@@ -83,8 +84,17 @@ function App() {
       setC2pos('right');
       setC3pos('left');
     }
+
   }
-  // let carouselTimer = setInterval(clickRightCard, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     console.log('hello');
+  //     clickRightCard();
+  //   }, 3000);
+
+  //   return () => clearInterval(interval);
+  // }, []);
+  // let carouselTimer = setInterval(clickRightCard, 10000);
   return (
     <>
       <div className="bg_circle top-left"></div>
