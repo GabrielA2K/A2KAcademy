@@ -299,6 +299,11 @@ p.description {
   .bg_circle.top-left, .bg_circle.top-right {
     animation: none;
   }
+  .blur_overlay.blur {
+    backdrop-filter: blur(0);
+    background-image: linear-gradient(170deg, #5A2405, #27282B, #1A1A1A);
+  }
+
   .content {
     flex-direction: column;
     display: flex;
