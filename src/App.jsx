@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import a2klogo from './assets/A2KACADEMY.png'
+import a2klogo from './assets/images/A2KACADEMY.png'
 import sound from './assets/boom.mp3'
 import huhsound from './assets/huh.mp3'
 

@@ -1,10 +1,5 @@
 @import url(assets/font-import.css);
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
+
 *{
   margin:0;
   box-sizing: border-box;
@@ -150,7 +145,7 @@
 .background_image {
   position: fixed;
   /* background-color: rgba(0, 0, 0, 0.308); */
-  background-image: url(assets/3dprint2.jpg);
+  background-image: url(assets/images/3dprint2.jpg);
   width: 120vh;
   height: 50vh;
   background-size: cover;
@@ -197,19 +192,19 @@
 }
 
 .card.c1 {
-  background: url(assets/hardwarecomputing2.jpg);
+  background: url(assets/images/hardwarecomputing2.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .card.c2 {
-  background: url(assets/3dprint2.jpg);
+  background: url(assets/images/3dprint2.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .card.c3 {
-  background: url(assets/codeblocks.png);
+  background: url(assets/images/codeblocks.png);
   background-size: cover;
   background-position: center;
 }
@@ -337,19 +332,19 @@ p.description {
   }
   
   .card.c1 {
-    background: url(assets/hardwarecomputing2.jpg);
+    background: url(assets/images/hardwarecomputing2.jpg);
     background-size: cover;
     background-position: center;
   }
   
   .card.c2 {
-    background: url(assets/3dprint2.jpg);
+    background: url(assets/images/3dprint2.jpg);
     background-size: cover;
     background-position: center;
   }
   
   .card.c3 {
-    background: url(assets/codeblocks.png);
+    background: url(assets/images/codeblocks.png);
     background-size: cover;
     background-position: center;
   }
