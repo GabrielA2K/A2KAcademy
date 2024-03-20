@@ -26,75 +26,51 @@ function App() {
   const [c1pos, setC1pos] = useState('left');
   const [c2pos, setC2pos] = useState('center');
   const [c3pos, setC3pos] = useState('right');
+  const cposition = ['right', 'center', 'left'];
   
   let audio = new Audio(sound)
   let audiohuh = new Audio(huhsound)
   // let manInterval = setInterval(() => {console.log('triggered')}, 5000);
   
+  
+  const [aa, setAa] = useState(0);
+  const [test, settest] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      settest(test => (test>10)? 0 : test + 1);
+      setAa(aa => ((aa==2)? 0: aa+1));
+      
+
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // let carouselTimer = setInterval(clickRightCard, 10000);
+
   const clickC1 = () => {
-    setC1pos('center');
-    setC2pos('right');
-    setC3pos('left');
+    setAa(1);
     audiohuh.play();
   }
   const clickC2 = () => {
-    setC1pos('left');
-    setC2pos('center');
-    setC3pos('right');
+    setAa(0);
     audiohuh.play();
   }
   const clickC3 = () => {
-    setC1pos('right');
-    setC2pos('left');
-    setC3pos('center');
+    setAa(2);
     audiohuh.play();
   }
 
-  function clickLeftCard() {
-    if (c1pos == 'center') {
-      setC1pos('right');
-      setC2pos('left');
-      setC3pos('center');
-    }
-    if (c2pos == 'center') {
-      setC1pos('center');
-      setC2pos('right');
-      setC3pos('left');
-    }
-    if (c3pos == 'center') {
-      setC1pos('left');
-      setC2pos('center');
-      setC3pos('right');
-    }
-  }
-
   function clickRightCard() {
-    if (c1pos == 'center') {
-      setC1pos('left');
-      setC2pos('center');
-      setC3pos('right');
-    }
-    if (c2pos == 'center') {
-      setC1pos('right');
-      setC2pos('left');
-      setC3pos('center');
-    }
-    if (c3pos == 'center') {
-      setC1pos('center');
-      setC2pos('right');
-      setC3pos('left');
-    }
-
+    setAa(aa => (aa==2)?0:aa+1);
+    
   }
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     console.log('hello');
-  //     clickRightCard();
-  //   }, 3000);
+  function clickLeftCard() {
+    setAa(aa => (aa==0)?2:aa-1);
+  }
 
-  //   return () => clearInterval(interval);
-  // }, []);
-  // let carouselTimer = setInterval(clickRightCard, 10000);
+
+
   return (
     <>
       <div className="bg_circle top-left"></div>
@@ -109,6 +85,7 @@ function App() {
             <p>About</p>
             <p>Services</p>
             <p>Browse</p>
+            <p>{aa}</p>
           </div>
           <div onMouseDown={()=>{audio.play();}} className="main_button">Get Started</div>
         </div>
@@ -122,9 +99,10 @@ function App() {
               checkDirection();
             }} className="cards_container">
             <div className="card_click left"></div>
-            <div onClick={clickC1} className={"card c1 "+c1pos}></div>
-            <div onClick={clickC2} className={"card c2 "+c2pos}></div>
-            <div onClick={clickC3} className={"card c3 "+c3pos}></div>
+            {/* <div onClick={clickC1} className={"card c1 "+c1pos}></div> */}
+            <div onClick={clickC1} className={"card c1 "+cposition[aa]}></div>
+            <div onClick={clickC2} className={"card c2 "+cposition[((aa==2)?0:aa+1)]}></div>
+            <div onClick={clickC3} className={"card c3 "+cposition[((aa==0)?2:aa-1)]}></div>
             <div className="card_click right"></div>
           </div>
 
