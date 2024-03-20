@@ -7,6 +7,15 @@ import huhsound from './assets/huh.mp3'
 
 
 function App() {
+  let touchstartX = 0
+  let touchendX = 0
+
+  function checkDirection() {
+    if (touchendX < touchstartX) clickRightCard()
+    if (touchendX > touchstartX) clickLeftCard()
+  }
+
+
   const [c1pos, setC1pos] = useState('left');
   const [c2pos, setC2pos] = useState('center');
   const [c3pos, setC3pos] = useState('right');
@@ -33,7 +42,7 @@ function App() {
     audiohuh.play();
   }
 
-  const clickLeftCard = () => {
+  function clickLeftCard() {
     if (c1pos == 'center') {
       setC1pos('right');
       setC2pos('left');
@@ -51,7 +60,7 @@ function App() {
     }
   }
 
-  const clickRightCard = () => {
+  function clickRightCard() {
     if (c1pos == 'center') {
       setC1pos('left');
       setC2pos('center');
@@ -89,7 +98,12 @@ function App() {
       <div className="blur_overlay blur">
         
         <div className="content">
-          <div className="cards_container">
+          <div onTouchStart={(e) => {
+              touchstartX = e.changedTouches[0].screenX
+            }} onTouchEnd={(e) => {
+              touchendX = e.changedTouches[0].screenX;
+              checkDirection();
+            }} className="cards_container">
             <div className="card_click left"></div>
             <div onClick={clickC1} className={"card c1 "+c1pos}></div>
             <div onClick={clickC2} className={"card c2 "+c2pos}></div>
