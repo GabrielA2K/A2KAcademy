@@ -328,7 +328,7 @@ p.description {
   }
 
   .card {
-    transition: 1s;
+    transition: 0.5s;
     position: absolute;
     height: 80vw;
     width: 50vw;
