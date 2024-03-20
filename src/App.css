@@ -296,6 +296,9 @@ p.description {
 
 
 @media only screen and (max-width: 600px) {
+  .bg_circle.top-left, .bg_circle.top-right {
+    animation: none;
+  }
   .content {
     flex-direction: column;
     display: flex;
