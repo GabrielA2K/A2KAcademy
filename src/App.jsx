@@ -100,7 +100,6 @@ function App() {
             <p>About</p>
             <p>Services</p>
             <p>Browse</p>
-            <p>{test}</p>
           </div>
           <div onMouseDown={()=>{audio.play();}} className="main_button">Get Started</div>
         </div>

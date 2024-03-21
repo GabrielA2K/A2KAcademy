@@ -6,6 +6,24 @@
       backdrop-filter: blur(0);
       background-image: linear-gradient(170deg, #632805, #632805, #1A1A1A, #1A1A1A, #131313);
     } */
+    .navbar {
+      flex-direction: column;
+    }
+    .links_container p {
+      display: none;
+    }
+    .main_button {
+      margin-right: 0;
+      padding: 0;
+      display: none;
+    }
+    .logo {
+      transition: 0.5s;
+      height: 2.8rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1.2rem;
+    }
   
     .content {
       flex-direction: column;
