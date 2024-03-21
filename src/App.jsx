@@ -9,15 +9,21 @@ import huhsound from './assets/huh.mp3'
 function App() {
   let touchstartX = 0
   let touchendX = 0
+  let touchstartY = 0
+  let touchendY = 0
 
   function checkDirection() {
-    if (touchendX < touchstartX && (touchstartX-touchendX) > 60 ) {
+    if (touchendX < touchstartX && 
+      (touchstartX-touchendX) > 60 && 
+      ((touchstartY-touchendY) > -110 && (touchstartY-touchendY) < 110)) {
       clickRightCard();
-      // alert(touchstartX-touchendX);
+       alert(touchstartY-touchendY);
     }
-    if (touchendX > touchstartX && (touchstartX-touchendX) < -60) {
+    if (touchendX > touchstartX && 
+      (touchstartX-touchendX) < -60 && 
+      ((touchstartY-touchendY) > -110 && (touchstartY-touchendY) < 110)) {
       clickLeftCard();
-      // alert(touchstartX-touchendX);
+       alert(touchstartY-touchendY);
     }
       
   }
@@ -102,9 +108,11 @@ function App() {
         
         <div className="content">
           <div onTouchStart={(e) => {
-              touchstartX = e.changedTouches[0].screenX
+              touchstartX = e.changedTouches[0].screenX;
+              touchstartY = e.changedTouches[0].screenY;
             }} onTouchEnd={(e) => {
               touchendX = e.changedTouches[0].screenX;
+              touchendY = e.changedTouches[0].screenY;
               checkDirection();
             }} className="cards_container">
             <div className="card_click left"></div>
