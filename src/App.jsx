@@ -15,15 +15,15 @@ function App() {
   function checkDirection() {
     if (touchendX < touchstartX && 
       (touchstartX-touchendX) > 60 && 
-      ((touchstartY-touchendY) > -110 && (touchstartY-touchendY) < 110)) {
+      ((touchstartY-touchendY) > -70 && (touchstartY-touchendY) < 110)) {
       clickRightCard();
-       alert(touchstartY-touchendY);
+      //  alert(touchstartY-touchendY);
     }
     if (touchendX > touchstartX && 
       (touchstartX-touchendX) < -60 && 
-      ((touchstartY-touchendY) > -110 && (touchstartY-touchendY) < 110)) {
+      ((touchstartY-touchendY) > -70 && (touchstartY-touchendY) < 110)) {
       clickLeftCard();
-       alert(touchstartY-touchendY);
+      //  alert(touchstartY-touchendY);
     }
       
   }
