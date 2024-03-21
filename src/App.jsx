@@ -15,13 +15,13 @@ function App() {
   function checkDirection() {
     if (touchendX < touchstartX && 
       (touchstartX-touchendX) > 60 && 
-      ((touchstartY-touchendY) > -70 && (touchstartY-touchendY) < 110)) {
+      ((touchstartY-touchendY) > -100 && (touchstartY-touchendY) < 100)) {
       clickRightCard();
       //  alert(touchstartY-touchendY);
     }
     if (touchendX > touchstartX && 
       (touchstartX-touchendX) < -60 && 
-      ((touchstartY-touchendY) > -70 && (touchstartY-touchendY) < 110)) {
+      ((touchstartY-touchendY) > -100 && (touchstartY-touchendY) < 100)) {
       clickLeftCard();
       //  alert(touchstartY-touchendY);
     }
