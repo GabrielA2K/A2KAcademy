@@ -1,0 +1,102 @@
+@media only screen and (max-width: 700px) {
+    .bg_circle.top-left, .bg_circle.top-right {
+      animation: none;
+    }
+    /* .blur_overlay.blur {
+      backdrop-filter: blur(0);
+      background-image: linear-gradient(170deg, #632805, #632805, #1A1A1A, #1A1A1A, #131313);
+    } */
+  
+    .content {
+      flex-direction: column;
+      display: flex;
+      height: 150vw;
+      margin-top: 5rem;
+      justify-content: flex-start;
+      /* align-items: center; */
+      /* background-color: red; */
+      width: 90%;
+      margin: 6rem auto 0 auto;
+    }
+    .cards_container {
+      /* background-color: black; */
+      /* border: black solid; */
+      min-height: 85vw;
+      min-width:88vw;
+      perspective: 24vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0;
+    }
+  
+    .card {
+      transition: 0.7s;
+      position: absolute;
+      height: 80vw;
+      width: 50vw;
+      border-radius: 8vw;
+      border: #7E7E7E solid 0.6vw;
+    }
+    
+    .card.c1 {
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .card.c2 {
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .card.c3 {
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .card.left {
+      transform: translateX(-38vw) rotateY(-20deg) scale(70%);
+      transform-style: preserve-3d;
+      opacity: 40%;
+      cursor: pointer;
+    }
+    
+    .card.center {
+      z-index: 1;
+      opacity: 100%;
+    }
+    
+    .card.right {
+      transform: translateX(38vw) rotateY(20deg) scale(70%);
+      transform-style: preserve-3d;
+      /* z-index: 1; */
+      opacity: 40%;
+      cursor: pointer;
+    }
+  
+    .text_content {
+      /* margin: 2rem 0 0 2rem; */
+      margin-left: auto;
+      margin-right: auto ;
+      /* background-color: rgba(0, 0, 0, 0.253); */
+      width: 85vw;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    h1.heading {
+      font-family: ProductSansBlack;
+      font-size: 10vw;
+      color: #EA7000;
+    }
+    p.description {
+      font-family: ProductSans;
+      font-size: 4vw;
+      color: #B1B1B1;
+      margin-bottom: 2rem;
+    }
+  
+  }
