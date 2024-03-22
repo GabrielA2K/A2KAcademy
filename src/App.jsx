@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import ImportIcon from './assets/ImportIcon'
 import a2klogo from './assets/images/A2KACADEMY.png'
 import sound from './assets/boom.mp3'
 import huhsound from './assets/huh.mp3'
@@ -29,10 +30,9 @@ function App() {
   }
   
 
-  const [c1pos, setC1pos] = useState('left');
-  const [c2pos, setC2pos] = useState('center');
-  const [c3pos, setC3pos] = useState('right');
   const cposition = ['right', 'center', 'left'];
+  const tabStates = ['active', 'inactive'];
+  const [tabPos, setTabPos] = useState(0);
   
   let audio = new Audio(sound)
   let audiohuh = new Audio(huhsound)
@@ -84,6 +84,16 @@ function App() {
     settest(0);
   }
 
+  const clickTab1 = () => {
+    setTabPos(0);
+  }
+  const clickTab2 = () => {
+    setTabPos(1);
+  }
+  const clickTab3 = () => {
+    setTabPos(2);
+  }
+
 
 
   return (
@@ -96,10 +106,24 @@ function App() {
       <div className="navbar blur">
           <img src={a2klogo} alt="A2K ACADEMY Logo" className="logo" />
           <div className="links_container">
-            <p>Home</p>
-            <p>About</p>
-            <p>Services</p>
-            <p>Browse</p>
+            <div className={"tabs tab1 "+tabStates[(tabPos==0)?0:1]} onClick={clickTab1}>
+              <div className="icon">
+                <ImportIcon name={'3D-Print'} />
+              </div>
+              <p>3D Printing</p>
+            </div>
+            <div className={"tabs tab2 "+tabStates[(tabPos==1)?0:1]} onClick={clickTab2}>
+              <div className="icon">
+              <ImportIcon name={'Physical-Computing'} />
+              </div>
+              <p>Physical Computing</p>
+            </div>
+            <div className={"tabs tab3 "+tabStates[(tabPos==2)?0:1]} onClick={clickTab3}>
+              <div className="icon">
+              <ImportIcon name={'Coding'} />
+              </div>
+              <p>World of Coding</p>
+            </div>
           </div>
           <div onMouseDown={()=>{audio.play();}} className="main_button">Get Started</div>
         </div>
