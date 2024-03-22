@@ -303,9 +303,9 @@
   
 
   @media only screen and (max-width: 970px) {
-    .tabs.inactive p {
-      /* display: none; */
-    }
+    /* .tabs.inactive p {
+      display: none;
+    } */
     .links_container, .tabs, .tabs p {
       transition: 0.5s;
     }
