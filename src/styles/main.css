@@ -87,14 +87,17 @@
   .tabs .icon {
     /* background-color: rgba(0, 0, 0, 0.242); */
     fill: #B9B9B9;
-    height: 1.8rem;
-    width: 1.8rem;
+    min-height: 1.8rem;
+    min-width: 1.8rem;
     margin: 0.2rem 0.5rem 0.2rem 0.2rem; 
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .tabs p {
+    white-space: nowrap;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
     color: #B9B9B9;
     font-family: ProductSansBold;
   }
@@ -129,6 +132,10 @@
     border: #A03A00 solid 2px;
     box-shadow: #EA70004C 0px 0px 12px;
     cursor: pointer;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .logo:has(~ .main_button:active){
     transition: 0.5s;
@@ -295,20 +302,24 @@
   } */
   
 
-  @media only screen and (max-width: 975px) {
+  @media only screen and (max-width: 970px) {
     .tabs.inactive p {
-      display: none;
+      /* display: none; */
     }
-    /* .links_container, .tabs, .tabs p {
-      transition: 0.3s;
-    } */
+    .links_container, .tabs, .tabs p {
+      transition: 0.5s;
+    }
     .tabs {
       padding: 2px 1rem 2px 1rem;
       margin: 0 0.3rem;
     }
+    .tabs.active {
+      width: 14rem;
+    }
+    .tabs.inactive {
+      width: 4.2rem;
+    }
     .tabs .icon {
-      height: 1.8rem;
-      width: 1.8rem;
-      margin: 0.2rem 0.2rem 0.2rem 0.2rem; 
+      margin: 0.2rem; 
     }
   }
