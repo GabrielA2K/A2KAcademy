@@ -321,5 +321,6 @@
     }
     .tabs .icon {
       margin: 0.2rem; 
+      transition: 0.5s;
     }
   }
