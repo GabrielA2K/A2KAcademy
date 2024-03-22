@@ -299,9 +299,9 @@
     .tabs.inactive p {
       display: none;
     }
-    .links_container, .tabs, .tabs p {
+    /* .links_container, .tabs, .tabs p {
       transition: 0.3s;
-    }
+    } */
     .tabs {
       padding: 2px 1rem 2px 1rem;
       margin: 0 0.3rem;
