@@ -7,11 +7,11 @@
     --active-text-color: #313131;
 }
 
-:root:has(.something) {
-    --background-color: #d8d8d8;
-    --accent-color: #eb9443;
-    --secondary-accent-color: #e49568;
+:root:has(.blue) {
+    --background-color: #1A1A1A;
+    --accent-color: #369df1;
+    --secondary-accent-color: #012b61;
 
-    --active-text-color: #B1B1B1;
-    --text-color: #313131;
+    --text-color: #92bad4;
+    --active-text-color: #313131;
 }
