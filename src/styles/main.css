@@ -121,23 +121,32 @@
     cursor: pointer;
   } */
   
-  .main_button {
+  .dark_mode {
     transition: 0.5s;
-    padding: 0.6rem 1.5rem;
-    background-color: #2b2b2b66;
+    height: 2.4rem;
+    width: 2.4rem;
+    /* padding-bottom: 0.5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(109, 109, 109, 0.3);
     border-radius: 50px;
     margin-right: 3rem;
     font-family: ProductSans;
-    color: #EA7000;
-    border: #A03A00 solid 2px;
-    box-shadow: #EA70004C 0px 0px 12px;
     cursor: pointer;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
-  .logo:has(~ .main_button:active){
+  .dark_mode .icon {
+    /* background-color: rgba(0, 0, 0, 0.242); */
+    fill: #B9B9B9;
+    min-height: 1.4rem;
+    min-width: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .logo:has(~ .dark_mode:active){
     transition: 0.5s;
     transform: rotate(360deg);
     transform-style: preserve-3d;

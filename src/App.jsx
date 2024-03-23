@@ -43,7 +43,7 @@ function App() {
   const [test, settest] = useState(0);
 
   //15 SECS WAIT
-  const watingTime = 10;
+  const watingTime = 5;
   let interval;
   useEffect(() => {
     interval = setInterval(() => {
@@ -120,12 +120,16 @@ function App() {
             </div>
             <div className={"tabs tab3 "+tabStates[(tabPos==2)?0:1]} onClick={clickTab3}>
               <div className="icon">
-              <ImportIcon name={'Coding'} />
+                <ImportIcon name={'Coding'} />
               </div>
               <p>World of Coding</p>
             </div>
           </div>
-          <div onMouseDown={()=>{audio.play();}} className="main_button">Get Started</div>
+          <div onMouseDown={()=>{audio.play();}} className="dark_mode">
+            <div className="icon">
+              <ImportIcon name={'Dark-Mode'} />
+            </div>
+          </div>
         </div>
       <div className="blur_overlay blur">
         
