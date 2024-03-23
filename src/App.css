@@ -1,4 +1,5 @@
 @import url(assets/fonts/font-import.css);
+@import url(StyleVariables.css);
 @import url(styles/universal.css);
 @import url(styles/main.css);
 @import url(styles/portrait.css);

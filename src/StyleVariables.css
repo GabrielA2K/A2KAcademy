@@ -1,0 +1,17 @@
+:root {
+    --background-color: #1A1A1A;
+    --accent-color: #EA7000;
+    --secondary-accent-color: #612401;
+
+    --text-color: #B1B1B1;
+    --active-text-color: #313131;
+}
+
+:root:has(.something) {
+    --background-color: #d8d8d8;
+    --accent-color: #eb9443;
+    --secondary-accent-color: #e49568;
+
+    --active-text-color: #B1B1B1;
+    --text-color: #313131;
+}

@@ -1,4 +1,6 @@
-
+:root {
+  background-color: var(--background-color);
+}
   .blur {
     backdrop-filter: blur(80px);
   }
@@ -9,7 +11,7 @@
   }
   
   .bg_circle {
-    background-color: #612401;
+    background-color: var(--secondary-accent-color);
   }
   .bg_circle.top-left {
     position: fixed;
@@ -85,8 +87,7 @@
     cursor: pointer;
   }
   .tabs .icon {
-    /* background-color: rgba(0, 0, 0, 0.242); */
-    fill: #B9B9B9;
+    fill: var(--text-color);
     min-height: 1.8rem;
     min-width: 1.8rem;
     margin: 0.2rem 0.5rem 0.2rem 0.2rem; 
@@ -98,34 +99,26 @@
     white-space: nowrap;
     overflow: hidden;
     /* text-overflow: ellipsis; */
-    color: #B9B9B9;
+    color: var(--text-color);
     font-family: ProductSansBold;
   }
 
   .tabs.active {
-    background-color: #EA7000;
+    background-color: var(--accent-color);
   }
   .tabs.active p {
-    color: #313131;
+    color: var(--active-text-color);
   }
   .tabs.active .icon {
     /* background-color: #313131; */
-    fill: #313131;
+    fill: var(--active-text-color);
   }
 
-
-  
-  /* .links_container p {
-    font-family: ProductSans;
-    color: #EA7000;
-    cursor: pointer;
-  } */
   
   .dark_mode {
     transition: 0.5s;
     height: 2.4rem;
     width: 2.4rem;
-    /* padding-bottom: 0.5px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,8 +129,7 @@
     cursor: pointer;
   }
   .dark_mode .icon {
-    /* background-color: rgba(0, 0, 0, 0.242); */
-    fill: #B9B9B9;
+    fill: var(--text-color);
     min-height: 1.4rem;
     min-width: 1.4rem;
     display: flex;
@@ -153,7 +145,6 @@
   }
   
   
-  
   .background_image_container {
     position: absolute;
     height: 100%;
@@ -161,11 +152,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
   }
   .background_image {
     position: fixed;
-    /* background-color: rgba(0, 0, 0, 0.308); */
     background-image: url(../assets/images/3dprint2.jpg);
     width: 120vh;
     height: 50vh;
@@ -188,13 +177,10 @@
     margin-top: 5rem;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
     width: 100%;
-    /* margin: 5rem auto 0 auto; */
   }
   
   .cards_container {
-    /* border: black solid; */
     height: calc(90vh - 1rem);
     min-width: 65vh;
     perspective: 16vh;
@@ -287,12 +273,12 @@
   h1.heading {
     font-family: ProductSansBlack;
     font-size: 10vh;
-    color: #EA7000;
+    color: var(--accent-color);
   }
   p.description {
     font-family: ProductSans;
     font-size: 4vh;
-    color: #B1B1B1;
+    color: var(--text-color);
     margin-bottom: 2rem;
   }
   

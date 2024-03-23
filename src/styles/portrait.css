@@ -113,15 +113,11 @@
     }
   
     h1.heading {
-      font-family: ProductSansBlack;
       font-size: 10vw;
-      color: #EA7000;
     }
     p.description {
       font-family: ProductSans;
       font-size: 4vw;
-      color: #B1B1B1;
-      margin-bottom: 2rem;
     }
   
   }

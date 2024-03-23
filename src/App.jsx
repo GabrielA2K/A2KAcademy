@@ -98,6 +98,7 @@ function App() {
 
   return (
     <>
+      <div id="lightModeDetection" className=""></div>
       <div className="bg_circle top-left"></div>
       <div className="bg_circle top-right"></div>
       <div className="background_image_container">
