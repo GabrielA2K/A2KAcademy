@@ -30,70 +30,61 @@ function App() {
   }
   
 
-  const cposition = ['right', 'center', 'left'];
+  const cPosDef = ['right', 'center', 'left'];
   const tabStates = ['active', 'inactive'];
   const [tabPos, setTabPos] = useState(0);
   const [navbarState, setNavbarState] = useState('expanded');
   
   let audio = new Audio(sound)
   let audiohuh = new Audio(huhsound)
-  // let manInterval = setInterval(() => {console.log('triggered')}, 5000);
   
   
-  const [aa, setAa] = useState(0);
-  const [test, settest] = useState(0);
+  const [activeCard, setActiveCard] = useState(0);
+  const [cardTimerInterval, setCardTimerInterval] = useState(0);
 
   //15 SECS WAIT
   const watingTime = 5;
   let interval;
   useEffect(() => {
     interval = setInterval(() => {
-      if (test > ((watingTime/2)-1)) {
-        setAa(aa => ((aa==2)? 0: aa+1));
+      if (cardTimerInterval > ((watingTime/2)-1)) {
+        setActiveCard(activeCard => ((activeCard==2)? 0: activeCard+1));
       }
-      settest((test>((watingTime/2)-1))?0:test + (watingTime/2));
+      setCardTimerInterval((cardTimerInterval>((watingTime/2)-1))?0:cardTimerInterval + (watingTime/2));
     }, (watingTime/2)*1000);
 
     return () => clearInterval(interval);
   }/*, []*/);
 
-  // let carouselTimer = setInterval(clickRightCard, 10000);
 
   const clickC1 = () => {
-    setAa(1);
-    settest(0);
+    setActiveCard(1);
+    setCardTimerInterval(0);
     audiohuh.play();
   }
   const clickC2 = () => {
-    setAa(0);
-    settest(0);
+    setActiveCard(0);
+    setCardTimerInterval(0);
     audiohuh.play();
   }
   const clickC3 = () => {
-    setAa(2);
-    settest(0);
+    setActiveCard(2);
+    setCardTimerInterval(0);
     audiohuh.play();
   }
 
   function clickRightCard() {
-    setAa(aa => (aa==2)?0:aa+1);
-    settest(0);
-    
+    setActiveCard(activeCard => (activeCard==2)?0:activeCard+1);
+    setCardTimerInterval(0);
   }
   function clickLeftCard() {
-    setAa(aa => (aa==0)?2:aa-1);
-    settest(0);
+    setActiveCard(activeCard => (activeCard==0)?2:activeCard-1);
+    setCardTimerInterval(0);
   }
 
-  const clickTab1 = () => {
-    setTabPos(0);
-  }
-  const clickTab2 = () => {
-    setTabPos(1);
-  }
-  const clickTab3 = () => {
-    setTabPos(2);
-  }
+  const clickTab1 = () => {setTabPos(0);}
+  const clickTab2 = () => {setTabPos(1);}
+  const clickTab3 = () => {setTabPos(2);}
 
 
   function toggleNavbarState() {
@@ -105,6 +96,12 @@ function App() {
   }
 
   const [briefAnimate, setBriefAnimate] = useState('no-anim');
+  const addBriefAnimate = () => {
+    setBriefAnimate('with-anim')
+    setTimeout(()=>{
+      setBriefAnimate('no-anim')
+    },500)
+  }
   
  
 
@@ -140,7 +137,7 @@ function App() {
             <p>World of Coding</p>
           </div>
         </div>
-        <div onMouseDown={()=>{toggleNavbarState();}} className="dark_mode">
+        <div onMouseDown={()=>{toggleNavbarState(); addBriefAnimate()}} className="toggle_nav">
           <div className={"icon "+navbarState} >
             <ImportIcon name={'Down'} />
           </div>
@@ -159,9 +156,9 @@ function App() {
             }} className="cards_container">
             <div className="card_click left"></div>
             {/* <div onClick={clickC1} className={"card c1 "+c1pos}></div> */}
-            <div onClick={clickC1} className={"card c1 "+cposition[aa]}></div>
-            <div onClick={clickC2} className={"card c2 "+cposition[((aa==2)?0:aa+1)]}></div>
-            <div onClick={clickC3} className={"card c3 "+cposition[((aa==0)?2:aa-1)]}></div>
+            <div onClick={clickC1} className={"card c1 "+cPosDef[activeCard]}></div>
+            <div onClick={clickC2} className={"card c2 "+cPosDef[((activeCard==2)?0:activeCard+1)]}></div>
+            <div onClick={clickC3} className={"card c3 "+cPosDef[((activeCard==0)?2:activeCard-1)]}></div>
             <div className="card_click right"></div>
           </div>
 

@@ -63,8 +63,10 @@
     justify-content: space-between;
     position: fixed;
   } */
-  .blur_overlay {
+  .with-anim {
     transition: 0.5s;
+  }
+  .blur_overlay {
     position: fixed;
     left: 0;
     top: 5rem;
@@ -199,7 +201,7 @@
   
 
   
-  .dark_mode {
+  .toggle_nav {
     transition: 0.5s;
     height: 2.4rem;
     width: 2.4rem;
@@ -212,7 +214,7 @@
     font-family: ProductSans;
     cursor: pointer;
   }
-  .dark_mode .icon {
+  .toggle_nav .icon {
     transition: 0.5s;
     fill: var(--text-color);
     min-height: 0.9rem;
@@ -222,12 +224,12 @@
     align-items: center;
     transform: rotate(180deg);
   }
-  .dark_mode .icon.collapsed {
+  .toggle_nav .icon.collapsed {
     transform: rotate(0deg);
   }
   
 
-  /* .logo:has(~ .dark_mode:active){
+  /* .logo:has(~ .toggle_nav:active){
     transition: 0.5s;
     transform: rotate(360deg);
     transform-style: preserve-3d;
