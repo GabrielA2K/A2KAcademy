@@ -33,6 +33,7 @@ function App() {
   const cposition = ['right', 'center', 'left'];
   const tabStates = ['active', 'inactive'];
   const [tabPos, setTabPos] = useState(0);
+  const [navbarState, setNavbarState] = useState('expanded');
   
   let audio = new Audio(sound)
   let audiohuh = new Audio(huhsound)
@@ -95,44 +96,57 @@ function App() {
   }
 
 
+  function toggleNavbarState() {
+    if (navbarState == 'expanded') {
+      setNavbarState('collapsed')
+    } else {
+      setNavbarState('expanded')
+    }
+  }
+
+  const [briefAnimate, setBriefAnimate] = useState('no-anim');
+  
+ 
 
   return (
     <>
-      <div id="lightModeDetection" className=""></div>
+      
       <div className="bg_circle top-left"></div>
       <div className="bg_circle top-right"></div>
+      <div className="navbar_cover"></div>
       <div className="background_image_container">
         <div className="background_image"></div>
       </div>
-      <div className="navbar blur">
-          <img src={a2klogo} alt="A2K ACADEMY Logo" className="logo" />
-          <div className="links_container">
-            <div className={"tabs tab1 "+tabStates[(tabPos==0)?0:1]} onClick={clickTab1}>
-              <div className="icon">
-                <ImportIcon name={'3D-Print'} />
-              </div>
-              <p>3D Printing</p>
-            </div>
-            <div className={"tabs tab2 "+tabStates[(tabPos==1)?0:1]} onClick={clickTab2}>
-              <div className="icon">
-              <ImportIcon name={'Physical-Computing'} />
-              </div>
-              <p>Physical Computing</p>
-            </div>
-            <div className={"tabs tab3 "+tabStates[(tabPos==2)?0:1]} onClick={clickTab3}>
-              <div className="icon">
-                <ImportIcon name={'Coding'} />
-              </div>
-              <p>World of Coding</p>
-            </div>
-          </div>
-          <div onMouseDown={()=>{audio.play();}} className="dark_mode">
+      <div className={"navbar "+navbarState}>
+        <img src={a2klogo} alt="A2K ACADEMY Logo" className="logo" />
+        <div className="links_container">
+          <div className="selected_tab_indicator"></div>
+          <div className={"tabs tab1 "+tabStates[(tabPos==0)?0:1]} onClick={clickTab1}>
             <div className="icon">
-              <ImportIcon name={'Dark-Mode'} />
+              <ImportIcon name={'3D-Print'} />
             </div>
+            <p>3D Printing</p>
+          </div>
+          <div className={"tabs tab2 "+tabStates[(tabPos==1)?0:1]} onClick={clickTab2}>
+            <div className="icon">
+            <ImportIcon name={'Physical-Computing'} />
+            </div>
+            <p>Physical Computing</p>
+          </div>
+          <div className={"tabs tab3 "+tabStates[(tabPos==2)?0:1]} onClick={clickTab3}>
+            <div className="icon">
+              <ImportIcon name={'Coding'} />
+            </div>
+            <p>World of Coding</p>
           </div>
         </div>
-      <div className="blur_overlay blur">
+        <div onMouseDown={()=>{toggleNavbarState();}} className="dark_mode">
+          <div className={"icon "+navbarState} >
+            <ImportIcon name={'Down'} />
+          </div>
+        </div>
+      </div>
+      <div className={"blur_overlay blur "+navbarState+" "+briefAnimate}>
         
         <div className="content">
           <div onTouchStart={(e) => {
