@@ -6,6 +6,17 @@
       backdrop-filter: blur(0);
       background-image: linear-gradient(170deg, #632805, #632805, #1A1A1A, #1A1A1A, #131313);
     } */
+    .blur_overlay {
+      top: 9rem;
+    }
+    .blur_overlay.collapsed{
+      border-radius: 0;
+      padding-top: 3rem;
+      top: 0rem;
+    }
+    .navbar_cover {
+      height: 12rem;
+    }
     .navbar {
       flex-direction: column;
       height: 9rem;
@@ -14,10 +25,13 @@
     /* .links_container {
       display: none;
     } */
-    .dark_mode {
+    .toggle_nav {
       margin-right: 0;
       padding: 0;
-      display: none;
+      /* display: none; */
+      position: fixed;
+      right: 1rem;
+      top: 1rem;
     }
     .logo {
       transition: 0.5s;
@@ -30,8 +44,17 @@
     .links_container {
       margin-bottom: 1rem;
     }
+    /* .navbar:has(.icon.collapsed) {
+      transition: 0.5s;
+      flex-direction: row;
+    } */
 
-  
+    .navbar.collapsed > .links_container,
+    .logo:has(~ .toggle_nav .icon.collapsed) {
+      margin-top: -22rem;
+      
+    }
+    
     .content {
       flex-direction: column;
       display: flex;
@@ -41,7 +64,7 @@
       /* align-items: center; */
       /* background-color: red; */
       width: 90%;
-      margin: 9rem auto 0 auto;
+      margin: 0rem auto 0 auto;
     }
     .cards_container {
       /* background-color: black; */
@@ -119,9 +142,9 @@
       font-family: ProductSans;
       font-size: 4vw;
     }
+
   
   }
-
 
   @media only screen and (max-width: 450px) {
     .tabs p {
@@ -130,5 +153,6 @@
     .tabs.active {
       width: 7rem;
     }
+
     
   }

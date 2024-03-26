@@ -15,3 +15,12 @@
     --text-color: #92bad4;
     --active-text-color: #313131;
 }
+
+:root:has(.purple) {
+    --background-color: #1A1A1A;
+    --accent-color: #9736f1;
+    --secondary-accent-color: #3e0161;
+
+    --text-color: #92bad4;
+    --active-text-color: #313131;
+}

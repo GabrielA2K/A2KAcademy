@@ -81,6 +81,7 @@
     padding-top: 5rem;
     top: 0rem;
   }
+  
   .navbar {
     transition: 0.5s;
     z-index: 1;
@@ -424,5 +425,9 @@
     }
     .selected_tab_indicator:has(~ .tabs.tab3.active) {
       margin-left: calc(8.4rem + 1.5rem);
+    }
+
+    .navbar.collapsed:hover > .links_container {
+      margin-top: -9rem;
     }
   }
