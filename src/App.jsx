@@ -107,7 +107,7 @@ function App() {
 
   return (
     <>
-      
+      <div className=""></div>
       <div className="bg_circle top-left"></div>
       <div className="bg_circle top-right"></div>
       <div className="navbar_cover"></div>
