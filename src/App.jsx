@@ -120,19 +120,19 @@ function App() {
           <div className="selected_tab_indicator"></div>
           <div className={"tabs tab1 "+tabStates[(tabPos==0)?0:1]} onClick={clickTab1}>
             <div className="icon">
-              <ImportIcon name={'3D-Print'} />
+              <ImportIcon name={'3D'} />
             </div>
             <p>3D Printing</p>
           </div>
           <div className={"tabs tab2 "+tabStates[(tabPos==1)?0:1]} onClick={clickTab2}>
             <div className="icon">
-            <ImportIcon name={'Physical-Computing'} />
+            <ImportIcon name={'Plug'} />
             </div>
             <p>Physical Computing</p>
           </div>
           <div className={"tabs tab3 "+tabStates[(tabPos==2)?0:1]} onClick={clickTab3}>
             <div className="icon">
-              <ImportIcon name={'Coding'} />
+              <ImportIcon name={'Coding1'} />
             </div>
             <p>World of Coding</p>
           </div>
