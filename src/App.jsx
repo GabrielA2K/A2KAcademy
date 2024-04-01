@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import ImportIcon from './assets/ImportIcon'
 import a2klogo from './assets/images/A2KACADEMY.png'
+import print_3d_def from './assets/images/3dprint1.png'
+import whatisavatar from './assets/images/whatisavatar.png'
 import sound from './assets/boom.mp3'
 import huhsound from './assets/huh.mp3'
 
@@ -165,10 +167,26 @@ function App() {
           <div className="text_content">
             <h1 className="heading">3D PRINTING</h1>
             <p className="description">Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.</p>
+            <div className="read_more_btn">Continue Reading...</div>
           </div>
                 
         </div>
         <div className="content_bottom">
+          <div className="what_is_container">
+            <div className="what_is_header">
+              <div className="what_is_image" style={{backgroundImage: 'url('+print_3d_def+')'}}>
+
+              </div>
+              <div className="what_is_avatar" style={{backgroundImage: 'url('+whatisavatar+')'}}></div>
+              {/* <img src={print_3d_def} alt="" /> */}
+              <div className="what_is_header_text">
+                <h2 className="heading2">What is 3D Printing?</h2>
+                <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate velit asperiores tenetur, quaerat minima dolor fuga, saepe praesentium architecto aspernatur temporibus reiciendis cumque amet veritatis! Nisi perspiciatis asperiores ratione blanditiis sunt,  ipsam.</p>
+              </div>
+            </div>
+
+
+          </div>
           <div className="image1"></div>
         </div>
         <div className="footer"></div> 

@@ -376,14 +376,91 @@
     color: var(--text-color);
     margin-bottom: 2rem;
   }
-  
-  .content_bottom {
-    height: 35rem;
-    width: 100%;
-    background-image: linear-gradient(to bottom, #1a1a1a00, #0000008c);
+  .read_more_btn {
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: ProductSansBold;
+    width: fit-content;
+    background-color: rgba(109, 109, 109,0.2);
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    padding: 0.3rem 1.5rem;
+    margin-top: -1.2rem;
+    cursor: pointer;
+    color: #808080;
+  }
+  .read_more_btn:hover {
+    border-radius: 0.8rem;
+    background-color: rgba(109, 109, 109,0.4);
   }
   
+  .content_bottom {
+    height: 50rem;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #1a1a1a00, #0000008c);
+    display: flex;
+    justify-content: center;
+  }
   
+  .what_is_container {
+    margin-top: 6rem;
+    height: fit-content;
+    width: 80%;
+    border-radius: 2rem;
+    background-color: rgba(0,0,0,0.5);
+    padding: 4rem;
+  }
+  .what_is_header {
+    /* background-color: red; */
+    width: 100%;
+    /* height: 1rem; */
+    display: flex;
+
+  }
+  .what_is_image {
+    /* background-color: green; */
+    height: 20rem;
+    width: 20rem;
+    border-radius: 59% 41% 69% 31% / 38% 36% 64% 62% ;
+    background-size: cover;
+    box-shadow: 0 0 2rem 1rem black;
+  }
+  .what_is_image::after {
+    content: " ";
+    display: block;
+    background-color: #393939;
+    height: 100%;
+    width: 100%;
+    border-radius: 59% 41% 69% 31% / 38% 36% 64% 62% ;
+    opacity: 0.5;
+  }
+
+  .what_is_avatar {
+    /* background-color: green; */
+    height: 13rem;
+    width: 13rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* align-self: flex-end; */
+    margin-left: -9.5rem;
+    margin-top: 8rem;
+    filter: drop-shadow(#000 0 0 2rem);
+  }
+  .what_is_header_text {
+    width: fit-content;
+    max-width: 35rem;
+    /* background-color: black; */
+    margin-left: 3rem;
+  }
+  h2.heading2 {
+    font-family: ProductSansBlack;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+  }
   
   /* .footer {
     height: 10rem;
