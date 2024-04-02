@@ -397,6 +397,16 @@
     border-radius: 0.8rem;
     background-color: rgba(109, 109, 109,0.4);
   }
+
+  .read_more_btn .icon {
+    fill: #808080;
+    min-height: 0.9rem;
+    min-width: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.8rem;
+  }
   
   .content_bottom {
     height: fit-content;
@@ -429,11 +439,12 @@
     min-height: 20rem;
     min-width: 20rem;
     border-radius: 59% 41% 69% 31% / 38% 36% 64% 62% ;
-    background-size: cover;
+    background-size: contain;
     opacity: 0.65;
     filter: grayscale(30%);
     box-shadow: 0 0 2rem 1rem black;
     align-self: flex-start;
+    background-position: 0 5px;
   }
   
 
@@ -468,6 +479,7 @@
     font-size: 1.3rem;
     color: var(--text-color);
     margin-bottom: 2rem;
+    line-height: 2rem;
   }
   .what_is_article {
     height: fit-content;
@@ -479,8 +491,11 @@
     font-family: ProductSans;
     font-size: 1.3rem;
     color: var(--text-color);
+    line-height: 2rem;
   }
   
+  
+
   /* .footer {
     height: 10rem;
     width: 5rem;
@@ -489,15 +504,8 @@
   
 
   @media only screen and (max-width: 970px) {
-    /* .tabs.inactive p {
-      display: none;
-    } */
-    .links_container, .tabs, .tabs p {
-      transition: 0.5s;
-    }
     .tabs {
       padding: 2px 1rem 2px 1rem;
-      margin: 0 0.3rem;
     }
     .tabs.active {
       background-color: var(--accent-color);
@@ -507,8 +515,7 @@
       width: 4.2rem;
     }
     .tabs .icon {
-      margin: 0.2rem; 
-      transition: 0.5s;
+      margin: 0.2rem;
     }
     .selected_tab_indicator {
       margin-left: 0;
@@ -533,7 +540,6 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      /* background-color: red; */
     }
     
     .cards_container {

@@ -167,7 +167,10 @@ function App() {
           <div className="text_content">
             <h1 className="heading">3D PRINTING</h1>
             <p className="description">Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.</p>
-            <div className="read_more_btn" onClick={() => {document.getElementById('what_is').scrollIntoView({behavior:'smooth'});}}>Continue Reading...</div>
+            <div className="read_more_btn" onClick={() => {document.getElementById('what_is').scrollIntoView({behavior:'smooth'});}}>
+              <p>Explore</p>
+              <div className="icon"><ImportIcon name={'Down'} /></div>
+              </div>
           </div>
                 
         </div>
@@ -181,11 +184,11 @@ function App() {
               {/* <img src={print_3d_def} alt="" /> */}
               <div className="what_is_header_text">
                 <h2 className="heading2">What is 3D Printing?</h2>
-                <p className="what_is_desc_brief justify-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate velit asperiores tenetur, quaerat minima dolor fuga, saepe praesentium architecto aspernatur temporibus reiciendis cumque amet veritatis! Nisi perspiciatis asperiores ratione blanditiis sunt,  ipsam.</p>
+                <p className="what_is_desc_brief ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate velit asperiores tenetur, quaerat minima dolor fuga, saepe praesentium architecto aspernatur temporibus reiciendis cumque amet veritatis! Nisi perspiciatis asperiores ratione blanditiis sunt,  ipsam.</p>
               </div>
             </div>
             <div className="what_is_article">
-                <p className="what_is_article_content justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
+                <p className="what_is_article_content ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
             </div>
 
           </div>
