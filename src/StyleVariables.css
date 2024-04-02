@@ -24,3 +24,10 @@
     --text-color: #92bad4;
     --active-text-color: #313131;
 }
+
+
+
+.justify-text {
+    text-align: justify;
+    text-justify: inter-word;
+}

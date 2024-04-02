@@ -366,11 +366,13 @@
   }
   
   h1.heading {
+    transition: 0.5s;
     font-family: ProductSansBlack;
     font-size: 10vh;
     color: var(--accent-color);
   }
   p.description {
+    transition: 0.5s;
     font-family: ProductSans;
     font-size: 4vh;
     color: var(--text-color);
@@ -397,11 +399,12 @@
   }
   
   .content_bottom {
-    height: 50rem;
+    height: fit-content;
     width: 100%;
     background-image: linear-gradient(to bottom, #1a1a1a00, #0000008c);
     display: flex;
     justify-content: center;
+    padding-bottom: 8rem;
   }
   
   .what_is_container {
@@ -411,55 +414,71 @@
     border-radius: 2rem;
     background-color: rgba(0,0,0,0.5);
     padding: 4rem;
+    overflow: hidden;
   }
   .what_is_header {
     /* background-color: red; */
     width: 100%;
     /* height: 1rem; */
     display: flex;
-
+    align-items: center;
+    
   }
   .what_is_image {
     /* background-color: green; */
-    height: 20rem;
-    width: 20rem;
+    min-height: 20rem;
+    min-width: 20rem;
     border-radius: 59% 41% 69% 31% / 38% 36% 64% 62% ;
     background-size: cover;
+    opacity: 0.65;
+    filter: grayscale(30%);
     box-shadow: 0 0 2rem 1rem black;
+    align-self: flex-start;
   }
-  .what_is_image::after {
-    content: " ";
-    display: block;
-    background-color: #393939;
-    height: 100%;
-    width: 100%;
-    border-radius: 59% 41% 69% 31% / 38% 36% 64% 62% ;
-    opacity: 0.5;
-  }
+  
 
   .what_is_avatar {
     /* background-color: green; */
-    height: 13rem;
-    width: 13rem;
+    min-height: 13rem;
+    min-width: 13rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* align-self: flex-end; */
+    align-self: flex-start;
     margin-left: -9.5rem;
     margin-top: 8rem;
     filter: drop-shadow(#000 0 0 2rem);
   }
   .what_is_header_text {
-    width: fit-content;
-    max-width: 35rem;
-    /* background-color: black; */
-    margin-left: 3rem;
+    
+    margin-left: 2rem;
   }
   h2.heading2 {
     font-family: ProductSansBlack;
     font-size: 3rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     color: var(--accent-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* background-color: red; */
+  }
+  p.what_is_desc_brief {
+    font-family: ProductSans;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+  }
+  .what_is_article {
+    height: fit-content;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 1rem;
+  }
+  p.what_is_article_content {
+    font-family: ProductSans;
+    font-size: 1.3rem;
+    color: var(--text-color);
   }
   
   /* .footer {
@@ -506,5 +525,89 @@
 
     .navbar.collapsed:hover > .links_container {
       margin-top: -9rem;
+    }
+
+    .content {
+      height: calc(50vw - 1.5rem);
+      margin-top: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      /* background-color: red; */
+    }
+    
+    .cards_container {
+      height: calc(45vw - 1rem);
+      min-width: 40vw;
+      perspective: 10vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 2rem;
+      /* background-color: red; */
+    }
+    .card {
+      transition: 0.7s;
+      position: absolute;
+      height: 40vw;
+      width: 25vw;
+      border-radius: 4vw;
+      border: #7E7E7E solid 0.3vw;
+    }
+    
+    .card.c1 {
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .card.c2 {
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .card.c3 {
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .card.left {
+      transform: translateX(-18vw) rotateY(-20deg) scale(65%);
+      transform-style: preserve-3d;
+      opacity: 40%;
+      cursor: pointer;
+    }
+    
+    .card.center {
+      z-index: 1;
+      opacity: 100%;
+    }
+    
+    .card.right {
+      transform: translateX(18vw) rotateY(20deg) scale(65%);
+      transform-style: preserve-3d;
+      /* z-index: 1; */
+      opacity: 40%;
+      cursor: pointer;
+    }
+    .text_content {
+      /* margin: 2rem 0 0 2rem; */
+      margin-left: 4rem;
+      margin-right: 2rem;
+      /* background-color: rgba(0, 0, 0, 0.253); */
+      width: 45vw;
+      height: 20rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    h1.heading {
+      font-size: 5vw;
+    }
+    p.description {
+      font-family: ProductSans;
+      font-size: 2vw;
+      color: var(--text-color);
+      margin-bottom: 2rem;
     }
   }
