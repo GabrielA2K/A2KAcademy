@@ -10,3 +10,11 @@
     font-family: ProductSansBold;
     src: url(productsansbold.ttf);
 }
+@font-face{
+    font-family: ProductSansLight;
+    src: url(productsanslight.ttf);
+}
+@font-face{
+    font-family: ProductSansThin;
+    src: url(productsansthin.ttf);
+}
