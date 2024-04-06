@@ -630,6 +630,55 @@
       opacity: 40%;
       cursor: pointer;
     }
+
+    .page_indicator {
+      height: 1rem;
+      width: 28vh;
+      /* background-color: rgba(0, 0, 0, 0.402); */
+      margin-top: calc(40vw + 2.2rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .page {
+      transition: 0.5s;
+      height: 0.4rem;
+      width: 0.4rem;
+      background-color: rgba(255, 255, 255, 0.127);
+      border-radius: 1rem;
+      margin-left: 0.2rem;
+      margin-right: 0.2rem;
+    }
+    .page.active {
+      width: 6vh;
+    }
+    .page::after {
+      transition: opacity 0.5s, width 0.5s linear;
+      display: block;
+      height: 100%;
+      width: 0.4rem;
+      content: " ";
+      background-color: rgb(201, 201, 201);
+      border-radius: 1rem;
+      opacity: 0;
+    }
+    .page.active::after {
+      transition: opacity 0.5s, width 5s linear;
+      width: 100%;
+      opacity: 1;
+    }
+    .page.active.reset::after {
+      transition: opacity 0.5s, width 0.5s ease;
+      width: 0.4rem;
+      /* opacity: 0; */
+    }
+
+
+
+
+
+
+    
     .text_content {
       /* margin: 2rem 0 0 2rem; */
       margin-left: 4rem;
