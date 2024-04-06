@@ -31,3 +31,18 @@
     text-align: justify;
     text-justify: inter-word;
 }
+.font-regular {
+    font-family: ProductSans;
+}
+.font-heavy {
+    font-family: ProductSansBlack;
+}
+.font-bold {
+    font-family: ProductSansBold;
+}
+.font-light {
+    font-family: ProductSansLight;
+}
+.font-thin {
+    font-family: ProductSansThin;
+}

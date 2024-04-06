@@ -14,6 +14,7 @@ function App() {
   let touchendX = 0
   let touchstartY = 0
   let touchendY = 0
+  let firstTime = 1
 
   function checkDirection() {
     if (touchendX < touchstartX && 
@@ -42,8 +43,9 @@ function App() {
   
   
   const [activeCard, setActiveCard] = useState(0);
+  const [activeCardPage, setActiveCardPage] = useState(-1);
   const [cardTimerInterval, setCardTimerInterval] = useState(0);
-
+  
   //15 SECS WAIT
   const watingTime = 5;
   let interval;
@@ -51,6 +53,7 @@ function App() {
     interval = setInterval(() => {
       if (cardTimerInterval > ((watingTime/2)-1)) {
         setActiveCard(activeCard => ((activeCard==2)? 0: activeCard+1));
+        setActiveCardPage((activeCard==2)? 0: activeCard+1);
       }
       setCardTimerInterval((cardTimerInterval>((watingTime/2)-1))?0:cardTimerInterval + (watingTime/2));
     }, (watingTime/2)*1000);
@@ -61,17 +64,23 @@ function App() {
 
   const clickC1 = () => {
     setActiveCard(1);
+    setActiveCardPage(1);
     setCardTimerInterval(0);
+    resetPageIndicator();
     audiohuh.play();
   }
   const clickC2 = () => {
     setActiveCard(0);
+    setActiveCardPage(0);
     setCardTimerInterval(0);
+    resetPageIndicator();
     audiohuh.play();
   }
   const clickC3 = () => {
     setActiveCard(2);
+    setActiveCardPage(2);
     setCardTimerInterval(0);
+    resetPageIndicator();
     audiohuh.play();
   }
 
@@ -104,7 +113,24 @@ function App() {
       setBriefAnimate('no-anim')
     },500)
   }
-  
+ 
+  const [pageIndicatorRes, setPageIndicatorRes] = useState('');
+  function resetPageIndicator() {
+    setPageIndicatorRes('reset')
+    setTimeout(()=>{
+      setPageIndicatorRes('')
+    },500)
+  }
+
+  let latency;
+  useEffect(() => {
+    latency = setTimeout(() => {
+      setActiveCardPage(0)
+    }, 100);
+
+    return () => clearTimeout(latency);
+  }, []);
+ 
  
 
   return (
@@ -162,11 +188,17 @@ function App() {
             <div onClick={clickC2} className={"card c2 "+cPosDef[((activeCard==2)?0:activeCard+1)]}></div>
             <div onClick={clickC3} className={"card c3 "+cPosDef[((activeCard==0)?2:activeCard-1)]}></div>
             <div className="card_click right"></div>
+            <div className="page_indicator">
+              <div className={"page p1 "+(activeCardPage==0?"active ":"")+pageIndicatorRes}></div>
+              <div className={"page p2 "+(activeCardPage==1?"active ":"")+pageIndicatorRes}></div>
+              <div className={"page p3 "+(activeCardPage==2?"active ":"")+pageIndicatorRes}></div>
+
+            </div>
           </div>
 
           <div className="text_content">
-            <h1 className="heading">3D PRINTING</h1>
-            <p className="description">Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.</p>
+            <h1 className="heading font-heavy">3D PRINTING</h1>
+            <p className="description font-regular">Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.</p>
             <div className="read_more_btn" onClick={() => {document.getElementById('what_is').scrollIntoView({behavior:'smooth'});}}>
               <p>Explore</p>
               <div className="icon"><ImportIcon name={'Down'} /></div>
@@ -183,12 +215,12 @@ function App() {
               <div className="what_is_avatar" style={{backgroundImage: 'url('+whatisavatar+')'}}></div>
               {/* <img src={print_3d_def} alt="" /> */}
               <div className="what_is_header_text">
-                <h2 className="heading2">What is 3D Printing?</h2>
-                <p className="what_is_desc_brief ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate velit asperiores tenetur, quaerat minima dolor fuga, saepe praesentium architecto aspernatur temporibus reiciendis cumque amet veritatis! Nisi perspiciatis asperiores ratione blanditiis sunt,  ipsam.</p>
+                <h2 className="heading2 font-heavy">What is 3D Printing?</h2>
+                <p className="what_is_desc_brief font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate velit asperiores tenetur, quaerat minima dolor fuga, saepe praesentium architecto aspernatur temporibus reiciendis cumque amet veritatis! Nisi perspiciatis asperiores ratione blanditiis sunt,  ipsam.</p>
               </div>
             </div>
             <div className="what_is_article">
-                <p className="what_is_article_content ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
+                <p className="what_is_article_content font-thin">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
             </div>
 
           </div>
