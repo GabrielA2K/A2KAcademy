@@ -46,3 +46,9 @@
 .font-thin {
     font-family: ProductSansThin;
 }
+.fontColor-accent {
+    color: var(--accent-color)
+}
+.fontColor-normal {
+    color: var(--text-color)
+}

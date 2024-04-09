@@ -86,10 +86,12 @@ function App() {
 
   function clickRightCard() {
     setActiveCard(activeCard => (activeCard==2)?0:activeCard+1);
+    setActiveCardPage(activeCardPage => (activeCardPage==2)?0:activeCardPage+1);
     setCardTimerInterval(0);
   }
   function clickLeftCard() {
     setActiveCard(activeCard => (activeCard==0)?2:activeCard-1);
+    setActiveCardPage(activeCardPage => (activeCardPage==0)?2:activeCardPage-1);
     setCardTimerInterval(0);
   }
 
@@ -109,6 +111,8 @@ function App() {
   const [briefAnimate, setBriefAnimate] = useState('no-anim');
   const addBriefAnimate = () => {
     setBriefAnimate('with-anim')
+    setCardTimerInterval(0);
+    resetPageIndicator();
     setTimeout(()=>{
       setBriefAnimate('no-anim')
     },500)
@@ -215,7 +219,13 @@ function App() {
               <div className="what_is_avatar" style={{backgroundImage: 'url('+whatisavatar+')'}}></div>
               {/* <img src={print_3d_def} alt="" /> */}
               <div className="what_is_header_text">
-                <h2 className="heading2 font-heavy">What is 3D Printing?</h2>
+                <div className="heading_container">
+                  <div className="icon">
+                    <ImportIcon name={'3D'} />
+                  </div>
+                  <h2 className="heading2 font-heavy">What is 3D Printing?</h2>
+                </div>
+                
                 <p className="what_is_desc_brief font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate velit asperiores tenetur, quaerat minima dolor fuga, saepe praesentium architecto aspernatur temporibus reiciendis cumque amet veritatis! Nisi perspiciatis asperiores ratione blanditiis sunt,  ipsam.</p>
               </div>
             </div>
