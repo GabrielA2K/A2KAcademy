@@ -2,4 +2,6 @@
 @import url(StyleVariables.css);
 @import url(styles/universal.css);
 @import url(styles/main.css);
+@import url(styles/custnavbar.css);
+@import url(styles/tablet.css);
 @import url(styles/portrait.css);

@@ -1,137 +1,71 @@
 @media only screen and (max-width: 700px) and (orientation: portrait) {
-    .bg_circle.top-left, .bg_circle.top-right {
-      animation: none;
-    }
-    /* .blur_overlay.blur {
-      backdrop-filter: blur(0);
-      background-image: linear-gradient(170deg, #632805, #632805, #1A1A1A, #1A1A1A, #131313);
-    } */
-    .blur_overlay {
-      top: 9rem;
-    }
-    .blur_overlay.collapsed{
-      border-radius: 0;
-      padding-top: 3rem;
-      top: 0rem;
-    }
-    .navbar_cover {
-      height: 12rem;
-    }
-    .navbar {
-      flex-direction: column;
-      height: 9rem;
-      justify-content: space-around;
-    }
-    /* .links_container {
-      display: none;
-    } */
-    .toggle_nav {
-      margin-right: 0;
-      padding: 0;
-      /* display: none; */
-      position: fixed;
-      right: 1rem;
-      top: 1rem;
-    }
-    .logo {
-      transition: 0.5s;
-      height: 2.8rem;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 1.2rem;
-    }
-
-    .links_container {
-      margin-bottom: 1rem;
-    }
-    /* .navbar:has(.icon.collapsed) {
-      transition: 0.5s;
-      flex-direction: row;
-    } */
-
-    .navbar.collapsed > .links_container,
-    .logo:has(~ .toggle_nav .icon.collapsed) {
-      margin-top: -22rem;
-      
-    }
-    
     .content {
       flex-direction: column;
-      display: flex;
       height: 150vw;
-      /* margin-top: 8rem; */
       justify-content: flex-start;
-      /* align-items: center; */
-      /* background-color: red; */
       width: 90%;
       margin: 2rem auto 0 auto;
     }
     .cards_container {
-      /* background-color: black; */
-      /* border: black solid; */
       min-height: 85vw;
       min-width:88vw;
       perspective: 24vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       margin-left: 0;
     }
   
     .card {
       transition: 0.7s;
-      position: absolute;
       height: 80vw;
       width: 50vw;
       border-radius: 8vw;
       border: #7E7E7E solid 0.6vw;
     }
     
-    .card.c1 {
-      background-size: cover;
-      background-position: center;
-    }
-    
-    .card.c2 {
-      background-size: cover;
-      background-position: center;
-    }
-    
-    .card.c3 {
-      background-size: cover;
-      background-position: center;
-    }
-    
     .card.left {
       transform: translateX(-38vw) rotateY(-20deg) scale(70%);
-      transform-style: preserve-3d;
-      opacity: 40%;
-      cursor: pointer;
     }
     
-    .card.center {
-      z-index: 1;
-      opacity: 100%;
-    }
     
     .card.right {
       transform: translateX(38vw) rotateY(20deg) scale(70%);
-      transform-style: preserve-3d;
-      /* z-index: 1; */
-      opacity: 40%;
-      cursor: pointer;
     }
+
+    .page_indicator {
+      height: 4.5vw;
+      width: 24vw;
+      margin-top: 92vw;
+      border-radius: 3vw;
+    }
+    .page {
+      height: 2vw;
+      width: 2vw;
+      border-radius: 1rem;
+      margin-left: 0.5vw;
+      margin-right: 0.5vw;
+    }
+    .page.active {
+      width: 8vw;
+    }
+    .page::after {
+      width: 2vw;
+      border-radius: 1rem;
+    }
+    .page.active.reset::after {
+      width: 2vw;
+    }
+
+
+
+
+
   
     .text_content {
-      /* margin: 2rem 0 0 2rem; */
+      margin-top: 10vw;
       margin-left: auto;
       margin-right: auto ;
-      /* background-color: rgba(0, 0, 0, 0.253); */
       width: 85vw;
       height: fit-content;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      align-items: center;
       text-align: center;
     }
   
@@ -139,20 +73,26 @@
       font-size: 10vw;
     }
     p.description {
-      font-family: ProductSans;
       font-size: 4vw;
+    }
+
+    .read_more_btn {
+      font-size: 3.5vw;
+      border-radius: 3.5vw;
+      padding: 1vw 5vw;
+      margin-top: 1vw;
+    }
+    .read_more_btn:hover {
+      border-radius: 1vh;
+    }
+  
+    .read_more_btn .icon {
+      min-height: 2vw;
+      min-width: 2vw;
+      margin-left: 2vw;
     }
 
   
   }
 
-  @media only screen and (max-width: 450px) {
-    .tabs p {
-      display: none;
-    }
-    .tabs.active {
-      width: 7rem;
-    }
-
-    
-  }
+  
