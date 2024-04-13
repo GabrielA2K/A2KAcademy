@@ -31,27 +31,27 @@
     }
 
     .page_indicator {
-      height: 4.5vw;
-      width: 24vw;
+      height: 4vw;
+      width: 22vw;
       margin-top: 92vw;
       border-radius: 3vw;
     }
     .page {
-      height: 2vw;
-      width: 2vw;
+      height: 1.6vw;
+      width: 1.6vw;
       border-radius: 1rem;
       margin-left: 0.5vw;
       margin-right: 0.5vw;
     }
     .page.active {
-      width: 8vw;
+      width: 7vw;
     }
     .page::after {
-      width: 2vw;
+      width: 1.6vw;
       border-radius: 1rem;
     }
     .page.active.reset::after {
-      width: 2vw;
+      width: 1.6vw;
     }
 
 
@@ -60,7 +60,7 @@
 
   
     .text_content {
-      margin-top: 10vw;
+      margin-top: 8vw;
       margin-left: auto;
       margin-right: auto ;
       width: 85vw;
