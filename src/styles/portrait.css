@@ -230,7 +230,7 @@
       /* margin-right: 5rem; */
       width: 74vw;
       margin-top: -20vw;
-      margin-left: 16vw;
+      margin-left: 14vw;
       z-index: 1;
       box-shadow: 0 0 3rem -1rem rgb(0, 0, 0);
     }
@@ -261,6 +261,12 @@
       font-size: 1.3rem;
       color: var(--text-color);
       line-height: 2rem;
+    }
+
+    .read_more_btn.proceed .icon {
+      min-height: 4vw;
+      min-width: 4vw;
+      margin-left: 1vw;
     }
   }
 

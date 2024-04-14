@@ -623,7 +623,15 @@
   }
   
   
-
+  .read_more_btn.proceed .icon {
+    fill: #808080;
+    min-height: 4vh;
+    min-width: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.8vh;
+  }
   /* .footer {
     height: 10rem;
     width: 5rem;

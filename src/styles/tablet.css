@@ -81,6 +81,12 @@
     min-width: 1vw;
     margin-left: 1vw;
   }
+
+  .read_more_btn.proceed .icon {
+    min-height: 1.8vw;
+    min-width: 1.8vw;
+    margin-left: 1vw;
+  }
 }
 
 @media only screen and (max-width: 990px) and (max-aspect-ratio: 4/3) {

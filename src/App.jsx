@@ -6,6 +6,7 @@ import print_3d_def from './assets/images/3dprint.webp'
 import whatisavatar from './assets/images/whatisavatar.png'
 import aboutavatar from './assets/images/aboutavatar.png'
 import kids3dprint from './assets/images/3dprintkids.jpg'
+import sample3dprint from './assets/images/3dprintsample.jpg'
 import sound from './assets/boom.mp3'
 import huhsound from './assets/huh.mp3'
 
@@ -141,6 +142,19 @@ function App() {
   function scroll_to(stringId) {
     document.getElementById(stringId).scrollIntoView({behavior:'smooth'});
   }
+
+  function autoNavTab() {
+    if (tabPos==0) {
+      clickTab2()
+    }
+    if (tabPos==1) {
+      clickTab3()
+    }
+    if (tabPos==2) {
+      clickTab1()
+    }
+  }
+
  
 
   return (
@@ -212,7 +226,7 @@ function App() {
             <div className="read_more_btn" onClick={() => {scroll_to('what_is')}}>
               <p>Explore</p>
               <div className="icon"><ImportIcon name={'Down'} /></div>
-              </div>
+            </div>
           </div>
                 
         </div>
@@ -227,7 +241,7 @@ function App() {
               
                 <div className="heading_container blur">
                   <div className="icon">
-                    <ImportIcon name={'3D'} />
+                    <ImportIcon name={(tabPos==0?"3D":(tabPos==1?"Plug":"Coding1"))} />
                   </div>
                   <h2 className="heading2 font-heavy">{"What is "+(tabPos==0?"3D Printing":(tabPos==1?"Physical Computing":"World of Coding"))+"?"}</h2>
                 </div>
@@ -257,8 +271,6 @@ function App() {
                   </div>
                   <h2 className="heading2 font-heavy">Benefits for Kids</h2>
                 </div>
-                
-              
             </div>
             <div className="about_article">
                 <p className="font-thin justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
@@ -266,10 +278,31 @@ function App() {
           </div>
 
 
+          <div id='what_is' className="what_is_container">
+            <div className="what_is_header">
+              <div className="about_image" style={{backgroundImage: 'url('+sample3dprint+')'}}>
+
+              </div>
+              <div className="about_avatar" style={{backgroundImage: 'url('+aboutavatar+')'}}></div>
+              {/* <img src={print_3d_def} alt="" /> */}
+              
+                <div className="heading_container_about blur">
+                  <div className="icon">
+                    <ImportIcon name={'Bulb'} />
+                  </div>
+                  <h2 className="heading2 font-heavy">Sample Projects</h2>
+                </div>
+            </div>
+            <div className="about_article">
+                <p className="font-thin justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
+            </div>
+          </div>
 
 
-
-
+          <div className="read_more_btn proceed" onClick={() => {autoNavTab();}}>
+            <p>{"Proceed to "+(tabPos==0?"Physical Computing":(tabPos==1?"World of Coding":"3D Printing"))}</p>
+            <div className="icon"><ImportIcon name={(tabPos==0?"Plug":(tabPos==1?"Coding1":"3D"))} /></div>
+          </div>
           <div className="image1"></div>
         </div>
         <div className="footer"></div> 
