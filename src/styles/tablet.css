@@ -122,7 +122,7 @@
     background-repeat: no-repeat;
     background-position: center;
     margin-left: 50vw;
-    margin-top: -23vw;
+    margin-top: -9vw;
     filter: drop-shadow(#000 0 0 2rem);
     z-index: 2;
   }
@@ -162,7 +162,7 @@
   .what_is_article {
     height: fit-content;
     width: 82%;
-    margin-top: 10vw;
+    margin-top: 5vw;
     margin-left: 0;
   }
   .what_is_article p {
@@ -202,7 +202,7 @@
     background-repeat: no-repeat;
     background-position: center;
     margin-left: -52vw;
-    margin-top: -23vw;
+    margin-top: -9vw;
     filter: drop-shadow(#000 0 0 2rem);
     z-index: 2;
   }
@@ -242,7 +242,7 @@
   .about_article {
     height: fit-content;
     width: 82%;
-    margin-top: 11.5vw;
+    margin-top: 5.5vw;
     margin-left: 0;
   }
   .about_article p {

@@ -99,7 +99,7 @@
 
     .what_is_container {
       height: fit-content;
-      max-width: 100vw;
+      max-width: 94vw;
       border-radius: 2rem;
       /* background-color: #0000004d; */
       /* background-color: red; */
@@ -135,7 +135,7 @@
       background-repeat: no-repeat;
       background-position: center;
       margin-left: 69vw;
-      margin-top: -36vw;
+      margin-top: -14vw;
       filter: drop-shadow(#000 0 0 2rem);
       z-index: 2;
     }
@@ -151,7 +151,7 @@
       /* margin-right: 5rem; */
       width: 74vw;
       margin-top: -22vw;
-      margin-left: 8vw;
+      margin-left: 6vw;
       z-index: 1;
       box-shadow: 0 0 3rem -1rem rgb(0, 0, 0);
     }
@@ -175,7 +175,7 @@
     .what_is_article {
       height: fit-content;
       width: 82%;
-      margin-top: 18vw;
+      margin-top: 5vw;
       margin-left: 0;
     }
     .what_is_article p {
@@ -214,7 +214,7 @@
       background-repeat: no-repeat;
       background-position: center;
       margin-left: -72vw;
-      margin-top: -36vw;
+      margin-top: -14vw;
       filter: drop-shadow(#000 0 0 2rem);
       z-index: 2;
     }
@@ -254,7 +254,7 @@
     .about_article {
       height: fit-content;
       width: 82%;
-      margin-top: 18vw;
+      margin-top: 5vw;
       margin-left: 0;
     }
     .about_article p {
