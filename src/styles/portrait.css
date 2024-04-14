@@ -120,7 +120,6 @@
       border-radius: 0.5rem;
       background-size: cover;
       /* opacity: 0.65; */
-      filter: grayscale(30%) brightness(40%);
       box-shadow: 0 0 3rem -1rem rgb(44, 24, 8);
       align-self: flex-start;
       flex-grow: 1;
@@ -140,7 +139,6 @@
       z-index: 2;
     }
     .heading_container {
-      background-color: rgba(0, 0, 0, 0.5);
       padding: 1.3vw 3vw;
       border-radius: 5vw;
       min-height: 15vw;
@@ -153,7 +151,6 @@
       margin-top: -22vw;
       margin-left: 6vw;
       z-index: 1;
-      box-shadow: 0 0 3rem -1rem rgb(0, 0, 0);
     }
     .heading_container .icon {
       height: 12vw;
@@ -198,7 +195,6 @@
       border-radius: 0.5rem;
       background-size: cover;
       /* opacity: 0.65; */
-      filter: grayscale(30%) brightness(40%);
       box-shadow: 0 0 3rem -1rem rgb(44, 24, 8);
       align-self: flex-start;
       flex-grow: 1;
@@ -219,7 +215,6 @@
       z-index: 2;
     }
     .heading_container_about {
-      background-color: rgba(0, 0, 0, 0.5);
       padding: 3vw 3vw;
       border-radius: 5vw;
       min-height: 15vw;
@@ -232,7 +227,6 @@
       margin-top: -20vw;
       margin-left: 14vw;
       z-index: 1;
-      box-shadow: 0 0 3rem -1rem rgb(0, 0, 0);
     }
     .heading_container_about .icon {
       height: 12vw;

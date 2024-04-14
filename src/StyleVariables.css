@@ -18,10 +18,10 @@
 
 :root:has(.purple) {
     --background-color: #1A1A1A;
-    --accent-color: #9736f1;
+    --accent-color: #a15be2;
     --secondary-accent-color: #3e0161;
 
-    --text-color: #92bad4;
+    --text-color: #d8d3ff;
     --active-text-color: #313131;
 }
 

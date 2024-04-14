@@ -2,11 +2,17 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import ImportIcon from './assets/ImportIcon'
 import a2klogo from './assets/images/A2KACADEMY.png'
-import print_3d_def from './assets/images/3dprint.webp'
+import print_3d_def from './assets/images/3dprint2.jpg'
 import whatisavatar from './assets/images/whatisavatar.png'
 import aboutavatar from './assets/images/aboutavatar.png'
 import kids3dprint from './assets/images/3dprintkids.jpg'
-import sample3dprint from './assets/images/3dprintsample.jpg'
+import sample3dprint from './assets/images/3dprintsample1.webp'
+import physicalcomputing from './assets/images/hardwarecomputing2.jpg'
+import kidsphysicalcomputing from './assets/images/physcompkids1.jpg'
+import samplephysicalcomputing from './assets/images/physcompsample.webp'
+import coding from './assets/images/codeblocks.png'
+import kidscoding from './assets/images/codingkids.jpg'
+import samplecoding from './assets/images/codingsample.jpg'
 import sound from './assets/boom.mp3'
 import huhsound from './assets/huh.mp3'
 
@@ -159,7 +165,7 @@ function App() {
 
   return (
     <>
-      <div className=""></div>
+      <div className={(tabPos==0?"":(tabPos==1?"blue":"purple"))}></div>
       <div className="bg_circle top-left"></div>
       <div className="bg_circle top-right"></div>
       <div className="navbar_cover"></div>
@@ -208,9 +214,9 @@ function App() {
             }} className="cards_container">
             <div className="card_click left"></div>
             {/* <div onClick={clickC1} className={"card c1 "+c1pos}></div> */}
-            <div onClick={clickC1} className={"card c1 "+cPosDef[activeCard]}></div>
-            <div onClick={clickC2} className={"card c2 "+cPosDef[((activeCard==2)?0:activeCard+1)]}></div>
-            <div onClick={clickC3} className={"card c3 "+cPosDef[((activeCard==0)?2:activeCard-1)]}></div>
+            <div onClick={clickC1} className={"card c1 "+cPosDef[activeCard]} style={{backgroundImage: 'url('+(tabPos==0?kids3dprint:(tabPos==1?kidsphysicalcomputing:kidscoding))+')'}}></div>
+            <div onClick={clickC2} className={"card c2 "+cPosDef[((activeCard==2)?0:activeCard+1)]} style={{backgroundImage: 'url('+(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))+')'}}></div>
+            <div onClick={clickC3} className={"card c3 "+cPosDef[((activeCard==0)?2:activeCard-1)]} style={{backgroundImage: 'url('+(tabPos==0?sample3dprint:(tabPos==1?samplephysicalcomputing:samplecoding))+')'}}></div>
             <div className="card_click right"></div>
             <div className="page_indicator">
               <div className={"page p1 "+(activeCardPage==0?"active ":"")+pageIndicatorRes}></div>
@@ -233,7 +239,7 @@ function App() {
         <div className="content_bottom">
           <div id='what_is' className="what_is_container">
             <div className="what_is_header">
-              <div className="what_is_image" style={{backgroundImage: 'url('+print_3d_def+')'}}>
+              <div className="what_is_image" style={{backgroundImage: 'url('+(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))+')'}}>
 
               </div>
               <div className="what_is_avatar" style={{backgroundImage: 'url('+whatisavatar+')'}}></div>
@@ -259,7 +265,7 @@ function App() {
 
           <div id='what_is' className="what_is_container">
             <div className="what_is_header">
-              <div className="about_image" style={{backgroundImage: 'url('+kids3dprint+')'}}>
+              <div className="about_image" style={{backgroundImage: 'url('+(tabPos==0?kids3dprint:(tabPos==1?kidsphysicalcomputing:kidscoding))+')'}}>
 
               </div>
               <div className="about_avatar" style={{backgroundImage: 'url('+aboutavatar+')'}}></div>
@@ -280,7 +286,7 @@ function App() {
 
           <div id='what_is' className="what_is_container">
             <div className="what_is_header">
-              <div className="about_image" style={{backgroundImage: 'url('+sample3dprint+')'}}>
+              <div className="about_image" style={{backgroundImage: 'url('+(tabPos==0?sample3dprint:(tabPos==1?samplephysicalcomputing:samplecoding))+')'}}>
 
               </div>
               <div className="about_avatar" style={{backgroundImage: 'url('+aboutavatar+')'}}></div>

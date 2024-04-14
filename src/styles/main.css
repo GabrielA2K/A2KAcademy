@@ -11,6 +11,7 @@
   }
   
   .bg_circle {
+    transition: 1s;
     background-color: var(--secondary-accent-color);
   }
   .bg_circle.top-left {
@@ -519,7 +520,7 @@
     margin-top: -14vw;
     margin-left: 7vw;
     z-index: 1;
-    box-shadow: 0 0 3rem -1rem rgb(0, 0, 0);
+    box-shadow: 0 0 3rem -1rem var(--accent-color);
   }
   .heading_container .icon {
     height: 5.5vw;
@@ -593,7 +594,7 @@
     margin-top: -14vw;
     margin-left: 26vw;
     z-index: 1;
-    box-shadow: 0 0 3rem -1rem rgb(0, 0, 0);
+    box-shadow: 0 0 3rem -1rem var(--accent-color);
   }
   .heading_container_about .icon {
     height: 5.5vw;
