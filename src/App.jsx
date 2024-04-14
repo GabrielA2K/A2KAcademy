@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import ImportIcon from './assets/ImportIcon'
 import a2klogo from './assets/images/A2KACADEMY.png'
-import print_3d_def from './assets/images/3dprint1.png'
+import print_3d_def from './assets/images/3dprint.webp'
 import whatisavatar from './assets/images/whatisavatar.png'
 import sound from './assets/boom.mp3'
 import huhsound from './assets/huh.mp3'
@@ -218,47 +218,23 @@ function App() {
               </div>
               <div className="what_is_avatar" style={{backgroundImage: 'url('+whatisavatar+')'}}></div>
               {/* <img src={print_3d_def} alt="" /> */}
-              <div className="what_is_header_text">
-                <div className="heading_container">
+              
+                <div className="heading_container blur">
                   <div className="icon">
                     <ImportIcon name={'3D'} />
                   </div>
                   <h2 className="heading2 font-heavy">What is 3D Printing?</h2>
                 </div>
                 
-                <p className="what_is_desc_brief font-thin justify-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate velit asperiores tenetur, quaerat minima dolor fuga, saepe praesentium architecto aspernatur temporibus reiciendis cumque amet veritatis! Nisi perspiciatis asperiores ratione blanditiis sunt,  ipsam.</p>
-              </div>
+              
             </div>
             <div className="what_is_article">
-                <p className="what_is_article_content font-thin justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
+                <p className="font-thin justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
             </div>
 
           </div>
 
 
-          <div id='what_is' className="what_is_container">
-            <div className="what_is_header">
-              <div className="what_is_image" style={{backgroundImage: 'url('+print_3d_def+')'}}>
-
-              </div>
-              <div className="what_is_avatar" style={{backgroundImage: 'url('+whatisavatar+')'}}></div>
-              {/* <img src={print_3d_def} alt="" /> */}
-              <div className="what_is_header_text">
-                <div className="heading_container">
-                  <div className="icon">
-                    <ImportIcon name={'3D'} />
-                  </div>
-                  <h2 className="heading2 font-heavy">What is 3D Printing?</h2>
-                </div>
-                
-                <p className="what_is_desc_brief font-thin justify-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate velit asperiores tenetur, quaerat minima dolor fuga, saepe praesentium architecto aspernatur temporibus reiciendis cumque amet veritatis! Nisi perspiciatis asperiores ratione blanditiis sunt,  ipsam.</p>
-              </div>
-            </div>
-            <div className="what_is_article">
-                <p className="what_is_article_content font-thin justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
-            </div>
-
-          </div>
           <div className="image1"></div>
         </div>
         <div className="footer"></div> 
