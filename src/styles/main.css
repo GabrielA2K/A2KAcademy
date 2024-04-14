@@ -462,7 +462,7 @@
   .what_is_container {
     height: fit-content;
     max-width: 80vw;
-    border-radius: 2.5vw;
+    border-radius: 4vw;
     background-color: #0000004d;
     padding: 4.7vw 0;
     overflow: hidden;
