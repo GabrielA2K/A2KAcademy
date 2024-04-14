@@ -59,10 +59,12 @@
   
   h1.heading {
     font-size: 5vw;
+    line-height: 6vw;
   }
   p.description {
     font-size: 2vw;
     margin-bottom: 2.5vw;
+    margin-top: 0.5vw;
   }
   .read_more_btn {
     font-size: 1.5vw;
@@ -164,6 +166,86 @@
     margin-left: 0;
   }
   .what_is_article p {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    line-height: 2rem;
+  }
+
+
+
+
+
+
+  .what_is_header {
+    width: 100%;
+  }
+  .about_image {
+    /* background-color: green; */
+    min-height: 30vw;
+    min-width: 100%;
+    border-radius: 0.5rem;
+    background-size: cover;
+    /* opacity: 0.65; */
+    filter: grayscale(30%) brightness(40%);
+    box-shadow: 0 0 3rem -1rem rgb(44, 24, 8);
+    align-self: flex-start;
+    flex-grow: 1;
+    background-position: 0 -10rem;
+  }
+  
+
+  .about_avatar {
+    /* background-color: green; */
+    min-height: 19vw;
+    min-width: 19vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -52vw;
+    margin-top: -23vw;
+    filter: drop-shadow(#000 0 0 2rem);
+    z-index: 2;
+  }
+  .heading_container_about {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.3vw 3vw;
+    border-radius: 2.5vw;
+    min-height: 8.2vw;
+    /* width: fit-content; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin-right: 5rem; */
+    width: 52vw;
+    margin-top: -15vw;
+    margin-left: 16vw;
+    z-index: 1;
+    box-shadow: 0 0 3rem -1rem rgb(0, 0, 0);
+  }
+  .heading_container_about .icon {
+    height: 9vw;
+    width: 9vw;
+    margin-right: 1rem;
+    fill: var(--accent-color);
+    display: flex;
+    margin-left: 1vw;
+    margin-right: 2.5vw;
+  }
+  h2.heading2 {
+    font-size: 4vw;
+    color: var(--accent-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* background-color: red; */
+  }
+  
+  .about_article {
+    height: fit-content;
+    width: 82%;
+    margin-top: 11.5vw;
+    margin-left: 0;
+  }
+  .about_article p {
     font-size: 1.3rem;
     color: var(--text-color);
     line-height: 2rem;

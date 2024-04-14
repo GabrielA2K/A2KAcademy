@@ -410,12 +410,14 @@
     transition: 0.5s;
     font-size: 10vh;
     color: var(--accent-color);
+    line-height: 11vh;
   }
   p.description {
     transition: 0.5s;
     font-size: 4vh;
     color: var(--text-color);
     margin-bottom: 3.5vh;
+    margin-top: 1.5vh;
   }
   .read_more_btn {
     transition: 0.5s;
@@ -454,7 +456,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 8rem;
+    padding-bottom: 10rem;
     padding-top: 6rem;
   }
   
@@ -541,6 +543,80 @@
     margin-left: -5rem;
   }
   .what_is_article p {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    line-height: 2rem;
+  }
+
+
+
+
+
+  
+  .about_image {
+    /* background-color: green; */
+    min-height: 23vw;
+    min-width: 72vw;
+    border-radius: 4.5vw 0 0 4.5vw ;
+    background-size: cover;
+    /* opacity: 0.65; */
+    filter: grayscale(30%) brightness(40%);
+    box-shadow: 0 0 3rem -1rem rgb(44, 24, 8);
+    align-self: flex-end;
+    flex-grow: 1;
+    background-position: 0 -18vw;
+  }
+  
+
+  .about_avatar {
+    /* background-color: green; */
+    min-height: 19vw;
+    min-width: 19vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -56vw;
+    margin-top: -15vw;
+    filter: drop-shadow(#000 0 0 2rem);
+  }
+  .heading_container_about {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.3vw 2vw;
+    border-radius: 2.5vw;
+    min-height: 8.2vw;
+    /* width: fit-content; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin-right: 5rem; */
+    width: 38vw;
+    margin-top: -14vw;
+    margin-left: 26vw;
+    z-index: 1;
+    box-shadow: 0 0 3rem -1rem rgb(0, 0, 0);
+  }
+  .heading_container_about .icon {
+    height: 5.5vw;
+    width: 5.5vw;
+    margin-right: -1rem;
+    fill: var(--accent-color);
+    display: flex;
+  }
+  h2.heading2 {
+    font-size: 2.5vw;
+    color: var(--accent-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* background-color: red; */
+  }
+  
+  .about_article {
+    height: fit-content;
+    width: 75%;
+    margin-top: 7vw;
+    margin-left: 5rem;
+  }
+  .about_article p {
     font-size: 1.3rem;
     color: var(--text-color);
     line-height: 2rem;

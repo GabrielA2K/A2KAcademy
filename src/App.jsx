@@ -4,8 +4,11 @@ import ImportIcon from './assets/ImportIcon'
 import a2klogo from './assets/images/A2KACADEMY.png'
 import print_3d_def from './assets/images/3dprint.webp'
 import whatisavatar from './assets/images/whatisavatar.png'
+import aboutavatar from './assets/images/aboutavatar.png'
+import kids3dprint from './assets/images/3dprintkids.jpg'
 import sound from './assets/boom.mp3'
 import huhsound from './assets/huh.mp3'
+
 
 
 
@@ -67,21 +70,21 @@ function App() {
     setActiveCardPage(1);
     setCardTimerInterval(0);
     resetPageIndicator();
-    audiohuh.play();
+    // audiohuh.play();
   }
   const clickC2 = () => {
     setActiveCard(0);
     setActiveCardPage(0);
     setCardTimerInterval(0);
     resetPageIndicator();
-    audiohuh.play();
+    // audiohuh.play();
   }
   const clickC3 = () => {
     setActiveCard(2);
     setActiveCardPage(2);
     setCardTimerInterval(0);
     resetPageIndicator();
-    audiohuh.play();
+    // audiohuh.play();
   }
 
   function clickRightCard() {
@@ -95,9 +98,9 @@ function App() {
     setCardTimerInterval(0);
   }
 
-  const clickTab1 = () => {setTabPos(0);}
-  const clickTab2 = () => {setTabPos(1);}
-  const clickTab3 = () => {setTabPos(2);}
+  const clickTab1 = () => {setTabPos(0);resetPageIndicator();scroll_to('top');}
+  const clickTab2 = () => {setTabPos(1);resetPageIndicator();scroll_to('top');}
+  const clickTab3 = () => {setTabPos(2);resetPageIndicator();scroll_to('top');}
 
 
   function toggleNavbarState() {
@@ -135,6 +138,9 @@ function App() {
     return () => clearTimeout(latency);
   }, []);
  
+  function scroll_to(stringId) {
+    document.getElementById(stringId).scrollIntoView({behavior:'smooth'});
+  }
  
 
   return (
@@ -177,7 +183,7 @@ function App() {
       </div>
       <div className={"blur_overlay blur "+navbarState+" "+briefAnimate}>
         
-        <div className="content">
+        <div className="content" id="top">
           <div onTouchStart={(e) => {
               touchstartX = e.changedTouches[0].screenX;
               touchstartY = e.changedTouches[0].screenY;
@@ -201,9 +207,9 @@ function App() {
           </div>
 
           <div className="text_content">
-            <h1 className="heading font-heavy">3D PRINTING</h1>
+            <h1 className="heading font-heavy">{(tabPos==0?"3D PRINTING":(tabPos==1?"PHYSICAL COMPUTING":"WORLD OF CODING"))}</h1>
             <p className="description font-regular">Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.</p>
-            <div className="read_more_btn" onClick={() => {document.getElementById('what_is').scrollIntoView({behavior:'smooth'});}}>
+            <div className="read_more_btn" onClick={() => {scroll_to('what_is')}}>
               <p>Explore</p>
               <div className="icon"><ImportIcon name={'Down'} /></div>
               </div>
@@ -223,7 +229,7 @@ function App() {
                   <div className="icon">
                     <ImportIcon name={'3D'} />
                   </div>
-                  <h2 className="heading2 font-heavy">What is 3D Printing?</h2>
+                  <h2 className="heading2 font-heavy">{"What is "+(tabPos==0?"3D Printing":(tabPos==1?"Physical Computing":"World of Coding"))+"?"}</h2>
                 </div>
                 
               
@@ -231,8 +237,37 @@ function App() {
             <div className="what_is_article">
                 <p className="font-thin justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
             </div>
-
           </div>
+
+
+
+
+
+          <div id='what_is' className="what_is_container">
+            <div className="what_is_header">
+              <div className="about_image" style={{backgroundImage: 'url('+kids3dprint+')'}}>
+
+              </div>
+              <div className="about_avatar" style={{backgroundImage: 'url('+aboutavatar+')'}}></div>
+              {/* <img src={print_3d_def} alt="" /> */}
+              
+                <div className="heading_container_about blur">
+                  <div className="icon">
+                    <ImportIcon name={'Star'} />
+                  </div>
+                  <h2 className="heading2 font-heavy">Benefits for Kids</h2>
+                </div>
+                
+              
+            </div>
+            <div className="about_article">
+                <p className="font-thin justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
+            </div>
+          </div>
+
+
+
+
 
 
           <div className="image1"></div>
