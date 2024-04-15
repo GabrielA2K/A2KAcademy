@@ -20,6 +20,25 @@ import huhsound from './assets/huh.mp3'
 
 
 function App() {
+
+const print3d_short = "3D printing is a powerful technology that builds 3D objects layer by layer from digital designs. It allows you to quickly create custom items, from toys to gadgets, and even complex designs for various industries. Discover the future of making with 3D printing!"
+const physcomp_short = "Physical Computing helps you build fun, interactive projects using sensors and code. It's a great way to learn and create cool gadgets, robots, and more. Get started and bring your imagination to life!"
+const code_short = "Coding lets you tell computers what to do! Learn how to create games, apps, and cool projects. It boosts your creativity and problem-solving skills, and it's the key to shaping the future. Start coding today!"
+
+const print3d_what = "3D printing is a process that uses a special machine to create three-dimensional objects from digital designs. The machine adds layer upon layer of material, such as plastic, resin, or metal, to build up the object. This technology allows for quick and cost-effective production of custom items, including prototypes, art pieces, and functional parts for various industries. For instance, in healthcare, 3D printing can produce custom prosthetics or medical models for surgeries. In engineering, it enables the creation of intricate designs that traditional manufacturing can't achieve. It's a powerful tool for anyone interested in innovation and design, as it helps bring ideas to life efficiently and creatively."
+const physcomp_what = "Physical computing is the practice of building interactive systems that connect the digital and physical worlds using hardware and software. For example, you can use microcontrollers like Arduino to control sensors and actuators, enabling you to create projects such as robots, smart devices, or wearable tech. By combining coding and electronics, you can make everyday objects respond to touch, light, sound, and other inputs. This field encourages you to think critically and solve problems as you design, build, and troubleshoot your projects. Physical computing opens up opportunities for innovation in areas like home automation, gaming, and even environmental monitoring. It provides a great foundation for a career in engineering, computer science, or design. Plus, it's a fun way to bring your ideas to life and make things that matter to you."
+const code_what = "Coding, also known as programming, is the process of writing instructions for computers to follow. By learning how to code, you can create software, apps, websites, and games that perform specific tasks. Coding involves working with different programming languages like Python, Java, or JavaScript, each with its own syntax and uses. Coding teaches you problem-solving skills and logical thinking as you learn how to break down tasks into manageable pieces. It also boosts creativity by allowing you to design and develop projects from your imagination. Coding can lead to exciting careers in technology, game development, data science, and more. It's a valuable skill that lets you shape the digital world around you and turn your ideas into reality."
+
+const print3d_kids = "3D printing offers kids a chance to bring their ideas to life by creating custom toys, gadgets, and models. It encourages creativity and problem-solving as they design and experiment with new projects. Kids can learn valuable skills in 3D modeling software, engineering, and even coding as they prepare their designs for printing. This technology also promotes learning in science, technology, engineering, art, and math (STEAM) fields by providing hands-on experiences. Additionally, kids can produce personalized items for school projects or gifts for friends and family, allowing them to express their individuality and boost confidence."
+const physcomp_kids = "Physical computing offers kids the opportunity to interact with technology in exciting and tangible ways. By using microcontrollers like Arduino, kids can create interactive projects such as robots, smart devices, and even their own games. This hands-on experience fosters problem-solving and critical thinking as they learn how to connect sensors, actuators, and other components. Physical computing also introduces kids to the basics of coding and electronics, providing a strong foundation in science, technology, engineering, and math (STEM) subjects. As they experiment with different projects, kids gain confidence in their ability to create and innovate. Additionally, it nurtures creativity and curiosity, empowering them to turn their ideas into reality and explore the world of technology in a meaningful way."
+const code_kids = "Coding offers kids valuable skills that can benefit them in many areas. It boosts problem-solving abilities as they learn how to break down complex tasks and find efficient solutions. Coding encourages creativity, allowing kids to design games, apps, and other projects from their imagination. By learning coding, kids gain a strong foundation in logical thinking and computational skills, which are useful in many subjects. It also opens doors to potential future careers in technology, engineering, and other STEM fields. Moreover, coding can be a fun and rewarding activity that builds confidence as kids see their ideas come to life on screen."
+
+
+
+
+
+
+
   let touchstartX = 0
   let touchendX = 0
   let touchstartY = 0
@@ -228,7 +247,7 @@ function App() {
 
           <div className="text_content">
             <h1 className="heading font-heavy">{(tabPos==0?"3D PRINTING":(tabPos==1?"PHYSICAL COMPUTING":"WORLD OF CODING"))}</h1>
-            <p className="description font-regular">Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.</p>
+            <p className="description font-regular">{(tabPos==0?print3d_short:(tabPos==1?physcomp_short:code_short))}</p>
             <div className="read_more_btn" onClick={() => {scroll_to('what_is')}}>
               <p>Explore</p>
               <div className="icon"><ImportIcon name={'Down'} /></div>
@@ -255,7 +274,7 @@ function App() {
               
             </div>
             <div className="what_is_article">
-                <p className="font-thin justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
+                <p className="font-thin justify-text">{(tabPos==0?print3d_what:(tabPos==1?physcomp_what:code_what))}</p>
             </div>
           </div>
 
@@ -279,7 +298,7 @@ function App() {
                 </div>
             </div>
             <div className="about_article">
-                <p className="font-thin justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
+                <p className="font-thin justify-text">{(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))}</p>
             </div>
           </div>
 
