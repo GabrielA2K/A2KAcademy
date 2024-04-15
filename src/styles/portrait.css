@@ -176,7 +176,7 @@
       margin-left: 0;
     }
     .what_is_article p {
-      font-size: 1rem;
+      font-size: 4vw;
       color: var(--text-color);
       line-height: 1.5rem;
     }
@@ -252,7 +252,7 @@
       margin-left: 0;
     }
     .about_article p {
-      font-size: 1rem;
+      font-size: 4vw;
       color: var(--text-color);
       line-height: 1.5rem;
     }
