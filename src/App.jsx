@@ -6,7 +6,7 @@ import print_3d_def from './assets/images/3dprint2.jpg'
 import whatisavatar from './assets/images/whatisavatar.png'
 import aboutavatar from './assets/images/aboutavatar.png'
 import kids3dprint from './assets/images/3dprintkids.jpg'
-import sample3dprint from './assets/images/3dprintsample1.webp'
+import sample3dprint from './assets/images/3dprintsample2.jpeg'
 import physicalcomputing from './assets/images/hardwarecomputing2.jpg'
 import kidsphysicalcomputing from './assets/images/physcompkids1.jpg'
 import samplephysicalcomputing from './assets/images/physcompsample.webp'
@@ -202,8 +202,8 @@ function App() {
         </div>
       </div>
       <div className={"blur_overlay blur "+navbarState+" "+briefAnimate}>
-        
-        <div className="content" id="top">
+        <div id="top"></div>
+        <div className="content">
           <div onTouchStart={(e) => {
               touchstartX = e.changedTouches[0].screenX;
               touchstartY = e.changedTouches[0].screenY;

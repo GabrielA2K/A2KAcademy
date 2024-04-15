@@ -108,7 +108,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
     .what_is_header {
       width: 100%;
@@ -176,9 +176,9 @@
       margin-left: 0;
     }
     .what_is_article p {
-      font-size: 1.3rem;
+      font-size: 1rem;
       color: var(--text-color);
-      line-height: 2rem;
+      line-height: 1.5rem;
     }
 
 
@@ -252,9 +252,9 @@
       margin-left: 0;
     }
     .about_article p {
-      font-size: 1.3rem;
+      font-size: 1rem;
       color: var(--text-color);
-      line-height: 2rem;
+      line-height: 1.5rem;
     }
 
     .read_more_btn.proceed .icon {
