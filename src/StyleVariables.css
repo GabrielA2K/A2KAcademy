@@ -5,6 +5,7 @@
 
     --text-color: #B1B1B1;
     --active-text-color: #313131;
+    --transparent-accent: #ea710075;
 }
 
 :root:has(.blue) {
@@ -14,6 +15,7 @@
 
     --text-color: #a8c0d0;
     --active-text-color: #313131;
+    --transparent-accent: #369df175;
 }
 
 :root:has(.purple) {
@@ -23,6 +25,7 @@
 
     --text-color: #d8d3ff;
     --active-text-color: #313131;
+    --transparent-accent: #a15be275;
 }
 
 

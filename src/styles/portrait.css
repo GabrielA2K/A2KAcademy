@@ -178,7 +178,7 @@
     .what_is_article p {
       font-size: 4vw;
       color: var(--text-color);
-      line-height: 1.5rem;
+      line-height: 6vw;
     }
 
 
@@ -254,7 +254,7 @@
     .about_article p {
       font-size: 4vw;
       color: var(--text-color);
-      line-height: 1.5rem;
+      line-height: 6vw;
     }
 
     .read_more_btn.proceed .icon {

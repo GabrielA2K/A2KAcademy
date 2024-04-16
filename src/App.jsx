@@ -248,59 +248,58 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
           <div className="text_content">
             <h1 className="heading font-heavy">{(tabPos==0?"3D PRINTING":(tabPos==1?"PHYSICAL COMPUTING":"WORLD OF CODING"))}</h1>
             <p className="description font-regular">{(tabPos==0?print3d_short:(tabPos==1?physcomp_short:code_short))}</p>
-            <div className="read_more_btn" onClick={() => {scroll_to('what_is')}}>
+            <div className="read_more_btn" onClick={() => {scroll_to('contents')}}>
               <p>Explore</p>
               <div className="icon"><ImportIcon name={'Down'} /></div>
             </div>
           </div>
                 
         </div>
-        <div className="content_bottom">
-          <div id='what_is' className="what_is_container">
-            <div className="what_is_header">
-              <div className="what_is_image" style={{backgroundImage: 'url('+(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))+')'}}>
+        <div className="divider" style={{height: "4rem"}}></div>
+        <div id="contents" className="content_bottom">
 
-              </div>
-              <div className="what_is_avatar" style={{backgroundImage: 'url('+whatisavatar+')'}}></div>
-              {/* <img src={print_3d_def} alt="" /> */}
-              
-                <div className="heading_container blur">
+            <div className="content_card">
+              <div className="card_head">
+                <div className="card_head_image" style={{backgroundImage: 'url('+(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))+')'}}></div>
+                <div className="card_head_container">
                   <div className="icon">
                     <ImportIcon name={(tabPos==0?"3D":(tabPos==1?"Plug":"Coding1"))} />
                   </div>
-                  <h2 className="heading2 font-heavy">{"What is "+(tabPos==0?"3D Printing":(tabPos==1?"Physical Computing":"World of Coding"))+"?"}</h2>
+                  <p className="card_head_text font-heavy">{(tabPos==0?"What is \n3D Printing":(tabPos==1?"What is Physical\nComputing":"What is \nWorld of Coding"))+"?"}</p>
                 </div>
-                
-              
-            </div>
-            <div className="what_is_article">
-                <p className="font-thin justify-text">{(tabPos==0?print3d_what:(tabPos==1?physcomp_what:code_what))}</p>
-            </div>
-          </div>
-
-
-
-
-
-          <div id='what_is' className="what_is_container">
-            <div className="what_is_header">
-              <div className="about_image" style={{backgroundImage: 'url('+(tabPos==0?kids3dprint:(tabPos==1?kidsphysicalcomputing:kidscoding))+')'}}>
-
               </div>
-              <div className="about_avatar" style={{backgroundImage: 'url('+aboutavatar+')'}}></div>
-              {/* <img src={print_3d_def} alt="" /> */}
-              
-                <div className="heading_container_about blur">
-                  <div className="icon">
+              <div className="card_body">
+                <div className="container">
+                  <p className="font-thin justify-text">{(tabPos==0?print3d_what:(tabPos==1?physcomp_what:code_what))}</p>
+                </div>
+              </div>
+              <div className="avatar" style={{backgroundImage: 'url('+whatisavatar+')'}}></div>
+            </div>
+
+
+            <div className="content_card">
+              <div className="card_body">
+                <div className="container">
+                  <p className="font-thin justify-text">{(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))}</p>
+                </div>
+              </div>
+              <div className="card_head alt">
+                <div className="card_head_image" style={{backgroundImage: 'url('+(tabPos==0?kids3dprint:(tabPos==1?kidsphysicalcomputing:kidscoding))+')'}}></div>
+                <div className="card_head_container">
+                  <div className="icon alt">
                     <ImportIcon name={'Star'} />
                   </div>
-                  <h2 className="heading2 font-heavy">Benefits for Kids</h2>
+                  <p className="card_head_text font-heavy alt">{"Benefits to\nKids"}</p>
                 </div>
+              </div>
+              <div className="avatar alt" style={{backgroundImage: 'url('+aboutavatar+')'}}></div>
             </div>
-            <div className="about_article">
-                <p className="font-thin justify-text">{(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))}</p>
-            </div>
-          </div>
+
+
+
+
+
+
 
 
           <div id='what_is' className="what_is_container">

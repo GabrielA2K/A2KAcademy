@@ -133,7 +133,7 @@
     z-index: 2;
   }
   .heading_container {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 1.3vw 3vw;
     border-radius: 2.5vw;
     min-height: 8.2vw;
@@ -213,7 +213,7 @@
     z-index: 2;
   }
   .heading_container_about {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 1.3vw 3vw;
     border-radius: 2.5vw;
     min-height: 8.2vw;
