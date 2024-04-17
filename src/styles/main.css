@@ -499,6 +499,7 @@
   display: flex;
   margin-bottom: 3vw;
   /* align-items: stretch; */
+  box-shadow: 0 0 5vw -3vw rgba(255, 255, 255, 0.279);
 }
 .content_card:has(.alt) {
   flex-direction: row-reverse;
