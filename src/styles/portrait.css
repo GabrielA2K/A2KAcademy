@@ -234,7 +234,7 @@
   
   .card_body p {
     color: var(--text-color);
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
   
   .content_card .avatar {
