@@ -178,10 +178,10 @@
     justify-content: center;
   }
   .card_head_container .icon {
-    min-height: 14vw;
-    min-width: 14vw;
+    min-height: 16vw;
+    min-width: 16vw;
     fill: var(--accent-color);
-    margin-top: 0vw;
+    margin-top: -0.5vw;
     margin-left: -6vw;
     display: flex;
     justify-content: center;
@@ -192,10 +192,10 @@
     filter: drop-shadow(0 0 2rem var(--transparent-accent));
   }
   .card_head_container .icon.alt1 svg {
-    height: 12.5vw;
+    height: 13.5vw;
   }
   .card_head_container .icon.alt1 {
-    margin-top: 0vw;
+    margin-top: -1vw;
     display: flex;
     justify-content: center;
     margin-left: 0;
@@ -209,13 +209,13 @@
   .card_head_container .card_head_text {
     color: var(--accent-color);
     white-space: pre;
-    font-size: 5vw;
-    line-height: 6vw;
+    font-size: 6.2vw;
+    line-height: 7vw;
     text-align: center;
     margin-left: -2vw;
     text-shadow: 0 0 2rem var(--transparent-accent);
     text-align: left;
-    margin-left: 2vw;
+    margin-left: 4vw;
   }
   .card_head_container .card_head_text.alt {
     margin-left: 2vw;
@@ -227,7 +227,7 @@
   .card_body {
     /* background-color: red; */
     width: var(--cCardW);
-    padding: 6vw 10vw 8vw 10vw;
+    padding: 8vw 10vw 8vw 10vw;
     display: flex;
     align-items: center;
   }
@@ -246,8 +246,8 @@
     background-position: center;
     filter: drop-shadow(#000 0 0 2rem);
     margin-left: 0;
-    margin-right: 3vw;
-    margin-top: calc(var(--cCardH) - 12vw);
+    margin-right: 2vw;
+    margin-top: calc(var(--cCardH) - 10vw);
     align-self: flex-end;
   }
   

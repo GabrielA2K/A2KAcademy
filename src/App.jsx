@@ -270,7 +270,7 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
                   <div className="icon">
                     <ImportIcon name={(tabPos==0?"3D":(tabPos==1?"Plug":"Coding1"))} />
                   </div>
-                  <p className="card_head_text font-heavy">{(tabPos==0?"What is \n3D Printing":(tabPos==1?"What is Physical\nComputing":"What is \nWorld of Coding"))+"?"}</p>
+                  <p className="card_head_text font-heavy">{(tabPos==0?"What is \n3D Printing":(tabPos==1?"What is Physical\nComputing":"What is World\nof Coding"))+"?"}</p>
                 </div>
               </div>
               <div className="card_body">
