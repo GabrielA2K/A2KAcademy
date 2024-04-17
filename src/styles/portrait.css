@@ -181,8 +181,12 @@
     min-height: 14vw;
     min-width: 14vw;
     fill: var(--accent-color);
-    margin-top: 1vw;
+    margin-top: 0vw;
     margin-left: -6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
   }
   .card_head_container .icon svg {
     filter: drop-shadow(0 0 2rem var(--transparent-accent));
@@ -191,13 +195,13 @@
     height: 12.5vw;
   }
   .card_head_container .icon.alt1 {
-    margin-top: 1vw;
+    margin-top: 0vw;
     display: flex;
     justify-content: center;
     margin-left: 0;
   }
   .card_head_container .icon.alt {
-    margin-top: 0;
+    margin-top: -1vw;
     margin-left: 2vw;
   }
   
