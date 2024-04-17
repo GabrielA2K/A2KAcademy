@@ -3,7 +3,7 @@
     --accent-color: #EA7000;
     --secondary-accent-color: #612401;
 
-    --text-color: #B1B1B1;
+    --text-color: #a3a3a3;
     --active-text-color: #313131;
     --transparent-accent: #ea710075;
 }
@@ -13,19 +13,19 @@
     --accent-color: #369df1;
     --secondary-accent-color: #012b61;
 
-    --text-color: #a8c0d0;
+    --text-color: #a3a3a3;
     --active-text-color: #313131;
     --transparent-accent: #369df175;
 }
 
 :root:has(.purple) {
     --background-color: #1A1A1A;
-    --accent-color: #a15be2;
-    --secondary-accent-color: #3e0161;
+    --accent-color: #7E5BE2;
+    --secondary-accent-color: #3b2281;
 
-    --text-color: #d8d3ff;
+    --text-color: #a3a3a3;
     --active-text-color: #313131;
-    --transparent-accent: #a15be275;
+    --transparent-accent: #7E5BE275;
 }
 
 

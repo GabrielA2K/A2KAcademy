@@ -666,12 +666,16 @@
   /* height: var(--cCardH);  */
   width: calc(var(--cCardW) / 2);
   overflow: hidden;
-  border-radius: 0 5vw 18vw 0;
+  border-radius: 0 0vw 18vw 0;
   display: flex;
   align-items: center;
 }
 .card_head.alt {
-  border-radius: 18vw 0 0 5vw;
+  border-radius: 18vw 0 0 0vw;
+}
+.card_head.alt1 {
+  height: var(--cCardH);
+  border-radius: 0 0vw 18vw 18vw;
 }
 .card_head_image {
   height: 100%;
@@ -709,10 +713,19 @@
 .card_head_container .icon svg {
   filter: drop-shadow(0 0 2rem var(--transparent-accent));
 }
+.card_head_container .icon.alt1 svg {
+  height: 12.5vw;
+}
+.card_head_container .icon.alt1 {
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+}
 .card_head_container .icon.alt {
   margin-top: 1vw;
   margin-left: 2vw;
 }
+
 
 .card_head_container .card_head_text {
   color: var(--accent-color);
@@ -725,6 +738,9 @@
 }
 .card_head_container .card_head_text.alt {
   margin-left: 2vw;
+}
+.card_head_container .card_head_text.alt1 {
+  margin-left: 0;
 }
 
 .card_body {
@@ -754,4 +770,61 @@
 
 .content_card .avatar.alt {
   margin-left: calc(calc(var(--cCardW) / 2) - 5vw);
+}
+
+.card_body.alt1 {
+  align-items: center;
+  padding: 4vw 0;
+}
+.card_body.alt1 .container {
+  /* background-color: red; */
+  margin-left: -1vw;
+}
+.card_body.alt1 .container .gallery {
+  /* background-color: rgba(46, 51, 46, 0.464); */
+  height: fit-content;
+  width: calc(calc(var(--cCardW) / 2) + 1vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.gallery .photos_container {
+  /* background-color: black; */
+  height: 15vw;
+  width: calc(calc(var(--cCardW) / 2) + 1vw);
+  margin-bottom: 0.8vw;
+  display: flex;
+  justify-content: center;
+}
+.gallery .pager {
+  /* background-color: green; */
+  height: 1vw;
+  width: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5vw;
+}
+.pager .ppage {
+  background-color: rgba(255, 255, 255, 0.431);
+  height: 0.5vw;
+  width: 0.5vw;
+  margin-left: 0.3vw;
+  margin-right: 0.3vw;
+  border-radius: 1vw;
+}
+
+.photo {
+  height: 100%;
+  width: 80%;
+  background-color: gray;
+  border-radius: 1vw;
+}
+.card_body.alt1 .text_container {
+  /* background-color: red; */
+  height: fit-content;
+  width: calc(var(--cCardW) / 2);
+  margin-left: 1vw;
+  padding: 0 4.5vw;
 }

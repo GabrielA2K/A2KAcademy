@@ -5,6 +5,11 @@ import a2klogo from './assets/images/A2KACADEMY.png'
 import print_3d_def from './assets/images/3dprint2.jpg'
 import whatisavatar from './assets/images/whatisavatar.png'
 import aboutavatar from './assets/images/aboutavatar.png'
+import whatisavatarblue from './assets/images/whatisavatarblue.png'
+import aboutavatarblue from './assets/images/aboutavatarblue.png'
+import whatisavatarpurple from './assets/images/whatisavatarpurple.png'
+import aboutavatarpurple from './assets/images/aboutavatarpurple.png'
+
 import kids3dprint from './assets/images/3dprintkids.jpg'
 import sample3dprint from './assets/images/3dprintsample2.jpeg'
 import physicalcomputing from './assets/images/hardwarecomputing2.jpg'
@@ -270,17 +275,17 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
               </div>
               <div className="card_body">
                 <div className="container">
-                  <p className="font-thin justify-text">{(tabPos==0?print3d_what:(tabPos==1?physcomp_what:code_what))}</p>
+                  <p className="font-light justify-text">{(tabPos==0?print3d_what:(tabPos==1?physcomp_what:code_what))}</p>
                 </div>
               </div>
-              <div className="avatar" style={{backgroundImage: 'url('+whatisavatar+')'}}></div>
+              <div className="avatar" style={{backgroundImage: 'url('+(tabPos==0?whatisavatar:(tabPos==1?whatisavatarblue:whatisavatarpurple))+')'}}></div>
             </div>
 
 
             <div className="content_card">
               <div className="card_body">
                 <div className="container">
-                  <p className="font-thin justify-text">{(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))}</p>
+                  <p className="font-light justify-text">{(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))}</p>
                 </div>
               </div>
               <div className="card_head alt">
@@ -292,35 +297,44 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
                   <p className="card_head_text font-heavy alt">{"Benefits to\nKids"}</p>
                 </div>
               </div>
-              <div className="avatar alt" style={{backgroundImage: 'url('+aboutavatar+')'}}></div>
+              <div className="avatar alt" style={{backgroundImage: 'url('+(tabPos==0?aboutavatar:(tabPos==1?aboutavatarblue:aboutavatarpurple))+')'}}></div>
             </div>
 
 
 
-
-
-
-
-
-          <div id='what_is' className="what_is_container">
-            <div className="what_is_header">
-              <div className="about_image" style={{backgroundImage: 'url('+(tabPos==0?sample3dprint:(tabPos==1?samplephysicalcomputing:samplecoding))+')'}}>
-
-              </div>
-              <div className="about_avatar" style={{backgroundImage: 'url('+aboutavatar+')'}}></div>
-              {/* <img src={print_3d_def} alt="" /> */}
-              
-                <div className="heading_container_about blur">
-                  <div className="icon">
-                    <ImportIcon name={'Bulb'} />
+            <div className="content_card">
+              <div className="card_head alt1">
+                <div className="card_head_image" style={{backgroundImage: 'url('+(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))+')'}}></div>
+                <div className="card_head_container">
+                  <div className="icon alt1">
+                    <ImportIcon name={"Bulb"} />
                   </div>
-                  <h2 className="heading2 font-heavy">Sample Projects</h2>
+                  <p className="card_head_text alt1 font-heavy">{"Sample\nProjects"}</p>
                 </div>
+              </div>
+              <div className="card_body alt1">
+                <div className="container">
+                  <div className="gallery">
+                    <div className="photos_container">
+                      <div className="photo">
+
+                      </div>
+                    </div>
+                    <div className="pager">
+                      <div className="ppage 1"></div>
+                      <div className="ppage 2"></div>
+                      <div className="ppage 3"></div>
+                      <div className="ppage 4"></div>
+                    </div>
+                  </div>
+                  <div className="text_container">
+                    <p className="font-light center-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio recusandae illum beatae dolores ad, earum hic accusamus? Necessitatibus possimus odit, repellat a totam debitis, laudantium nisi dolore minima facilis iste architecto.</p>
+                  </div>
+                  
+                </div>
+              </div>
             </div>
-            <div className="about_article">
-                <p className="font-thin justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit similique porro amet nihil rerum ex cum eligendi, ratione, harum esse beatae unde! Quibusdam, doloribus expedita. Ducimus veniam, repellat beatae ratione dignissimos delectus minus similique eligendi nulla inventore eveniet veritatis odit nesciunt, iste tempora qui tempore! Tempore cumque impedit ad reiciendis dolorem voluptates dignissimos tenetur eligendi, velit voluptas est molestiae, id possimus dicta ab omnis facilis sed natus ex aliquam quidem illum in non? Ipsa cupiditate eaque culpa atque et repudiandae! Dignissimos iste ea suscipit exercitationem quod corporis ullam numquam magnam velit, animi odit reiciendis hic adipisci ab omnis delectus!</p>
-            </div>
-          </div>
+
 
 
           <div className="read_more_btn proceed" onClick={() => {autoNavTab();}}>
