@@ -232,7 +232,7 @@
   .card_body {
     /* background-color: red; */
     width: var(--cCardW);
-    padding: 8vw 10vw 8vw 10vw;
+    padding: 6vw 10vw 8vw 10vw;
     display: flex;
     align-items: center;
   }
