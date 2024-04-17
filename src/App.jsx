@@ -283,11 +283,6 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
 
 
             <div className="content_card">
-              <div className="card_body">
-                <div className="container">
-                  <p className="font-light justify-text">{(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))}</p>
-                </div>
-              </div>
               <div className="card_head alt">
                 <div className="card_head_image" style={{backgroundImage: 'url('+(tabPos==0?kids3dprint:(tabPos==1?kidsphysicalcomputing:kidscoding))+')'}}></div>
                 <div className="card_head_container">
@@ -295,6 +290,11 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
                     <ImportIcon name={'Star'} />
                   </div>
                   <p className="card_head_text font-heavy alt">{"Benefits to\nKids"}</p>
+                </div>
+              </div>
+              <div className="card_body">
+                <div className="container">
+                  <p className="font-light justify-text">{(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))}</p>
                 </div>
               </div>
               <div className="avatar alt" style={{backgroundImage: 'url('+(tabPos==0?aboutavatar:(tabPos==1?aboutavatarblue:aboutavatarpurple))+')'}}></div>
