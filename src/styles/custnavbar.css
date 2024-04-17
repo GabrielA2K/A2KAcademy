@@ -35,6 +35,18 @@
   .bg_circle.top-left, .bg_circle.top-right {
     animation: none;
   }
+  .bg_circle.top-left {
+    height: 25rem;
+    width: 45rem;
+    margin: 0rem 0 0 -25rem;
+  }
+  .bg_circle.top-right {
+    height: 25rem;
+    width: 35rem;
+    top: auto;
+    bottom: 0;
+    margin: 0 -20rem -15rem 0;
+  }
   /* .blur_overlay.blur {
     backdrop-filter: blur(0);
     background-image: linear-gradient(170deg, #632805, #632805, #1A1A1A, #1A1A1A, #131313);

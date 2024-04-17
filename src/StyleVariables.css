@@ -6,6 +6,7 @@
     --text-color: #a3a3a3;
     --active-text-color: #313131;
     --transparent-accent: #ea710075;
+    --transparent-dark-accent: #61240175;
 }
 
 :root:has(.blue) {
@@ -16,16 +17,18 @@
     --text-color: #a3a3a3;
     --active-text-color: #313131;
     --transparent-accent: #369df175;
+    --transparent-dark-accent: #012b6175;
 }
 
 :root:has(.purple) {
     --background-color: #1A1A1A;
     --accent-color: #7E5BE2;
-    --secondary-accent-color: #3b2281;
+    --secondary-accent-color: #2a195b;
 
     --text-color: #a3a3a3;
     --active-text-color: #313131;
     --transparent-accent: #7E5BE275;
+    --transparent-dark-accent: #2a195b75;
 }
 
 

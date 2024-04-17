@@ -18,22 +18,23 @@
     position: fixed;
     left: 0;
     top: 0;
-    height: 25rem;
-    width: 45rem;
+    height: 30vw;
+    width: 50vw;
     animation: rotate_full 30s linear infinite;
     border-radius: 50%;
-    margin: -10rem 0 0 -15rem;
+    margin: -5vw 0 0 -15vw;
   }
   
   .bg_circle.top-right {
     position: fixed;
     right: 0;
-    top: 0;
-    height: 25rem;
-    width: 35rem;
+    bottom: 0;
+    height: 30vw;
+    width: 40vw;
     animation: rotate_full 40s linear infinite;
     border-radius: 20%;
-    margin: -10rem -3rem 0 0;
+    margin: 0 -10rem -5vw 0;
+    background-color: var(--transparent-dark-accent);
   }
   .navbar_cover {
     background-color: #161616;
