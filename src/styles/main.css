@@ -37,7 +37,7 @@
     background-color: var(--transparent-dark-accent);
   }
   .navbar_cover {
-    background-color: #161616;
+    background-color: var(--navbar-color);
     position: fixed;
     left: 0;
     right: 0;
@@ -73,15 +73,17 @@
     left: 0;
     top: 5rem;
     border-radius: 2rem 2rem 0 0;
-    height: 100vh;
+    height: calc(100vh - 5rem);
     width: 100vw;
     overflow-y: auto;
     background-color: rgba(255, 255, 255, 0.01);
+    /* box-shadow: 0 0 3rem 0rem rgba(114, 57, 11, 0.082); */
   }
   .blur_overlay.collapsed{
     border-radius: 0;
     padding-top: 5rem;
     top: 0rem;
+    height: 100vh;
   }
   
   .navbar {

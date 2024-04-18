@@ -1,5 +1,6 @@
 :root {
     --background-color: #1A1A1A;
+    --navbar-color: #161616;
     --accent-color: #EA7000;
     --secondary-accent-color: #612401;
 
@@ -29,6 +30,18 @@
     --active-text-color: #313131;
     --transparent-accent: #7E5BE275;
     --transparent-dark-accent: #2a195b75;
+}
+
+:root:has(.light) {
+    --background-color: #ffffff;
+    --navbar-color: #ffe3cd;
+    --accent-color: #ffc996;
+    --secondary-accent-color: #fff4ef;
+
+    --text-color: #755649;
+    --active-text-color: #743d19;
+    --transparent-accent: #ea710075;
+    --transparent-dark-accent: #ffd1b6c2;
 }
 
 

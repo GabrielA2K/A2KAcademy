@@ -63,7 +63,6 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
       clickLeftCard();
       //  alert(touchstartY-touchendY);
     }
-      
   }
   
 
@@ -96,27 +95,15 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
   }/*, []*/);
 
 
-  const clickC1 = () => {
-    setActiveCard(1);
-    setActiveCardPage(1);
+  function setCarouselCard(index) {
+    setActiveCard(index);
+    setActiveCardPage(index);
     setCardTimerInterval(0);
     resetPageIndicator();
-    // audiohuh.play();
   }
-  const clickC2 = () => {
-    setActiveCard(0);
-    setActiveCardPage(0);
-    setCardTimerInterval(0);
-    resetPageIndicator();
-    // audiohuh.play();
-  }
-  const clickC3 = () => {
-    setActiveCard(2);
-    setActiveCardPage(2);
-    setCardTimerInterval(0);
-    resetPageIndicator();
-    // audiohuh.play();
-  }
+  const clickC1 = () => {setCarouselCard(1);}
+  const clickC2 = () => {setCarouselCard(0);}
+  const clickC3 = () => {setCarouselCard(2);}
 
   function clickRightCard() {
     setActiveCard(activeCard => (activeCard==2)?0:activeCard+1);
@@ -129,17 +116,10 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
     setCardTimerInterval(0);
   }
 
-  const clickTab1 = () => {setTabPos(0);resetPageIndicator();scroll_to('top');}
-  const clickTab2 = () => {setTabPos(1);resetPageIndicator();scroll_to('top');}
-  const clickTab3 = () => {setTabPos(2);resetPageIndicator();scroll_to('top');}
 
 
   function toggleNavbarState() {
-    if (navbarState == 'expanded') {
-      setNavbarState('collapsed')
-    } else {
-      setNavbarState('expanded')
-    }
+    setNavbarState(navbarState=='expanded'?'collapsed':'expanded')
   }
 
   const [briefAnimate, setBriefAnimate] = useState('no-anim');
@@ -165,12 +145,14 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
     latency = setTimeout(() => {
       setActiveCardPage(0)
     }, 100);
-
     return () => clearTimeout(latency);
   }, []);
  
   function scroll_to(stringId) {
     document.getElementById(stringId).scrollIntoView({behavior:'smooth'});
+  }
+  function skip_to(stringId) {
+    document.getElementById(stringId).scrollIntoView();
   }
 
   function autoNavTab() {
@@ -185,6 +167,30 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
     }
   }
 
+
+  function gotoTab(index) {
+    if (tabPos != index) {
+      setTabPos(index);
+      resetPageIndicator();
+      scroll_to('top'); 
+    } else {
+      scroll_to('top'); 
+    }
+  }
+
+  const clickTab1 = () => {gotoTab(0);}
+  const clickTab2 = () => {gotoTab(1);}
+  const clickTab3 = () => {gotoTab(2);}
+
+  // const [showNavAnim, setShowNavAnim] = useState('hide');
+  // const addShowNavAnim = () => {
+  //   setShowNavAnim('show')
+  //   setCardTimerInterval(0);
+  //   resetPageIndicator();
+  //   setTimeout(()=>{
+  //     setShowNavAnim('hide')
+  //   },800)
+  // }
  
 
   return (
@@ -341,9 +347,14 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
             <p>{"Proceed to "+(tabPos==0?"Physical Computing":(tabPos==1?"World of Coding":"3D Printing"))}</p>
             <div className="icon"><ImportIcon name={(tabPos==0?"Plug":(tabPos==1?"Coding1":"3D"))} /></div>
           </div>
+          
           <div className="image1"></div>
         </div>
-        <div className="footer"></div> 
+        <div className="footer">
+        
+        </div> 
+        
+        
       </div>
       
     </>
