@@ -508,6 +508,7 @@
 }
 .card_head {
   /* height: var(--cCardH);  */
+  min-height: var(--cCardH);
   width: calc(var(--cCardW) / 2);
   overflow: hidden;
   border-radius: 0 0vw 18vw 0;

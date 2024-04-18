@@ -21,7 +21,7 @@ import samplecoding from './assets/images/codingsample.jpg'
 import sound from './assets/boom.mp3'
 import huhsound from './assets/huh.mp3'
 
-
+import ContentCard from './components/ContentCard'
 
 
 function App() {
@@ -269,42 +269,22 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
         <div className="divider" style={{height: "4rem"}}></div>
         <div id="contents" className="content_bottom">
 
-            <div className="content_card">
-              <div className="card_head">
-                <div className="card_head_image" style={{backgroundImage: 'url('+(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))+')'}}></div>
-                <div className="card_head_container">
-                  <div className="icon">
-                    <ImportIcon name={(tabPos==0?"3D":(tabPos==1?"Plug":"Coding1"))} />
-                  </div>
-                  <p className="card_head_text font-heavy">{(tabPos==0?"What is \n3D Printing":(tabPos==1?"What is Physical\nComputing":"What is World\nof Coding"))+"?"}</p>
-                </div>
-              </div>
-              <div className="card_body">
-                <div className="container">
-                  <p className="font-light justify-text">{(tabPos==0?print3d_what:(tabPos==1?physcomp_what:code_what))}</p>
-                </div>
-              </div>
-              <div className="avatar" style={{backgroundImage: 'url('+(tabPos==0?whatisavatar:(tabPos==1?whatisavatarblue:whatisavatarpurple))+')'}}></div>
-            </div>
-
-
-            <div className="content_card">
-              <div className="card_head alt">
-                <div className="card_head_image" style={{backgroundImage: 'url('+(tabPos==0?kids3dprint:(tabPos==1?kidsphysicalcomputing:kidscoding))+')'}}></div>
-                <div className="card_head_container">
-                  <div className="icon alt">
-                    <ImportIcon name={'Star'} />
-                  </div>
-                  <p className="card_head_text font-heavy alt">{"Benefits to\nKids"}</p>
-                </div>
-              </div>
-              <div className="card_body">
-                <div className="container">
-                  <p className="font-light justify-text">{(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))}</p>
-                </div>
-              </div>
-              <div className="avatar alt" style={{backgroundImage: 'url('+(tabPos==0?aboutavatar:(tabPos==1?aboutavatarblue:aboutavatarpurple))+')'}}></div>
-            </div>
+            <ContentCard 
+              variant={'left'} 
+              background={(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))} 
+              iconName={(tabPos==0?"3D":(tabPos==1?"Plug":"Coding1"))} 
+              title={(tabPos==0?"What is \n3D Printing":(tabPos==1?"What is Physical\nComputing":"What is World\nof Coding"))+"?"} 
+              textContent={(tabPos==0?print3d_what:(tabPos==1?physcomp_what:code_what))} 
+              avatarName={(tabPos==0?whatisavatar:(tabPos==1?whatisavatarblue:whatisavatarpurple))} 
+            />
+            <ContentCard 
+              variant={'right'} 
+              background={(tabPos==0?kids3dprint:(tabPos==1?kidsphysicalcomputing:kidscoding))} 
+              iconName={'Star'} 
+              title={'Benefits to\nKids'} 
+              textContent={(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))} 
+              avatarName={(tabPos==0?aboutavatar:(tabPos==1?aboutavatarblue:aboutavatarpurple))} 
+            />
 
 
 
