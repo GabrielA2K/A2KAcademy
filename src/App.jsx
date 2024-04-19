@@ -92,7 +92,7 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
     }, (watingTime/2)*1000);
 
     return () => clearInterval(interval);
-  }/*, []*/);
+  }, [cardTimerInterval]);
 
 
   function setCarouselCard(index) {
@@ -125,8 +125,6 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
   const [briefAnimate, setBriefAnimate] = useState('no-anim');
   const addBriefAnimate = () => {
     setBriefAnimate('with-anim')
-    setCardTimerInterval(0);
-    resetPageIndicator();
     setTimeout(()=>{
       setBriefAnimate('no-anim')
     },500)
@@ -171,8 +169,8 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
   function gotoTab(index) {
     if (tabPos != index) {
       setTabPos(index);
-      resetPageIndicator();
       scroll_to('top'); 
+      // setCarouselCard(0);
     } else {
       scroll_to('top'); 
     }
@@ -285,42 +283,13 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
               textContent={(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))} 
               avatarName={(tabPos==0?aboutavatar:(tabPos==1?aboutavatarblue:aboutavatarpurple))} 
             />
-
-
-
-            <div className="content_card">
-              <div className="card_head alt1">
-                <div className="card_head_image" style={{backgroundImage: 'url('+(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))+')'}}></div>
-                <div className="card_head_container">
-                  <div className="icon alt1">
-                    <ImportIcon name={"Bulb"} />
-                  </div>
-                  <p className="card_head_text alt1 font-heavy">{"Sample\nProjects"}</p>
-                </div>
-              </div>
-              <div className="card_body alt1">
-                <div className="container">
-                  <div className="gallery">
-                    <div className="photos_container">
-                      <div className="photo">
-
-                      </div>
-                    </div>
-                    <div className="pager">
-                      <div className="ppage 1"></div>
-                      <div className="ppage 2"></div>
-                      <div className="ppage 3"></div>
-                      <div className="ppage 4"></div>
-                    </div>
-                  </div>
-                  <div className="text_container">
-                    <p className="font-light center-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio recusandae illum beatae dolores ad, earum hic accusamus? Necessitatibus possimus odit, repellat a totam debitis, laudantium nisi dolore minima facilis iste architecto.</p>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-
+            <ContentCard 
+              variant={'gallery'} 
+              background={(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))} 
+              iconName={'Bulb'} 
+              title={'Sample\nProjects'} 
+              textContent={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio recusandae illum beatae dolores ad, earum hic accusamus? Necessitatibus possimus odit, repellat a totam debitis, laudantium nisi dolore minima facilis iste architecto.'} 
+            />
 
 
           <div className="read_more_btn proceed" onClick={() => {autoNavTab();}}>
