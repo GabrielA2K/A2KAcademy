@@ -1,16 +1,18 @@
 @media only screen and (max-width: 700px) and (orientation: portrait) {
     .content {
       flex-direction: column;
-      height: 150vw;
+      height: fit-content;
       justify-content: flex-start;
       width: 90%;
       margin: 2rem auto 0 auto;
+      /* background-color: red; */
     }
     .cards_container {
       min-height: 85vw;
-      min-width:88vw;
+      min-width: 88vw;
       perspective: 24vw;
       margin-left: 0;
+      /* background-color: red; */
     }
   
     .card {
@@ -18,7 +20,7 @@
       height: 80vw;
       width: 50vw;
       border-radius: 8vw;
-      border: #7E7E7E solid 0.6vw;
+      border: #7E7E7E solid 2px;
     }
     
     .card.left {
@@ -63,36 +65,23 @@
       margin-top: 8vw;
       margin-left: auto;
       margin-right: auto ;
-      width: 85vw;
+      width: 80vw;
       height: fit-content;
       align-items: center;
+      justify-content: flex-start;
       text-align: center;
+      /* background-color: red; */
+      margin-top: 4rem;
     }
   
     h1.heading {
-      font-size: 10vw;
-      line-height: 12vw;
-      margin-top: 5vw;
+      font-size: 3.5rem;
+      line-height: 4rem;
     }
     p.description {
-      font-size: 4vw;
+      font-size: 1.2rem;
     }
 
-    .read_more_btn {
-      font-size: 3.5vw;
-      border-radius: 3.5vw;
-      padding: 1vw 5vw;
-      margin-top: 1vw;
-    }
-    .read_more_btn:hover {
-      border-radius: 1vh;
-    }
-  
-    .read_more_btn .icon {
-      min-height: 2vw;
-      min-width: 2vw;
-      margin-left: 2vw;
-    }
 
   
 
@@ -103,13 +92,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 15rem;
+      padding-bottom: 10rem;
       padding-top: 2rem;
-    }
-    .read_more_btn.proceed .icon {
-      min-height: 4vw;
-      min-width: 4vw;
-      margin-left: 1vw;
     }
     
     .divider {
