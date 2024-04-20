@@ -461,7 +461,7 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 15rem;
-    padding-top: 2rem;
+    padding-top: 8rem;
   }
   .read_more_btn.proceed .icon {
     fill: #808080;
@@ -486,24 +486,26 @@
     }
   } */
 
-
+* {
+  --content-scale: 0.9;
+}
 .main_content_layer {
   position: relative;
   width: 100vw;
   height: fit-content;
-  min-height: 10rem;
+  min-height: calc(10rem * var(--content-scale));
   /* background-color: rgba(255, 0, 0, 0.05); */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: calc(5rem * var(--content-scale));
   padding: 0 15vw 0 15vw;
 }
 .main_content_layer .background_layer {
   position: absolute;
   z-index: -1;
-  width: 72rem;
-  height: 38rem;
+  width: calc(72rem * var(--content-scale));
+  height: calc(38rem * var(--content-scale));
   overflow: hidden;
   mask-image: url(../assets/images/softedgemask.png);
   mask-size: 100% 100%;
@@ -517,9 +519,9 @@
   z-index: -1;
   width: 100vw;
   /* height: 100%; */
-  top: -20rem;
+  top: calc(-20rem * var(--content-scale));
   left: 0;
-  bottom: -20rem;
+  bottom: calc(-20rem * var(--content-scale));
   overflow: hidden;
   mask-image: url(../assets/images/softedgemask.png);
   mask-size: 100% 100%;
@@ -551,7 +553,7 @@
   background-image: url(../assets/images/dot.png);
   background-repeat: repeat;
   position: absolute;
-  background-size: 1.5rem;
+  background-size: calc(1.5rem * var(--content-scale));
   opacity: 0.6;
 }
 .grid_overlay {
@@ -560,35 +562,35 @@
   background-image: url(../assets/images/grid.png);
   background-repeat: repeat;
   position: absolute;
-  background-size: 2rem;
+  background-size: calc(2rem * var(--content-scale));
   opacity: 0.3;
 }
 
 
 .main_content_layer .content_layer {
   /* background-color: rgba(0, 128, 0, 0.288); */
-  max-width: 72rem;
+  max-width: calc(72rem * var(--content-scale));
   height: fit-content;
-  min-height: 10rem;
+  min-height: calc(10rem * var(--content-scale));
   display: flex;
   flex-direction: column;
 }
 .content_layer .icon_holder {
-  height: 12rem;
-  width: 12rem;
+  height: calc(12rem * var(--content-scale));
+  width: calc(12rem * var(--content-scale));
   background-color: #1E1E1E;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3rem;
-  margin-top: 6rem;
-  margin-bottom: 2.4rem;
+  border-radius: calc(3rem * var(--content-scale));
+  margin-top: calc(6rem * var(--content-scale));
+  margin-bottom: calc(2.4rem * var(--content-scale));
   box-shadow: 0 0 4vw -0.8vw var(--accent-color);
 }
 .icon_holder .icon {
   fill: var(--accent-color);
-  height: 7.8rem;
-  width: 7.8rem;
+  height: calc(7.8rem * var(--content-scale));
+  width: calc(7.8rem * var(--content-scale));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -597,28 +599,28 @@
   position: absolute;
   /* background-color: rgba(255, 0, 0, 0.226); */
   fill: var(--accent-color);
-  width: 21.6rem;
-  margin-left: -4.8rem;
-  margin-top: -4.5rem;
+  width: calc(21.6rem * var(--content-scale));
+  margin-left: calc(-4.8rem * var(--content-scale));
+  margin-top: calc(-4.5rem * var(--content-scale));
   opacity: 0.4;
 }
 .content_layer p.title {
-  margin-bottom: 1.5rem;
-  font-size: 4.8rem;
-  line-height: 5.2rem;
+  margin-bottom: calc(1.5rem * var(--content-scale));
+  font-size: calc(4.8rem * var(--content-scale));
+  line-height: calc(5.2rem * var(--content-scale));
   white-space: pre-wrap;
 }
 .content_layer p.body {
-  font-size: 1.8rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  font-size: calc(1.8rem * var(--content-scale));
+  margin-left: calc(0.5rem * var(--content-scale));
+  margin-right: calc(0.5rem * var(--content-scale));
   white-space: pre-wrap;
 }
 
 
 *{
-  --bph: 30rem;
-  --bpw: 57rem;
+  --bph: calc(30rem * var(--content-scale));
+  --bpw: calc(57rem * var(--content-scale));
 }
 .content_layer .big_particles {
   position: absolute;
@@ -627,7 +629,7 @@
   /* align-self: flex-end; */
   /* background-color: rgba(194, 10, 10, 0.685); */
   display: flex;
-  margin-left: 20rem;
+  margin-left: calc(20rem * var(--content-scale));
   align-items: flex-end;
   fill: var(--accent-color);
   opacity: 0.15;
