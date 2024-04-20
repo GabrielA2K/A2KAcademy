@@ -273,7 +273,8 @@
   .content {
     display: flex;
     height: fit-content;
-    margin-top: 2rem;
+    min-height: 85vh;
+    margin-top: 0rem;
     justify-content: center;
     align-items: center;
     width: 100%;
