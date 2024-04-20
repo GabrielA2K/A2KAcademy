@@ -68,6 +68,9 @@
 .font-thin {
     font-family: ProductSansThin;
 }
+.font-icon {
+    font-family: icons;
+}
 .fontColor-accent {
     color: var(--accent-color)
 }

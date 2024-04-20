@@ -501,7 +501,7 @@
   position: absolute;
   z-index: -1;
   width: 100vw;
-  height: 50vw;
+  height: calc(100% + 6vw);
   overflow: hidden;
   mask-image: url(../assets/images/softedgemask.png);
   mask-size: 100% 100%;
@@ -514,7 +514,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 /* .background_layer img.overlay {
@@ -532,6 +532,16 @@
   background-repeat: repeat;
   position: absolute;
   background-size: 1.5rem;
+  opacity: 0.6;
+}
+.background_layer .grid_overlay {
+  height: 100%;
+  width: 100%;
+  background-image: url(../assets/images/grid.png);
+  background-repeat: repeat;
+  position: absolute;
+  background-size: 2rem;
+  opacity: 0.3;
 }
 
 
@@ -572,39 +582,150 @@
   margin-right: 0.3vw;
 }
 
+
+*{
+  --bph: 25vw;
+  --bpw: 48vw;
+}
 .content_layer .big_particles {
   position: absolute;
-  height: 20vw;
-  width: 40vw;
+  height: var(--bph);
+  width: var(--bpw);
   align-self: flex-end;
-  background-color: rgba(0, 0, 0, 0.295);
+  /* background-color: rgba(0, 0, 0, 0.295); */
   display: flex;
+  margin-right: -5rem;
+  align-items: flex-end;
+  fill: var(--accent-color);
+  opacity: 0.15;
 }
 .big_particles .small{
-  min-width: 5%;
-  max-width: 5%;
+  font-size: 120%;
 }
 .big_particles .medium{
-  min-width: 10%;
-  max-width: 10%;
+  font-size: 250%;
 }
 .big_particles .med-large{
-  min-width: 12%;
-  max-width: 12%;
+  font-size: 280%;
 }
 .big_particles .large{
-  min-width: 16%;
-  max-width: 16%;
+  font-size: 450%;
 }
 .big_particles .large-xl{
-  min-width: 20%;
-  max-width: 20%;
+  font-size: 550%;
 }
 .big_particles .xl{
-  min-width: 25%;
-  max-width: 25%;
+  font-size: 800%;
 }
 .big_particles .particle {
+  transition: 0.5s;
   position: absolute;
-  fill: var(--accent-color);
+  color: var(--accent-color);
+  opacity: 0.15;
+  /* background-color: red; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.big_particles .s1 {
+  margin: calc(var(--bph) * 0.55) auto auto calc(var(--bpw) * 0.06);
+  transform: rotate(13.5deg);
+}
+.big_particles .s2 {
+  margin: calc(var(--bph) * 0.36) auto auto calc(var(--bpw) * 0.20);
+  transform: rotate(-31.4deg);
+}
+.big_particles .s3 {
+  margin: calc(var(--bph) * 0.07) auto auto calc(var(--bpw) * 0.27);
+  transform: rotate(24deg);
+}
+.big_particles .s4 {
+  margin: calc(var(--bph) * 0.55) auto auto calc(var(--bpw) * 0.34);
+transform: rotate(-31.4deg);
+}
+.big_particles .s5 {
+  margin: calc(var(--bph) * 0.92) auto auto calc(var(--bpw) * 0.33);
+transform: rotate(-31.8deg);
+}
+.big_particles .s6 {
+  margin: calc(var(--bph) * 0.15) auto auto calc(var(--bpw) * 0.49);
+transform: rotate(23.7deg);
+}
+.big_particles .s7 {
+  margin: calc(var(--bph) * 0.64) auto auto calc(var(--bpw) * 0.58);
+transform: rotate(13.6deg);
+}
+.big_particles .s8 {
+  margin: calc(var(--bph) * 0.32) auto auto calc(var(--bpw) * 0.61);
+transform: rotate(-16.4deg);
+}
+.big_particles .s9 {
+  margin: calc(var(--bph) * 0.81) auto auto calc(var(--bpw) * 0.69);
+transform: rotate(-15.6deg);
+}
+.big_particles .s10 {
+  margin: calc(var(--bph) * 0.57) auto auto calc(var(--bpw) * 0.77);
+transform: rotate(-13.9deg);
+}
+
+.big_particles .m1 {
+  margin: calc(var(--bph) * 0.25) auto auto calc(var(--bpw) * 0.34);
+transform: rotate(-50deg);
+}
+.big_particles .m2 {
+  margin: calc(var(--bph) * 0.71) auto auto calc(var(--bpw) * 0.36);
+transform: rotate(-73.5deg);
+}
+.big_particles .m3 {
+  margin: calc(var(--bph) * 0.33) auto auto calc(var(--bpw) * 0.52);
+transform: rotate(-9.2deg);
+}
+.big_particles .m4 {
+  margin: calc(var(--bph) * 0.70) auto auto calc(var(--bpw) * 0.76);
+transform: rotate(-25.8deg);
+}
+.big_particles .m5 {
+  margin: calc(var(--bph) * 0.40) auto auto calc(var(--bpw) * 0.78);
+transform: rotate(-39deg);
+}
+
+.big_particles .ml1 {
+  margin: calc(var(--bph) * 0.48) auto auto calc(var(--bpw) * 0.22);
+transform: rotate(-10.2deg);
+}
+
+.big_particles .l1 {
+  margin: calc(var(--bph) * 0.18) auto auto calc(var(--bpw) * 0.04);
+transform: rotate(30deg);
+}
+.big_particles .l2 {
+  margin: calc(var(--bph) * 0.70) auto auto calc(var(--bpw) * 0.13);
+transform: rotate(-12.5deg);
+}
+.big_particles .l3 {
+  margin: calc(var(--bph) * 0.77) auto auto calc(var(--bpw) * 0.51);
+transform: rotate(-25deg);
+}
+.big_particles .l4 {
+  margin: calc(var(--bph) * 0.51) auto auto calc(var(--bpw) * 0.62);
+transform: rotate(20.7deg);
+}
+.big_particles .l5 {
+  margin: calc(var(--bph) * 0.52) auto auto calc(var(--bpw) * 0.85);
+transform: rotate(-21.8deg);
+}
+.big_particles .lxl1 {
+  margin: calc(var(--bph) * 0.42) auto auto calc(var(--bpw) * 0.42);
+transform: rotate(-35.9deg);
+}
+
+.big_particles .xl1 {
+  margin: calc(var(--bph) * 0.04) auto auto calc(var(--bpw) * 0.64);
+transform: rotate(-15deg);
+}
+
+.particle:hover {
+  opacity: 0.5;
 }

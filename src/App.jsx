@@ -170,7 +170,7 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
   function gotoTab(index) {
     if (tabPos != index) {
       setTabPos(index);
-      scroll_to('top'); 
+      skip_to('top'); 
       // setCarouselCard(0);
     } else {
       scroll_to('top'); 
@@ -295,23 +295,43 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
             <div className="main_content_layer">
               <div className="background_layer">
                 {/* <img src={dotoverlay} alt="" className="overlay" /> */}
-                <img src={print_3d_def} alt="" className='bg_image' />
-                <div className="dot_overlay"></div>
+                <img className='bg_image' src={(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))} />
+                <div className="grid_overlay"></div>
               </div>
               <div className="content_layer">
                 <div className="big_particles">
-                  <div className="p1 medium particle"><ImportIcon name={'Add'} /></div>
-                  <div className="p1 small particle"><ImportIcon name={'Add'} /></div>
-                  <div className="p1 large particle"><ImportIcon name={'Add'} /></div>
-                  <div className="p1 xl particle"><ImportIcon name={'Add'} /></div>
+                  {/* <div className="xl particle xl1 font-icon"></div>
+                  <div className="large-xl particle lxl1 font-icon"></div>
+                  <div className="large particle l1 font-icon"></div>
+                  <div className="large particle l2 font-icon"></div>
+                  <div className="large particle l3 font-icon"></div>
+                  <div className="large particle l4 font-icon"></div>
+                  <div className="large particle l5 font-icon"></div>
+                  <div className="med-large particle ml1 font-icon"></div>
+                  <div className="medium particle m1 font-icon"></div>
+                  <div className="medium particle m2 font-icon"></div>
+                  <div className="medium particle m3 font-icon"></div>
+                  <div className="medium particle m4 font-icon"></div>
+                  <div className="medium particle m5 font-icon"></div>
+                  <div className="small particle s1 font-icon"></div>
+                  <div className="small particle s2 font-icon"></div>
+                  <div className="small particle s3 font-icon"></div>
+                  <div className="small particle s4 font-icon"></div>
+                  <div className="small particle s5 font-icon"></div>
+                  <div className="small particle s6 font-icon"></div>
+                  <div className="small particle s7 font-icon"></div>
+                  <div className="small particle s8 font-icon"></div>
+                  <div className="small particle s9 font-icon"></div>
+                  <div className="small particle s10 font-icon"></div> */}
+                  <ImportIcon name={'Particles'} />
                 </div>
                 <div className="icon_holder">
                   <div className="icon">
                     <ImportIcon name={'3D'} />
                   </div>
                 </div>
-                <p className="title font-heavy fontColor-accent">{'What is\n3D Printing?'}</p>
-                <p className="body font-light fontColor-normal justify-text">{print3d_what}</p>
+                <p className="title font-heavy fontColor-accent">{(tabPos==0?"What is \n3D Printing":(tabPos==1?"What is\nPhysical Computing":"What is\nWorld of Coding"))+"?"}</p>
+                <p className="body font-light fontColor-normal justify-text">{(tabPos==0?print3d_what:(tabPos==1?physcomp_what:code_what))}</p>
               </div>
             </div>
 
