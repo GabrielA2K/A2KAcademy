@@ -497,6 +497,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 5rem;
+  padding: 0 15vw 0 15vw;
 }
 .main_content_layer .background_layer {
   position: absolute;
@@ -565,8 +566,8 @@
 
 
 .main_content_layer .content_layer {
-  /* background-color: rgba(0, 128, 0, 0.05); */
-  width: 72rem;
+  /* background-color: rgba(0, 128, 0, 0.288); */
+  max-width: 72rem;
   height: fit-content;
   min-height: 10rem;
   display: flex;
@@ -623,10 +624,10 @@
   position: absolute;
   height: var(--bph);
   width: var(--bpw);
-  align-self: flex-end;
-  /* background-color: rgba(0, 0, 0, 0.548); */
+  /* align-self: flex-end; */
+  /* background-color: rgba(194, 10, 10, 0.685); */
   display: flex;
-  margin-right: -5rem;
+  margin-left: 20rem;
   align-items: flex-end;
   fill: var(--accent-color);
   opacity: 0.15;
