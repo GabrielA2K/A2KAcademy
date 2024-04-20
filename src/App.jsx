@@ -9,6 +9,8 @@ import whatisavatarblue from './assets/images/whatisavatarblue.png'
 import aboutavatarblue from './assets/images/aboutavatarblue.png'
 import whatisavatarpurple from './assets/images/whatisavatarpurple.png'
 import aboutavatarpurple from './assets/images/aboutavatarpurple.png'
+import dotoverlay from './assets/images/dots_large.png'
+import dot from './assets/images/dot.png'
 
 import kids3dprint from './assets/images/3dprintkids.jpg'
 import sample3dprint from './assets/images/3dprintsample2.jpeg'
@@ -30,7 +32,7 @@ const print3d_short = "3D printing is a powerful technology that builds 3D objec
 const physcomp_short = "Physical Computing helps you build fun, interactive projects using sensors and code. It's a great way to learn and create cool gadgets, robots, and more. Get started and bring your imagination to life!"
 const code_short = "Coding lets you tell computers what to do! Learn how to create games, apps, and cool projects. It boosts your creativity and problem-solving skills, and it's the key to shaping the future. Start coding today!"
 
-const print3d_what = "3D printing is a process that uses a special machine to create three-dimensional objects from digital designs. The machine adds layer upon layer of material, such as plastic, resin, or metal, to build up the object. This technology allows for quick and cost-effective production of custom items, including prototypes, art pieces, and functional parts for various industries. For instance, in healthcare, 3D printing can produce custom prosthetics or medical models for surgeries. In engineering, it enables the creation of intricate designs that traditional manufacturing can't achieve. It's a powerful tool for anyone interested in innovation and design, as it helps bring ideas to life efficiently and creatively."
+const print3d_what = "3D printing is a process that uses a special machine to create three-dimensional objects from digital designs. The machine adds layer upon layer of material, such as plastic, resin, or metal, to build up the object. This technology allows for quick and cost-effective production of custom items, including prototypes, art pieces, and functional parts for various industries. It's a powerful tool for anyone interested in innovation and design, as it helps bring ideas to life efficiently and creatively."
 const physcomp_what = "Physical computing is the practice of building interactive systems that connect the digital and physical worlds using hardware and software. For example, you can use microcontrollers like Arduino to control sensors and actuators, enabling you to create projects such as robots, smart devices, or wearable tech. By combining coding and electronics, you can make everyday objects respond to touch, light, sound, and other inputs. This field encourages you to think critically and solve problems as you design, build, and troubleshoot your projects. Physical computing opens up opportunities for innovation in areas like home automation, gaming, and even environmental monitoring. It provides a great foundation for a career in engineering, computer science, or design. Plus, it's a fun way to bring your ideas to life and make things that matter to you."
 const code_what = "Coding, also known as programming, is the process of writing instructions for computers to follow. By learning how to code, you can create software, apps, websites, and games that perform specific tasks. Coding involves working with different programming languages like Python, Java, or JavaScript, each with its own syntax and uses. Coding teaches you problem-solving skills and logical thinking as you learn how to break down tasks into manageable pieces. It also boosts creativity by allowing you to design and develop projects from your imagination. Coding can lead to exciting careers in technology, game development, data science, and more. It's a valuable skill that lets you shape the digital world around you and turn your ideas into reality."
 
@@ -48,7 +50,6 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
   let touchendX = 0
   let touchstartY = 0
   let touchendY = 0
-  let firstTime = 1
 
   function checkDirection() {
     if (touchendX < touchstartX && 
@@ -267,7 +268,7 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
         <div className="divider" style={{height: "4rem"}}></div>
         <div id="contents" className="content_bottom">
 
-            <ContentCard 
+            {/* <ContentCard 
               variant={'left'} 
               background={(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))} 
               iconName={(tabPos==0?"3D":(tabPos==1?"Plug":"Coding1"))} 
@@ -289,7 +290,30 @@ const code_kids = "Coding offers kids valuable skills that can benefit them in m
               iconName={'Bulb'} 
               title={'Sample\nProjects'} 
               textContent={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio recusandae illum beatae dolores ad, earum hic accusamus? Necessitatibus possimus odit, repellat a totam debitis, laudantium nisi dolore minima facilis iste architecto.'} 
-            />
+            /> */}
+
+            <div className="main_content_layer">
+              <div className="background_layer">
+                {/* <img src={dotoverlay} alt="" className="overlay" /> */}
+                <img src={print_3d_def} alt="" className='bg_image' />
+                <div className="dot_overlay"></div>
+              </div>
+              <div className="content_layer">
+                <div className="big_particles">
+                  <div className="p1 medium particle"><ImportIcon name={'Add'} /></div>
+                  <div className="p1 small particle"><ImportIcon name={'Add'} /></div>
+                  <div className="p1 large particle"><ImportIcon name={'Add'} /></div>
+                  <div className="p1 xl particle"><ImportIcon name={'Add'} /></div>
+                </div>
+                <div className="icon_holder">
+                  <div className="icon">
+                    <ImportIcon name={'3D'} />
+                  </div>
+                </div>
+                <p className="title font-heavy fontColor-accent">{'What is\n3D Printing?'}</p>
+                <p className="body font-light fontColor-normal justify-text">{print3d_what}</p>
+              </div>
+            </div>
 
 
           <div className="read_more_btn proceed" onClick={() => {autoNavTab();}}>
