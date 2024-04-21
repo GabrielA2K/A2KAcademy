@@ -36,6 +36,19 @@
     margin: 0 -10rem -5vw 0;
     background-color: var(--transparent-dark-accent);
   }
+
+  .bg_circle.center {
+    position: fixed;
+    right: 50%;
+    bottom: 30%;
+    height: 30vw;
+    width: 30vw;
+    animation: rotate_full 30s linear infinite reverse;
+    border-radius: 10% 90% 30% 80%;
+    margin: 0 -10rem -5vw 0;
+    background-color: var(--secondary-accent-color);
+    opacity: 0.6;
+  }
   .navbar_cover {
     background-color: var(--navbar-color);
     position: fixed;
@@ -293,7 +306,7 @@
     /* background-color: red; */
   }
   .card {
-    transition: 1s;
+    transition: transform 1s, opacity 1s, background 0.1s;
     position: absolute;
     height: 25rem;
     width: 15rem;
@@ -416,20 +429,20 @@
   }
   
   h1.heading {
-    transition: 0.5s;
+    /* transition: 0.5s; */
     font-size: 4rem;
     color: var(--accent-color);
     line-height: 4.2rem;
   }
   p.description {
-    transition: 0.5s;
+    /* transition: 0.5s; */
     font-size: 1.5rem;
     color: var(--text-color);
     margin-bottom: 1.5rem;
     margin-top: 0.6rem;
   }
   .read_more_btn {
-    transition: 0.5s;
+    transition: opacity 0.5s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -445,7 +458,7 @@
     color: var(--active-text-color);
   }
   .read_more_btn:hover {
-    transition: 0.2s;
+    transition: opacity 0.2s;
     opacity: 0.5;
   }
 
@@ -566,8 +579,8 @@
   background-image: url(../assets/images/dot.png);
   background-repeat: repeat;
   position: absolute;
-  background-size: 1.5rem;
-  opacity: 0.6;
+  background-size: 1.6rem;
+  opacity: 0.8;
 }
 .grid_overlay {
   height: 100%;
@@ -576,7 +589,7 @@
   background-repeat: repeat;
   position: absolute;
   background-size: 2rem;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 
@@ -600,7 +613,8 @@
   margin-bottom: calc(2.4rem * var(--content-scale));
   box-shadow: 0 0 4vw -0.8vw var(--accent-color);
 }
-.content_layer.alt .icon_holder {
+.content_layer.alt .icon_holder,
+.content_layer.alt1 .icon_holder {
   height: calc(12rem * var(--content-scale));
   width: calc(12rem * var(--content-scale));
   background-color: #1E1E1E;
@@ -630,7 +644,8 @@
   margin-top: calc(-4.5rem * var(--content-scale));
   opacity: 0.4;
 }
-.content_layer.alt .icon_particles {
+.content_layer.alt .icon_particles,
+.content_layer.alt1 .icon_particles {
   position: absolute;
   /* background-color: rgba(255, 0, 0, 0.226); */
   fill: var(--accent-color);
@@ -640,13 +655,22 @@
   margin-top: calc(-4.5rem * var(--content-scale));
   opacity: 0.4;
 }
+.content_layer.alt1 .gallery {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+
+  /* background-color: red; */
+}
+
 .content_layer p.title {
   margin-bottom: calc(1.5rem * var(--content-scale));
   font-size: calc(4.8rem * var(--content-scale));
   line-height: calc(5.2rem * var(--content-scale));
   white-space: pre-wrap;
 }
-.content_layer.alt p.title {
+.content_layer.alt p.title,
+.content_layer.alt1 p.title {
   margin-bottom: calc(1.5rem * var(--content-scale));
   font-size: calc(4.8rem * var(--content-scale));
   line-height: calc(5.2rem * var(--content-scale));
@@ -676,4 +700,64 @@
   align-items: flex-end;
   fill: var(--accent-color);
   opacity: 0.15;
+}
+
+.gallery .photo_cards {
+  height: auto;
+  min-height: calc(30rem * var(--content-scale));
+  min-width: calc(28rem * var(--content-scale));
+  /* background-color: rgba(0, 128, 0, 0.288); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo_cards .project {
+  transition: 0.5s;
+  position: absolute;
+  height: calc(25rem * var(--content-scale));
+  width: calc(18rem * var(--content-scale));
+  background-color: rgb(53, 53, 53);
+  border-radius: calc(2.5rem * var(--content-scale));
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 calc(5rem * var(--content-scale)) calc(-2rem * var(--content-scale)) black;
+  cursor: pointer;
+}
+.photo_cards .p1 {
+  background-color: rgb(40, 40, 40);
+  transform: rotate(-14deg) translate(calc(-2.2rem * var(--content-scale)),calc(-0.6rem * var(--content-scale)));
+}
+.photo_cards .p3 {
+  background-color: rgb(76, 76, 76);
+  transform: rotate(14deg) translate(calc(2.3rem * var(--content-scale)),0);
+}
+
+.photo_cards .project:hover {
+  box-shadow: 0 0 5rem calc(-2rem * var(--content-scale)) var(--accent-color);
+}
+.photo_cards:hover .p1 {
+  transform: rotate(-30deg) translate(calc(-5rem * var(--content-scale)),calc(-4rem * var(--content-scale)));
+}
+.photo_cards:hover .p2 {
+  transform: rotate(-5deg) translate(calc(-1rem * var(--content-scale)),calc(-1rem * var(--content-scale)));
+}
+.photo_cards:hover .p3 {
+  transform: rotate(18deg) translate(calc(3.5rem * var(--content-scale)),0);
+}
+
+.photo_cards:hover .p1:hover {
+  transform: rotate(-15deg) translate(calc(-5rem * var(--content-scale)),calc(-9rem * var(--content-scale)));
+}
+.photo_cards:hover .p2:hover {
+  transform: rotate(0deg) translate(calc(-1rem * var(--content-scale)),calc(-7rem * var(--content-scale)));
+}
+.photo_cards:hover .p3:hover {
+  transform: rotate(18deg) translate(calc(3.5rem * var(--content-scale)),0);
+}
+
+.gallery p.body.alt1 {
+  font-size: calc(1.8rem * var(--content-scale));
+  margin-left: calc(3.5rem * var(--content-scale));
+  margin-right: calc(2rem * var(--content-scale));
+  align-self: center;
+  white-space: pre-wrap;
 }

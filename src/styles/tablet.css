@@ -16,7 +16,7 @@
     /* background-color: blue; */
   }
   .card {
-    transition: 0.7s;
+    transition: transform 0.7s, opacity 0.7s, background 0.1s;
     height: 20rem;
     width: 23rem;
   }

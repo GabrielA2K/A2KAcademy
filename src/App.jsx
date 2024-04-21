@@ -197,6 +197,7 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
       <div className={(tabPos==0?"":(tabPos==1?"blue":"purple"))}></div>
       <div className="bg_circle top-left"></div>
       <div className="bg_circle top-right"></div>
+      <div className="bg_circle center"></div>
       <div className="navbar_cover"></div>
       <div className="background_image_container">
         <div className="background_image"></div>
@@ -341,6 +342,41 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
                 <p className="body font-light fontColor-normal justify-text">{(tabPos==0?print3d_kids:(tabPos==1?physcomp_kids:code_kids))}</p>
               </div>
             </div>
+
+
+
+            <div className="main_content_layer">
+              <div className="background_layer">
+                {/* <img src={dotoverlay} alt="" className="overlay" /> */}
+                {/* <img className='bg_image' src={(tabPos==0?kids3dprint:(tabPos==1?kidsphysicalcomputing:kidscoding))} /> */}
+                {/* <div className="grid_overlay"></div> */}
+              </div>
+              <div className="background_overlay">
+                <div className="grid_overlay"></div>
+              </div>
+              <div className="content_layer alt1">
+                <div className="icon_particles">
+                <ImportIcon name={'Particles-Small'} />
+                </div>
+                <div className="icon_holder alt1">
+                  <div className="icon">
+                    <ImportIcon name={'Briefcase'} />
+                  </div>
+                </div>
+                <p className="title font-heavy fontColor-accent">{'Samples &\nProjects'}</p>
+                <div className="gallery">
+                  <div className="photo_cards">
+                    <div className="project p1"></div>
+                    <div className="project p2"></div>
+                    <div className="project p3"></div>
+                  </div>
+                  <p className="body alt1 font-light fontColor-normal justify-text">{'Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.'}</p>
+                </div>
+                
+              </div>
+            </div>
+
+
 
 
           <div className="read_more_btn proceed" onClick={() => {autoNavTab();}}>
