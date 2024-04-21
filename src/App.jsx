@@ -328,14 +328,11 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
               <div className="background_overlay">
                 <div className="dot_overlay"></div>
               </div>
-              <div className="content_layer">
-                <div className="big_particles">
-                  <ImportIcon name={'Particles'} />
-                </div>
+              <div className="content_layer alt">
                 <div className="icon_particles">
                 <ImportIcon name={'Particles-Small'} />
                 </div>
-                <div className="icon_holder">
+                <div className="icon_holder alt">
                   <div className="icon">
                     <ImportIcon name={'Star'} />
                   </div>
