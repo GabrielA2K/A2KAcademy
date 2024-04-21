@@ -109,7 +109,7 @@
 
 
 * {
-  --content-scale: 0.6;
+  --content-scale: 0.4;
 }
 .main_content_layer {
   position: relative;
@@ -254,7 +254,7 @@
   margin-bottom: calc(1.5rem * var(--content-scale));
   font-size: calc(4.8rem * var(--content-scale));
   line-height: calc(5.2rem * var(--content-scale));
-  white-space: pre-wrap;
+  white-space: normal;
 }
 .content_layer.alt p.title {
   margin-bottom: calc(1.5rem * var(--content-scale));
@@ -264,7 +264,7 @@
   text-align: center;
 }
 .content_layer p.body {
-  font-size: calc(1.8rem * var(--content-scale));
+  font-size: calc(2.6rem * var(--content-scale));
   margin-left: calc(0.5rem * var(--content-scale));
   margin-right: calc(0.5rem * var(--content-scale));
   white-space: pre-wrap;

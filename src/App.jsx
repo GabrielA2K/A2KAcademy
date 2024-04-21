@@ -344,7 +344,7 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
 
 
           <div className="read_more_btn proceed" onClick={() => {autoNavTab();}}>
-            <p>{"Proceed to "+(tabPos==0?"Physical Computing":(tabPos==1?"World of Coding":"3D Printing"))}</p>
+            <p>{'Continue'}</p>
             <div className="icon"><ImportIcon name={(tabPos==0?"Plug":(tabPos==1?"Coding1":"3D"))} /></div>
           </div>
           
