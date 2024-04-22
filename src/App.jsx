@@ -402,7 +402,7 @@ const [flipper, setFlipper] = useState('noFlip');
                     <div className={"project p2 "+activePhotocard} onClick={clickPC2}></div>
                     <div className={"project p3 "+activePhotocard} onClick={clickPC3}></div>
                   </div>
-                  <p className="body alt1 font-light fontColor-normal justify-text">{'Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.'}</p>
+                  <p className="body alt1 font-light fontColor-normal justify-text">{"Discover the amazing things made by the clever team at A2K Academy! Our teachers and tech experts have created fun projects and examples just for you. From cool games to neat apps, everything here is made with lots of imagination and care. Come explore and see how we're turning ideas into awesome stuff!"}</p>
                 </div>
                 
               </div>
