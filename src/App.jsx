@@ -172,6 +172,7 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
       setTabPos(index);
       skip_to('top'); 
       setActivePhotocard('activeNo fromPC1')
+      addFlipper();
       // setCarouselCard(0);
     } else {
       scroll_to('top'); 
@@ -213,6 +214,13 @@ const clickPC1 = () => {selectPhotocard('activePC1')}
 const clickPC2 = () => {selectPhotocard('activePC2')}
 const clickPC3 = () => {selectPhotocard('activePC3')}
 
+const [flipper, setFlipper] = useState('inactive');
+  const addFlipper = () => {
+    setFlipper('active')
+    setTimeout(()=>{
+      setFlipper('inactive')
+    },750)
+  }
 
 
   return (
@@ -291,7 +299,7 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
         </div>
         <div className="divider" style={{height: "4rem"}}></div>
         <div id="contents" className="content_bottom">
-
+            
             {/* <ContentCard 
               variant={'left'} 
               background={(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))} 
@@ -414,6 +422,11 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
         </div> 
         
         
+      </div>
+      <div className={"flipper blur "+flipper}>
+          <div className="icon">
+            <ImportIcon name={(tabPos==0?"3D":(tabPos==1?"Plug":"Coding1"))} />
+          </div>
       </div>
       
     </>

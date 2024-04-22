@@ -54,6 +54,9 @@
   .blur_overlay {
     top: 9rem;
   }
+  .flipper {
+    top: 9rem;
+  }
   .blur_overlay.collapsed{
     border-radius: 0;
     padding-top: 3rem;
