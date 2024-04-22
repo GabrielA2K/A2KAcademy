@@ -61,6 +61,13 @@
   .read_more_btn {
     align-self: center;
   }
+  .read_more_btn:hover {
+    opacity: 1;
+  }
+  .read_more_btn:active {
+    transition: opacity 0.2s;
+    opacity: 0.5;
+  }
 
 
   .content_layer.alt1 .gallery {
