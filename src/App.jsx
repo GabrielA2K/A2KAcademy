@@ -214,11 +214,11 @@ const clickPC1 = () => {selectPhotocard('activePC1')}
 const clickPC2 = () => {selectPhotocard('activePC2')}
 const clickPC3 = () => {selectPhotocard('activePC3')}
 
-const [flipper, setFlipper] = useState('inactive');
+const [flipper, setFlipper] = useState('noFlip');
   const addFlipper = () => {
-    setFlipper('active')
+    setFlipper('flip')
     setTimeout(()=>{
-      setFlipper('inactive')
+      setFlipper('noFlip')
     },750)
   }
 
@@ -237,19 +237,19 @@ const [flipper, setFlipper] = useState('inactive');
         <img src={a2klogo} alt="A2K ACADEMY Logo" className="logo" />
         <div className="links_container">
           <div className="selected_tab_indicator"></div>
-          <div className={"tabs tab1 "+tabStates[(tabPos==0)?0:1]} onClick={clickTab1}>
+          <div className={"tabs tab1 "+tabStates[(tabPos==0)?0:1]+" "+flipper} onClick={clickTab1}>
             <div className="icon">
               <ImportIcon name={'3D'} />
             </div>
             <p>3D Printing</p>
           </div>
-          <div className={"tabs tab2 "+tabStates[(tabPos==1)?0:1]} onClick={clickTab2}>
+          <div className={"tabs tab2 "+tabStates[(tabPos==1)?0:1]+" "+flipper} onClick={clickTab2}>
             <div className="icon">
             <ImportIcon name={'Plug'} />
             </div>
             <p>Physical Computing</p>
           </div>
-          <div className={"tabs tab3 "+tabStates[(tabPos==2)?0:1]} onClick={clickTab3}>
+          <div className={"tabs tab3 "+tabStates[(tabPos==2)?0:1]+" "+flipper} onClick={clickTab3}>
             <div className="icon">
               <ImportIcon name={'Coding1'} />
             </div>

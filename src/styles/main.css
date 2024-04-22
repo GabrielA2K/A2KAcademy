@@ -187,6 +187,10 @@
     cursor: pointer;
     box-shadow: 0 0 5rem -3rem black;
   }
+  .tabs.flip {
+    pointer-events: none;
+  }
+  
   .tabs .icon {
     fill: var(--text-color);
     min-height: 1.8rem;
@@ -882,17 +886,17 @@
   transform: scale(50%);
   opacity: 0;
 }
-.flipper.active {
+.flipper.flip {
   display: flex;
 }
 
 .flipper .icon svg {
   filter: drop-shadow(var(--secondary-accent-color) 0 0 5rem);
 }
-.flipper.active .icon {
+.flipper.flip .icon {
   animation: flipper 0.3s 0.1s 2 alternate;
 }
-.blur_overlay:has(~ .flipper.active) {
+.blur_overlay:has(~ .flipper.flip) {
   display: none;
 }
 @keyframes flipper {
