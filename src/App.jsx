@@ -190,7 +190,29 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
   //     setShowNavAnim('hide')
   //   },800)
   // }
- 
+
+ const [activePhotocard, setActivePhotocard] = useState('activeNo fromPC1')
+ function selectPhotocard(photocard_id) {
+  if (activePhotocard == 'activeNo fromPC1' || activePhotocard == 'activeNo fromPC2' || activePhotocard == 'activeNo fromPC3') {
+    setActivePhotocard(photocard_id)
+  } else {
+    if (activePhotocard == 'activePC1'){
+      setActivePhotocard('activeNo fromPC1')
+    }
+    if (activePhotocard == 'activePC2'){
+      setActivePhotocard('activeNo fromPC2')
+    }
+    if (activePhotocard == 'activePC3'){
+      setActivePhotocard('activeNo fromPC3')
+    }
+    
+  }
+ }
+const clickPC1 = () => {selectPhotocard('activePC1')}
+const clickPC2 = () => {selectPhotocard('activePC2')}
+const clickPC3 = () => {selectPhotocard('activePC3')}
+
+
 
   return (
     <>
@@ -366,9 +388,9 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
                 <p className="title font-heavy fontColor-accent">{'Samples &\nProjects'}</p>
                 <div className="gallery">
                   <div className="photo_cards">
-                    <div className="project p1"></div>
-                    <div className="project p2"></div>
-                    <div className="project p3"></div>
+                    <div className={"project p1 "+activePhotocard} onClick={clickPC1}></div>
+                    <div className={"project p2 "+activePhotocard} onClick={clickPC2}></div>
+                    <div className={"project p3 "+activePhotocard} onClick={clickPC3}></div>
                   </div>
                   <p className="body alt1 font-light fontColor-normal justify-text">{'Consectetur ac risus ultricies nibh. Gravida ac consequat tortor pretium sed. Egestas ut fringilla blandit nulla mi proin ac tellus malesuada. Ac at venenatis porttitor luctus. Pretium donec risus sed malesuada tristique.'}</p>
                 </div>
