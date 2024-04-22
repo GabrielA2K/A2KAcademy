@@ -57,6 +57,9 @@
   .flipper {
     top: 9rem;
   }
+  .flipper .icon {
+    margin-top: -30vmin;
+  }
   .blur_overlay.collapsed{
     border-radius: 0;
     padding-top: 3rem;
