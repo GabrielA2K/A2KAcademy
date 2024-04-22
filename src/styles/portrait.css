@@ -181,7 +181,6 @@
   background-repeat: repeat;
   position: absolute;
   background-size: 1.5rem;
-  opacity: 0.6;
 }
 .grid_overlay {
   height: 100%;
@@ -190,7 +189,6 @@
   background-repeat: repeat;
   position: absolute;
   background-size: 2rem;
-  opacity: 0.3;
 }
 
 
