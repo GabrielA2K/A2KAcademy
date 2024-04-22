@@ -218,6 +218,7 @@ const [flipper, setFlipper] = useState('noFlip');
   const addFlipper = () => {
     setFlipper('flip')
     setTimeout(()=>{
+      clickC2();
       setFlipper('noFlip')
     },750)
   }
