@@ -273,7 +273,149 @@
   margin-right: calc(0.5rem * var(--content-scale));
   white-space: pre-wrap;
 }
+.gallery p.body.alt1 {
+  font-size: calc(2.6rem * var(--content-scale));
+  margin-left: calc(0.5rem * var(--content-scale));
+  margin-right: calc(0.5rem * var(--content-scale));
+  white-space: pre-wrap;
+}
 
+* {
+  --PC-scale: 0.5;
+}
+.content_layer.alt1 .gallery {
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+.gallery .photo_cards {
+  margin-bottom: 2rem;
+  height: calc(32rem * var(--PC-scale));
+  /* background-color: red; */
+}
+.photo_cards .project {
+  height: calc(25rem * var(--PC-scale));
+  width: calc(18rem * var(--PC-scale));
+  margin-left: 2rem;
+}
+.photo_cards .p1,
+.photo_cards:hover .p1.activeNo,
+.photo_cards:hover .p1.activeNo:hover {
+  z-index: 1;
+  background-color: rgb(20, 20, 20);
+  transform: rotate(-30deg) translate(calc(-5rem * var(--PC-scale)),calc(-4rem * var(--PC-scale)));
+}
+.photo_cards .p2,
+.photo_cards:hover .p2.activeNo,
+.photo_cards:hover .p2.activeNo:hover {
+  z-index: 2;
+  background-color: rgb(40, 40, 40);
+  transform: rotate(-5deg) translate(calc(-1rem * var(--PC-scale)),calc(-1rem * var(--PC-scale)));
+}
+.photo_cards .p3,
+.photo_cards:hover .p3.activeNo,
+.photo_cards:hover .p3.activeNo:hover {
+  z-index: 3;
+  background-color: rgb(76, 76, 76);
+  transform: rotate(18deg) translate(calc(3.5rem * var(--PC-scale)),0);
+}
+
+.photo_cards .p1.activePC2,
+.photo_cards .p1.activePC3,
+.photo_cards .p2.activePC1,
+.photo_cards .p2.activePC3,
+.photo_cards .p3.activePC1,
+.photo_cards .p3.activePC2 {
+  transform: rotate(0deg) translate(-1rem,0) scale(100%);
+}
+.photo_cards .p1.activePC1 {
+  animation: photocard1-select 1.5s forwards;
+}
+.photo_cards .p2.activePC2 {
+  animation: photocard2-select 1.5s forwards;
+}
+.photo_cards .p3.activePC3 {
+  transform: rotate(0deg) translate(-1rem,0) scale(140%) !important;
+}
+.photo_cards .p1.activeNo.fromPC1 {
+  animation: photocard1-deselect 0.9s none;
+}
+.photo_cards .p2.activeNo.fromPC2 {
+  animation: photocard2-deselect 0.9s none;
+}
+
+.photo_cards .project:hover {
+  box-shadow: 0 0 calc(5rem * var(--PC-scale)) calc(-2rem * var(--PC-scale)) black;
+}
+
+
+
+
+
+
+@keyframes photocard1-select{
+  0% {
+    transform: rotate(-30deg) translate(calc(-5rem * var(--PC-scale)),calc(-4rem * var(--PC-scale)));
+  }
+  20% {
+    transform: rotate(-15deg) translate(calc(-5rem * var(--PC-scale)),calc(-28rem * var(--PC-scale)));
+  }
+  45% {
+    z-index: 4;
+  }
+  70%, 100% {
+    z-index: 4;
+    transform: rotate(0deg) translate(-1rem,0) scale(140%);
+  }
+}
+@keyframes photocard2-select{
+  0% {
+    transform: rotate(-5deg) translate(calc(-1rem * var(--PC-scale)),calc(-1rem * var(--PC-scale)));
+  }
+  20% {
+    transform: rotate(0deg) translate(calc(-1rem * var(--PC-scale)),calc(-26rem * var(--PC-scale)));
+  }
+  45% {
+    z-index: 4;
+  }
+  70%, 100% {
+    z-index: 4;
+    transform: rotate(0deg) translate(-1rem,0) scale(140%);
+  }
+}
+
+@keyframes photocard1-deselect{
+  0% {
+    z-index: 4;
+    transform: rotate(0deg) translate(-1rem,0) scale(140%);
+  }
+  40% {
+    z-index: 4;
+    transform: rotate(-15deg) translate(calc(-5rem * var(--PC-scale)),calc(-28rem * var(--PC-scale)));
+  }
+  50% {
+    z-index: 1;
+  }
+  80% {
+    transform: rotate(-30deg) translate(calc(-5rem * var(--PC-scale)),calc(-4rem * var(--PC-scale)));
+  }
+}
+@keyframes photocard2-deselect{
+  0% {
+    z-index: 4;
+    transform: rotate(0deg) translate(-1rem,0) scale(140%);
+  }
+  40% {
+    z-index: 4;
+    transform: rotate(0deg) translate(calc(-1rem * var(--PC-scale)),calc(-26rem * var(--PC-scale)));
+  }
+  50% {
+    z-index: 2;
+  }
+  80% {
+    transform: rotate(-5deg) translate(calc(-1rem * var(--PC-scale)),calc(-1rem * var(--PC-scale)));
+  }
+}
 
 *{
   --bph: calc(30rem * var(--content-scale));
@@ -291,5 +433,6 @@
   fill: var(--accent-color);
   opacity: 0.15;
 }
+
   
   }

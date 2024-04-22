@@ -171,6 +171,7 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
     if (tabPos != index) {
       setTabPos(index);
       skip_to('top'); 
+      setActivePhotocard('activeNo fromPC1')
       // setCarouselCard(0);
     } else {
       scroll_to('top'); 

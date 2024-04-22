@@ -724,7 +724,7 @@
 }
 .photo_cards .p1 {
   z-index: 1;
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(20, 20, 20);
   transform: rotate(-14deg) translate(calc(-2.2rem * var(--content-scale)),calc(-0.6rem * var(--content-scale)));
 }
 .photo_cards .p2 {
@@ -766,15 +766,12 @@
   box-shadow: 0 0 4rem -2rem var(--accent-color);
 }
 .photo_cards:hover .p1.activeNo {
-  
   transform: rotate(-30deg) translate(calc(-5rem * var(--content-scale)),calc(-4rem * var(--content-scale)));
 }
 .photo_cards:hover .p2.activeNo {
-  
   transform: rotate(-5deg) translate(calc(-1rem * var(--content-scale)),calc(-1rem * var(--content-scale)));
 }
 .photo_cards:hover .p3.activeNo {
- 
   transform: rotate(18deg) translate(calc(3.5rem * var(--content-scale)),0);
 }
 
@@ -854,7 +851,7 @@
 
 .gallery p.body.alt1 {
   font-size: calc(1.8rem * var(--content-scale));
-  margin-left: calc(3.5rem * var(--content-scale));
+  margin-left: calc(2.5rem * var(--content-scale));
   margin-right: calc(2rem * var(--content-scale));
   align-self: center;
   white-space: pre-wrap;
