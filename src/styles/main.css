@@ -616,6 +616,7 @@
   margin-top: calc(6rem * var(--content-scale));
   margin-bottom: calc(2.4rem * var(--content-scale));
   box-shadow: 0 0 4vw -0.8vw var(--accent-color);
+  z-index: 2;
 }
 .content_layer.alt .icon_holder,
 .content_layer.alt1 .icon_holder {
@@ -630,6 +631,7 @@
   margin-bottom: calc(2.4rem * var(--content-scale));
   box-shadow: 0 0 4vw -0.8vw var(--accent-color);
   align-self: center;
+  z-index: 2;
 }
 .icon_holder .icon {
   fill: var(--accent-color);
@@ -906,6 +908,23 @@
   }  
   100% {
     transform: scale(100%);
+    opacity: 1;
+  }
+}
+
+.icon_particles {
+  animation: particle_accelerator both;
+  animation-timeline: view();
+  animation-range-start: -50px;
+}
+@keyframes particle_accelerator {
+  30% {
+    transform: translateY(20%) scale(20%);
+    opacity: 0;
+    transform-origin: bottom;
+  }
+  60% {
+    transform: translateY(0) scale(100%);
     opacity: 1;
   }
 }
