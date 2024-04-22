@@ -99,6 +99,12 @@
     top: 0rem;
     height: 100vh;
   }
+  .flipper.collapsed {
+    border-radius: 0;
+    padding-top: 5rem;
+    top: 0rem;
+    height: 100vh;
+  }
   
   .navbar {
     transition: 0.5s;
@@ -794,31 +800,39 @@
 @keyframes photocard1-select{
   0% {
     transform: rotate(-15deg) translate(calc(-5rem * var(--content-scale)),calc(-9rem * var(--content-scale)));
+    pointer-events: none;
   }
   20% {
     transform: rotate(-15deg) translate(calc(-5rem * var(--content-scale)),calc(-28rem * var(--content-scale)));
+    pointer-events: none;
   }
   45% {
     z-index: 4;
+    pointer-events: none;
   }
-  70%, 100% {
+  70%,100% {
     z-index: 4;
     transform: rotate(0deg) translate(0,0) scale(120%);
+    pointer-events: all;
   }
 }
 @keyframes photocard2-select{
   0% {
     transform: rotate(0deg) translate(calc(-1rem * var(--content-scale)),calc(-7rem * var(--content-scale)));
+    pointer-events: none;
   }
   20% {
     transform: rotate(0deg) translate(calc(-1rem * var(--content-scale)),calc(-26rem * var(--content-scale)));
+    pointer-events: none;
   }
   45% {
     z-index: 4;
+    pointer-events: none;
   }
-  70%, 100% {
+  70%,100% {
     z-index: 4;
     transform: rotate(0deg) translate(0,0) scale(120%);
+    pointer-events: all;
   }
 }
 
@@ -826,32 +840,40 @@
   0% {
     z-index: 4;
     transform: rotate(0deg) translate(0,0) scale(120%);
+    pointer-events: none;
   }
   40% {
     z-index: 4;
     transform: rotate(-15deg) translate(calc(-5rem * var(--content-scale)),calc(-28rem * var(--content-scale)));
+    pointer-events: none;
   }
   50% {
     z-index: 1;
+    pointer-events: none;
   }
   80% {
     transform: rotate(-30deg) translate(calc(-5rem * var(--content-scale)),calc(-4rem * var(--content-scale)));
+    pointer-events: all;
   }
 }
 @keyframes photocard2-deselect{
   0% {
     z-index: 4;
     transform: rotate(0deg) translate(0,0) scale(120%);
+    pointer-events: none;
   }
   40% {
     z-index: 4;
     transform: rotate(0deg) translate(calc(-1rem * var(--content-scale)),calc(-26rem * var(--content-scale)));
+    pointer-events: none;
   }
   50% {
     z-index: 2;
+    pointer-events: none;
   }
   80% {
     transform: rotate(-5deg) translate(calc(-1rem * var(--content-scale)),calc(-1rem * var(--content-scale)));
+    pointer-events: all;
   }
 }
 

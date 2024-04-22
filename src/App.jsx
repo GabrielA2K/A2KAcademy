@@ -412,7 +412,7 @@ const [flipper, setFlipper] = useState('noFlip');
 
 
           <div className="read_more_btn proceed" onClick={() => {autoNavTab();}}>
-            <p>{'Continue'}</p>
+            <p>{'Cycle Sections'}</p>
             <div className="icon"><ImportIcon name={(tabPos==0?"Plug":(tabPos==1?"Coding1":"3D"))} /></div>
           </div>
           
@@ -424,7 +424,7 @@ const [flipper, setFlipper] = useState('noFlip');
         
         
       </div>
-      <div className={"flipper blur "+flipper}>
+      <div className={"flipper blur "+flipper+" "+navbarState}>
           <div className="icon">
             <ImportIcon name={(tabPos==0?"3D":(tabPos==1?"Plug":"Coding1"))} />
           </div>

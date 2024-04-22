@@ -65,6 +65,11 @@
     padding-top: 3rem;
     top: 0rem;
   }
+  .blur_overlay.collapsed{
+    border-radius: 0;
+    padding-top: 3rem;
+    top: 0rem;
+  }
   .navbar_cover {
     height: 12rem;
   }
