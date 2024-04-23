@@ -22,6 +22,7 @@ import kidscoding from './assets/images/codingkids.jpg'
 import samplecoding from './assets/images/codingsample.jpg'
 import sound from './assets/boom.mp3'
 import huhsound from './assets/huh.mp3'
+import video1 from './assets/videos/vid.mp4'
 
 import ContentCard from './components/ContentCard'
 
@@ -222,7 +223,11 @@ const [flipper, setFlipper] = useState('noFlip');
       setFlipper('noFlip')
     },750)
   }
-
+  // const video = document.querySelector('video');
+  // function playVideo(id) {
+  //   const video = document.querySelector('video#'+id);
+  //   video.paused ? video.play() : video.pause();
+  // }
 
   return (
     <>
@@ -398,13 +403,43 @@ const [flipper, setFlipper] = useState('noFlip');
                 <p className="title font-heavy fontColor-accent">{'Samples &\nProjects'}</p>
                 <div className="gallery">
                   <div className="photo_cards">
-                    <div className={"project p1 "+activePhotocard} onClick={clickPC1}></div>
-                    <div className={"project p2 "+activePhotocard} onClick={clickPC2}></div>
-                    <div className={"project p3 "+activePhotocard} onClick={clickPC3}></div>
+                    <div className={"project p1 "+activePhotocard} onClick={clickPC1} style={{backgroundImage: 'url('+(tabPos==0?print_3d_def:(tabPos==1?physicalcomputing:coding))+')'}}></div>
+                    <div className={"project p2 "+activePhotocard} onClick={clickPC2} style={{backgroundImage: 'url('+(tabPos==0?kids3dprint:(tabPos==1?kidsphysicalcomputing:kidscoding))+')'}}></div>
+                    <div className={"project p3 "+activePhotocard} onClick={clickPC3} style={{backgroundImage: 'url('+(tabPos==0?sample3dprint:(tabPos==1?samplephysicalcomputing:samplecoding))+')'}}></div>
                   </div>
                   <p className="body alt1 font-light fontColor-normal justify-text">{"Discover the amazing things made by the clever team at A2K Academy! Our teachers and tech experts have created fun projects and examples just for you. From cool games to neat apps, everything here is made with lots of imagination and care. Come explore and see how we're turning ideas into awesome stuff!"}</p>
                 </div>
                 
+              </div>
+            </div>
+
+
+
+
+
+
+            <div className="main_content_layer">
+              <div className="background_overlay">
+                <div className="dot_overlay"></div>
+              </div>
+              <div className="video_card">
+                <div className="video_container">
+                  <video id='vid1' src={video1} controls></video>
+                  {/* <div className="video_controls">
+                    <div className="play_btn" onClick={playVideo('vid1')}>
+                      <div className="icon">
+                        <ImportIcon name={'Play'} />
+                      </div>
+                    </div>
+                  </div> */}
+                </div>
+                <div className="text_side">
+                  <div className="icon">
+                    <ImportIcon name={'Video'} />
+                  </div>
+                  <p className="title font-heavy fontColor-accent">{'Academy\nPreview'}</p>
+                  <p className="body font-light fontColor-normal">{'Consectetur ac risus ultricies nibh. Gravida tortor pretium sed.'}</p>
+                </div>
               </div>
             </div>
 
