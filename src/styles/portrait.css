@@ -477,14 +477,17 @@
   fill: var(--accent-color);
   height: calc(5rem * var(--content-scale));
   width: calc(5rem * var(--content-scale));
+  margin-top: 1rem;
 }
 .text_side p.title {
-  font-size: calc(2.5rem * var(--content-scale));
+  font-size: calc(4.8rem * var(--content-scale));
   white-space: normal;
-  line-height: calc(2.5rem * var(--content-scale));
+  line-height: calc(4.8rem * var(--content-scale));
 }
 .text_side p.body {
-  font-size: calc(1.5rem * var(--content-scale));
+  font-size: calc(2.6rem * var(--content-scale));
+  line-height: calc(3rem * var(--content-scale));
+  margin-bottom: 1rem;
 }
 
   
