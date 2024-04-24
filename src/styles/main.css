@@ -812,7 +812,7 @@
   transform: rotate(18deg) translate(calc(3.5rem * var(--content-scale)),0);
 }
 
-.photo_cards:hover .p1.activeNo:hover {
+.photo_cards:hover .p1.activeNo:hover {  
   transform: rotate(-15deg) translate(calc(-5rem * var(--content-scale)),calc(-9rem * var(--content-scale)));
 }
 .photo_cards:hover .p2.activeNo:hover {
@@ -1011,6 +1011,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-right: 1rem;
   gap: calc(0.8rem * var(--content-scale));
 }
 .text_side .icon {

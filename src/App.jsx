@@ -438,7 +438,7 @@ const [flipper, setFlipper] = useState('noFlip');
                     <ImportIcon name={'Video'} />
                   </div>
                   <p className="title font-heavy fontColor-accent">{'Academy\nPreview'}</p>
-                  <p className="body font-light fontColor-normal">{'Consectetur ac risus ultricies nibh. Gravida tortor pretium sed.'}</p>
+                  <p className="body font-light fontColor-normal">{'Here is the preview of the amazing projects made by the clever team of A2K Academy!'}</p>
                 </div>
               </div>
             </div>
