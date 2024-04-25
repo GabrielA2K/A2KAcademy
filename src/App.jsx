@@ -52,7 +52,7 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
   let touchstartY = 0
   let touchendY = 0
 
-  function checkDirection() {
+  const checkDirection = () => {
     if (touchendX < touchstartX && 
       (touchstartX-touchendX) > 60 && 
       ((touchstartY-touchendY) > -80 && (touchstartY-touchendY) < 80)) {
@@ -81,7 +81,7 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
   const [activeCardPage, setActiveCardPage] = useState(-1);
   const [cardTimerInterval, setCardTimerInterval] = useState(0);
   
-  //15 SECS WAIT
+  //5 SECS WAIT
   const watingTime = 5;
   let interval;
   useEffect(() => {
@@ -94,10 +94,10 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
     }, (watingTime/2)*1000);
 
     return () => clearInterval(interval);
-  }, [cardTimerInterval]);
+  }, [cardTimerInterval,activeCardPage,activeCard]);
 
 
-  function setCarouselCard(index) {
+  const setCarouselCard = (index) => {
     setActiveCard(index);
     setActiveCardPage(index);
     setCardTimerInterval(0);
@@ -107,12 +107,12 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
   const clickC2 = () => {setCarouselCard(0);}
   const clickC3 = () => {setCarouselCard(2);}
 
-  function clickRightCard() {
+  const clickRightCard = () => {
     setActiveCard(activeCard => (activeCard==2)?0:activeCard+1);
     setActiveCardPage(activeCardPage => (activeCardPage==2)?0:activeCardPage+1);
     setCardTimerInterval(0);
   }
-  function clickLeftCard() {
+  const clickLeftCard = () => {
     setActiveCard(activeCard => (activeCard==0)?2:activeCard-1);
     setActiveCardPage(activeCardPage => (activeCardPage==0)?2:activeCardPage-1);
     setCardTimerInterval(0);
@@ -120,7 +120,7 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
 
 
 
-  function toggleNavbarState() {
+  const toggleNavbarState = () => {
     setNavbarState(navbarState=='expanded'?'collapsed':'expanded')
   }
 
@@ -133,11 +133,11 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
   }
  
   const [pageIndicatorRes, setPageIndicatorRes] = useState('');
-  function resetPageIndicator() {
+  const resetPageIndicator = () => {
     setPageIndicatorRes('reset')
     setTimeout(()=>{
       setPageIndicatorRes('')
-    },500)
+    },400)
   }
 
   let latency;
@@ -148,14 +148,14 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
     return () => clearTimeout(latency);
   }, []);
  
-  function scroll_to(stringId) {
+  const scroll_to = (stringId) => {
     document.getElementById(stringId).scrollIntoView({behavior:'smooth'});
   }
-  function skip_to(stringId) {
+  const skip_to = (stringId) => {
     document.getElementById(stringId).scrollIntoView();
   }
 
-  function autoNavTab() {
+  const autoNavTab = () => {
     if (tabPos==0) {
       clickTab2()
     }
@@ -168,7 +168,7 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
   }
 
 
-  function gotoTab(index) {
+  const gotoTab = (index) => {
     if (tabPos != index) {
       setTabPos(index);
       skip_to('top'); 
@@ -195,7 +195,7 @@ const code_kids = "\tCoding offers kids valuable skills that can benefit them in
   // }
 
  const [activePhotocard, setActivePhotocard] = useState('activeNo fromPC1')
- function selectPhotocard(photocard_id) {
+ const selectPhotocard = (photocard_id) => {
   if (activePhotocard == 'activeNo fromPC1' || activePhotocard == 'activeNo fromPC2' || activePhotocard == 'activeNo fromPC3') {
     setActivePhotocard(photocard_id)
   } else {
