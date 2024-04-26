@@ -1,8 +1,10 @@
-# React + Vite
+# A2K Academy Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
+The A2K Academy Website is a static website which showcases its courses offerings: 3D Printing, Physical Computing, and World of Coding.
+Each offering has a section: the description, benefits to kids, sample projects, video preview.
 
-Currently, two official plugins are available:
+_This mini-project was done mainly as a designing and front end development training._
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Contributors
+ - **Jose Gabriel R. Castillo** - Designer, Front End Dev
