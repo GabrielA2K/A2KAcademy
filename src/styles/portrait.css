@@ -439,7 +439,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: calc(3rem * var(--content-scale));
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   padding: calc(2rem * var(--content-scale));
   border: 1px solid var(--accent-color);
   box-shadow: 0 0 5rem -3rem var(--accent-color);
@@ -480,14 +480,14 @@
   margin-top: 1rem;
 }
 .text_side p.title {
-  font-size: calc(4.8rem * var(--content-scale));
+  font-size: calc(4rem * var(--content-scale));
   white-space: normal;
-  line-height: calc(4.8rem * var(--content-scale));
+  line-height: calc(4rem * var(--content-scale));
 }
 .text_side p.body {
   font-size: calc(2.6rem * var(--content-scale));
   line-height: calc(3rem * var(--content-scale));
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
   
