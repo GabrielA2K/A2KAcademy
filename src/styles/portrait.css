@@ -490,5 +490,169 @@
   margin-bottom: 0rem;
 }
 
+
+
+
+
+.venn_container {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  min-height: calc(46rem * var(--content-scale));
+  /* background-color: rgba(255, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: calc(15rem * var(--content-scale));
+  padding: 0 10vw 0 10vw;
+}
+.venn_container .background_overlay {
+  opacity: 0.3;
+}
+.diagram {
+  position: absolute;
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.462);
+  height: 12rem;
+  width: 12rem;
+  /* opacity: 0.5; */
+  border-radius: 50%;
+  /* border: 1px solid var(--accent-color); */
+  mix-blend-mode:screen;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  white-space: pre-wrap;
+}
+.diagram.d1 {
+  background-color: #612401;
+}
+.diagram.d2 {
+  background-color:  #012b61;
+  margin-left: -7rem;
+  margin-top: 6rem;
+}
+.diagram.d3 {
+  background-color:  #2a195b;
+  margin-left: 7rem;
+  margin-top: 6rem;
+}
+.diagram:hover,
+.diagram:has(~ .diagram.d4:hover) {
+  cursor: pointer;
+  box-shadow: 0 0 0 0 transparent;
+  height: 12rem;
+  width: 12rem;
+}
+.diagram.d1:hover,
+.diagram.d1:has(~ .diagram.d4:hover) {
+  margin-top: 0rem;
+}
+.diagram.d2:hover,
+.diagram.d2:has(~ .diagram.d4:hover) {
+  margin-top: 6rem;
+}
+.diagram.d3:hover,
+.diagram.d3:has(~ .diagram.d4:hover) {
+  margin-top: 6rem;
+}
+
+
+.diagram.d1 p {
+  transition: 0.5s;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+}
+.diagram.d1:hover p,
+.diagram.d1:has(~ .diagram.d4:hover) > p {
+  font-size: 0.9rem;
+  margin-top: 2.5rem;
+  text-shadow: 0 0 0 transparent;
+}
+
+.diagram.d2 p {
+  transition: 0.5s;
+  margin-top: 5.5rem;
+  margin-left: -4rem;
+  font-size: 0.9rem;
+}
+.diagram.d2:hover p,
+.diagram.d2:has(~ .diagram.d4:hover) > p {
+  font-size: 0.9rem;
+  margin-top: 5.5rem;
+  margin-left: -4rem;
+  text-shadow: 0 0 0 transparent;
+}
+.diagram.d3 p {
+  transition: 0.5s;
+  margin-top: 5.5rem;
+  margin-right: -4rem;
+  font-size: 0.9rem;
+}
+.diagram.d3:hover p,
+.diagram.d3:has(~ .diagram.d4:hover) > p {
+  font-size: 0.9rem;
+  margin-top: 5.5rem;
+  margin-right: -4rem;
+  text-shadow: 0 0 0 transparent;
+}
+
+.diagram.d4 {
+  height: 5rem;
+  width: 5rem;
+  margin-top: 7rem;
+  border-radius: 50% 50% 50% 50% / 67% 67% 33% 33% ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  background-color: transparent;
+}
+
+.diagram.d4 p {
+  margin-top: 1.2rem;
+  transition: 0.5s;
+  font-size: 0.9rem;
+}
+.diagram.d4:hover p {
+  font-size: 0.9rem;
+}
+
+
+.discipline {
+  background-color: rgba(0, 0, 0, 0.434);
+  width: 15.5rem;
+  height: fit-content;
+  position: absolute;
+  margin-left: 38rem;
+  margin-top: 1rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--accent-color);
+  padding: 0.7rem 0.2rem;
+}
+.discipline p,
+.discipline:has(~ .diagram.d4:hover) > p {
+  font-size: 1rem !important;
+  margin-top: 0.2rem !important;
+  margin-left: 1rem;
+  line-height: 1rem;
+  white-space: pre-wrap;
+}
+
+.discipline.ds2 {
+  margin-left: -39.5rem;
+  margin-top: 2rem;
+}
+.discipline.ds2 p.dsp {
+  margin-top: 0.2rem !important;
+  margin-left: 1rem;
+}
+
+.discipline.ds3 {
+  margin-left: 44rem;
+  margin-top: 10rem;
+}
+
+
   
   }
