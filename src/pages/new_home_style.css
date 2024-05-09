@@ -1,0 +1,165 @@
+@import url(../assets/fonts/font-import.css);
+
+.textAlign-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+.textAlign-center {
+    text-align: center;
+}
+.font-regular {
+    font-family: ProductSans;
+}
+.font-heavy {
+    font-family: ProductSansBlack;
+}
+.font-bold {
+    font-family: ProductSansBold;
+}
+.font-light {
+    font-family: ProductSansLight;
+}
+.font-thin {
+    font-family: ProductSansThin;
+}
+.font-icon {
+    font-family: icons;
+}
+.fontColor-accent {
+    color: var(--accent-color)
+}
+.fontColor-normal {
+    color: #9E9E9E
+}
+
+#body_root {
+    position: relative;
+    height: 100dvh;
+    width: 100dvw;
+    background-color: #161616;
+    overflow: hidden;
+}
+#body_root p{
+    white-space: pre-wrap;
+}
+#orb_purple {
+    position: absolute;
+    height: 52dvh;
+    width: 52dvh;
+    border-radius: 73% 27% 61% 39% / 36% 45% 55% 64% ;
+    background-color: #201947;
+    left: 20dvw;
+    top: 20dvh;
+}
+#orb_blue {
+    position: absolute;
+    height: 42dvh;
+    width: 42dvh;
+    border-radius: 47% 53% 61% 39% / 67% 71% 29% 33% ;
+    background-color: #143451;
+    right: 20dvw;
+    top: 35dvh;
+}
+#orb_orange {
+    position: absolute;
+    height: 32dvh;
+    width: 36dvh;
+    border-radius: 77% 23% 35% 65% / 45% 23% 77% 55% ;
+    background-color: #472B11;
+    left: 42dvw;
+    top: 50dvh;
+}
+.main_blur_overlay {
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.038);
+    /* background-color: red; */
+    backdrop-filter: blur(120px);
+    display: flex;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+
+.logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 23rem;
+    width: 30rem;
+    margin-top: 3rem;
+    /* background-color: red; */
+}
+
+.overlay_mask {
+    position: absolute;
+    z-index: -1;
+    width: 100dvw;
+    /* height: 100%; */
+    top: calc(-10rem * var(--content-scale));
+    left: 0;
+    bottom: calc(-10rem * var(--content-scale));
+    overflow: hidden;
+    mask-image: url(../assets/images/softedgemask.png);
+    mask-size: 120% 100%;
+    mask-position: 50% 0;
+    mask-repeat: no-repeat;
+    opacity: 0.3;
+    display: flex;
+    justify-self: flex-end;
+    /* background-color: red; */
+  }
+  .overlay_mask .dot_overlay {
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/images/dot.png);
+    background-repeat: repeat;
+    position: absolute;
+    background-size: 1.8rem;
+    opacity: 0.8;
+  }
+  .overlay_mask .grid_overlay {
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/images/grid.png);
+    background-repeat: repeat;
+    position: absolute;
+    background-size: 2.5rem;
+    opacity: 0.3;
+  }
+
+
+  p.greeting {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+  p.greeting-heavy {
+    margin-top: 0.2rem;
+    font-size: 1.4rem;
+  }
+
+.wave_mask {
+    position: relative;
+    width: 104dvw;
+    height: 25rem;
+    mask-size: 100%;
+    mask-position: center;
+    mask-image: url(../assets/images/wave.svg);
+    mask-repeat: no-repeat;
+    /* background-color: red; */
+    margin-top: -15rem;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.wave {
+    position: absolute;
+    top: 19.5rem;
+    width: 104dvw;
+    height: 30rem;
+    fill: rgba(0, 0, 0, 0.9);
+}
+.wave svg {
+    filter: drop-shadow(0 -0.5rem 1rem rgba(110,168,255,0.3));
+}
