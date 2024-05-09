@@ -31,6 +31,9 @@
 .fontColor-normal {
     color: #9E9E9E
 }
+.fontColor-focused {
+    color: #C6C6C6
+}
 
 #body_root {
     position: relative;
@@ -84,13 +87,22 @@
 
 
 .logo_container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 23rem;
-    width: 30rem;
+    min-height: 23rem;
+    min-width: 30rem;
     margin-top: 3rem;
     /* background-color: red; */
+}
+.logo_container .logo {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    /* background-color: blue; */
 }
 
 .overlay_mask {
@@ -136,30 +148,293 @@
     font-size: 1.3rem;
   }
   p.greeting-heavy {
-    margin-top: 0.2rem;
-    font-size: 1.4rem;
+    margin-top: 0.3rem;
+    font-size: 1.5rem;
   }
 
-.wave_mask {
-    position: relative;
-    width: 104dvw;
-    height: 25rem;
-    mask-size: 100%;
-    mask-position: center;
-    mask-image: url(../assets/images/wave.svg);
-    mask-repeat: no-repeat;
-    /* background-color: red; */
-    margin-top: -15rem;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.wave {
+.lower-curl {
+    --size: 30px;
+    --p: 75px;
+    --R: 80.77px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
+    --dir: top;
+    
+      -webkit-mask:
+      radial-gradient(var(--R) at left 50% var(--d,var(--dir)) calc(var(--size) + var(--p)),#000 99%,#0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+      radial-gradient(var(--R) at left 50% var(--d,var(--dir)) calc(-1*var(--p)),#0000 99%,#000 101%) 
+                                  left 50% var(--d,var(--dir)) var(--size)/calc(4*var(--size)) 100% repeat-x;
+      mask:
+      radial-gradient(var(--R) at left 50% var(--d,var(--dir)) calc(var(--size) + var(--p)),#000 99%,#0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+      radial-gradient(var(--R) at left 50% var(--d,var(--dir)) calc(-1*var(--p)),#0000 99%,#000 101%) 
+                                  left 50% var(--d,var(--dir)) var(--size)/calc(4*var(--size)) 100% repeat-x;
+  }
+  
+  .curl {
+    z-index: -1;
     position: absolute;
-    top: 19.5rem;
-    width: 104dvw;
-    height: 30rem;
-    fill: rgba(0, 0, 0, 0.9);
-}
-.wave svg {
-    filter: drop-shadow(0 -0.5rem 1rem rgba(110,168,255,0.3));
-}
+    border: none;
+    left: 0;
+    height: 40rem;
+    width: 100dvw;
+    /* backdrop-filter: blur(100px); */
+    /* background-color: red; */
+    background-image: linear-gradient(to bottom, rgba(8, 8, 8, 0.3), rgba(0,0,0,0));
+    box-shadow: 0 1rem 1rem 2rem black;
+    margin-top: 34rem;
+  }
+  button {
+    transition: 0.3s;
+    background-color: #C6C6C6;
+    border: none;
+    padding: 0.6rem 2.8rem;
+    font-family: 'ProductSansBlack';
+    color: #4F4F4F;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+  button:hover {
+    opacity: 0.7;
+  }
+  button:active {
+    transition: 0.1s;
+    transform: translateY(4px) scale(95%);
+  }
+
+  .explore {
+    margin-top: 5rem;
+  }
+  .icon-wrapper {
+    position: relative;
+    min-height: var(--hw);
+    min-width: var(--hw);
+    /* background-color: red; */
+  }
+  .icon-wrapper .icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    fill: var(--fill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chevron-down {
+    --hw: 2rem;
+    --fill: #C6C6C6;
+    opacity: 0.6;
+    margin-top: 0.5rem;
+    margin-bottom: 12rem;
+  }
+
+
+
+
+
+
+
+  @media only screen and (max-width: 1250px) and (max-aspect-ratio: 5/3) {
+    .chevron-down {
+        --hw: 2rem;
+        --fill: #C6C6C6;
+        opacity: 0.6;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+      }
+  }
+
+
+
+
+
+  @media only screen and (max-width: 700px) and (orientation: portrait) {
+    #orb_purple {
+        position: absolute;
+        height: 35dvh;
+        width: 35dvh;
+        border-radius: 73% 27% 61% 39% / 36% 45% 55% 64% ;
+        background-color: #201947;
+        left: -10dvw;
+        top: 10dvh;
+    }
+    #orb_blue {
+        position: absolute;
+        height: 31dvh;
+        width: 31dvh;
+        border-radius: 47% 53% 61% 39% / 67% 71% 29% 33% ;
+        background-color: #143451;
+        right: 20dvw;
+        top: 35dvh;
+    }
+    #orb_orange {
+        position: absolute;
+        height: 22dvh;
+        width: 26dvh;
+        border-radius: 77% 23% 35% 65% / 45% 23% 77% 55% ;
+        background-color: #472B11;
+        left: 42dvw;
+        top: 60dvh;
+    }
+    .main_blur_overlay {
+        width: 100dvw;
+        height: 100dvh;
+        background-color: rgba(0, 0, 0, 0.038);
+        /* background-color: red; */
+        backdrop-filter: blur(70px);
+        display: flex;
+        align-items: center;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        flex-direction: column;
+    }
+    
+    
+    .logo_container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 12rem;
+        min-width: 15rem;
+        margin-top: 7rem;
+        /* background-color: red; */
+    }
+    .logo_container .logo {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        /* background-color: blue; */
+    }
+    
+    .overlay_mask {
+        position: absolute;
+        z-index: -1;
+        width: 100dvw;
+        /* height: 100%; */
+        top: calc(-10rem * var(--content-scale));
+        left: 0;
+        bottom: calc(-10rem * var(--content-scale));
+        overflow: hidden;
+        mask-image: url(../assets/images/softedgemask.png);
+        mask-size: 120% 100%;
+        mask-position: 50% 0;
+        mask-repeat: no-repeat;
+        opacity: 0.3;
+        display: flex;
+        justify-self: flex-end;
+        /* background-color: red; */
+      }
+      .overlay_mask .dot_overlay {
+        height: 100%;
+        width: 100%;
+        background-image: url(../assets/images/dot.png);
+        background-repeat: repeat;
+        position: absolute;
+        background-size: 1.8rem;
+        opacity: 0.8;
+      }
+      .overlay_mask .grid_overlay {
+        height: 100%;
+        width: 100%;
+        background-image: url(../assets/images/grid.png);
+        background-repeat: repeat;
+        position: absolute;
+        background-size: 2.2rem;
+        opacity: 0.3;
+      }
+    
+      .greeting_container{
+        /* background-color: red; */
+        padding: 0 2rem;
+      }
+      p.greeting {
+        margin-top: 5rem;
+        font-size: 1rem;
+        white-space: normal !important;
+        min-height: 5rem;
+        /* background-color: red; */
+      }
+      p.greeting-heavy {
+        margin-top: 0.5rem;
+        font-size: 1.4rem;
+      }
+    
+    .lower-curl {
+        --size: 20px;
+        --p: 50px;
+        --R: 53.85px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
+        --dir: top;
+        
+          -webkit-mask:
+          radial-gradient(var(--R) at left 50% var(--d,var(--dir)) calc(var(--size) + var(--p)),#000 99%,#0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+          radial-gradient(var(--R) at left 50% var(--d,var(--dir)) calc(-1*var(--p)),#0000 99%,#000 101%) 
+                                      left 50% var(--d,var(--dir)) var(--size)/calc(4*var(--size)) 100% repeat-x;
+          mask:
+          radial-gradient(var(--R) at left 50% var(--d,var(--dir)) calc(var(--size) + var(--p)),#000 99%,#0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+          radial-gradient(var(--R) at left 50% var(--d,var(--dir)) calc(-1*var(--p)),#0000 99%,#000 101%) 
+                                      left 50% var(--d,var(--dir)) var(--size)/calc(4*var(--size)) 100% repeat-x;
+      }
+      
+      .curl {
+        z-index: -1;
+        position: absolute;
+        border: none;
+        left: 0;
+        height: 40rem;
+        width: 100dvw;
+        /* backdrop-filter: blur(100px); */
+        /* background-color: red; */
+        background-image: linear-gradient(to bottom, rgba(8, 8, 8, 0.3), rgba(0,0,0,0));
+        box-shadow: 0 1rem 1rem 2rem black;
+        margin-top: 34rem;
+      }
+      button {
+        transition: 0.3s;
+        background-color: #C6C6C6;
+        border: none;
+        padding: 0.6rem 2.8rem;
+        font-family: 'ProductSansBlack';
+        color: #4F4F4F;
+        font-size: 1.2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+      }
+      button:hover {
+        opacity: 1;
+      }
+      button:active {
+        transition: 0.1s;
+        transform: translateY(4px) scale(95%);
+        opacity: 0.7;
+      }
+    
+      .explore {
+        margin-top: 5rem;
+      }
+      .icon-wrapper {
+        position: relative;
+        min-height: var(--hw);
+        min-width: var(--hw);
+        /* background-color: red; */
+      }
+      .icon-wrapper .icon {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        fill: var(--fill);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .chevron-down {
+        --hw: 2rem;
+        --fill: #C6C6C6;
+        opacity: 0.6;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+      }
+
+  }
