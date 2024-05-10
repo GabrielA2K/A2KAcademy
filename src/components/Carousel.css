@@ -167,7 +167,7 @@
     display: flex;
     align-items: center;
     text-align: left;
-    font-family: 'ProductSansBold';
+    font-family: 'ProductSansBlack';
   }
   .course_btn .icon {
     /* background-color: red; */
@@ -179,6 +179,8 @@
     align-items: center;
     transition: 0.2s;
     font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
   }
   .btn_code .icon {
     font-size: 0.9rem;
@@ -456,6 +458,10 @@
       fill: var(--fill);
       display: flex;
       align-items: center;
+      font-size: 1.5rem;
+    }
+    .btn_code .icon {
+      font-size: 1.3rem;
     }
     .course_btn p {
       display: none;
@@ -573,6 +579,9 @@
         margin-left: 0.3rem;
       }
       .course_btn .icon {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
         /* background-color: red; */
         height: 1.5rem;
         width: 1.5rem;
@@ -580,6 +589,9 @@
         fill: --fill;
         display: flex;
         align-items: center;
+      }
+      .btn_code .icon {
+        font-size: 1.3rem;
       }
       .course_btn p {
         display: none;
