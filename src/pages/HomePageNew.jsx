@@ -113,7 +113,8 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
                 <button className='explore' onClick={()=>{scroll_to('top')}}>Explore</button>
                 <div className="chevron-down icon-wrapper">
                     <div className="icon">
-                        <ImportIcon name='Chevron-Down-Compact' />
+                    
+                        {/* <ImportIcon name='Chevron-Down-Compact' /> */}
                     </div>
                 </div>
                 <div id="top"></div>

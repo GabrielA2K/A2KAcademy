@@ -218,6 +218,9 @@
   .explore {
     margin-top: 5rem;
   }
+  .icon {
+    font-family: "icons";
+  }
   .icon-wrapper {
     position: relative;
     min-height: var(--hw);
@@ -233,10 +236,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'icons';
+    font-size: 2rem;
+    color: var(--fill);
   }
-  .icon-wrapper .icon svg{
-    position: absolute;
-  }
+  
 
   .chevron-down {
     --hw: 2rem;

@@ -150,19 +150,22 @@ export default function Carousel(){
                 <button className='course_btn btn_3d' data-active={activeCourse==0?"true":"false"} onClick={()=>{setActiveCourse(0)}}>
                   <p>3D Printing</p>
                   <div className="icon">
-                    <ImportIcon name="3D" />
+                  
+                    {/* <ImportIcon name="3D" /> */}
                   </div>
                 </button>
                 <button className='course_btn btn_phys' data-active={activeCourse==1?"true":"false"} onClick={()=>{setActiveCourse(1)}}>
                   <p>Physical Computing</p>
                   <div className="icon">
-                    <ImportIcon name="Plug" />
+                  
+                    {/* <ImportIcon name="Plug" /> */}
                   </div>
                 </button>
                 <button className='course_btn btn_code' data-active={activeCourse==2?"true":"false"} onClick={()=>{setActiveCourse(2)}}>
                   <p>World of Coding</p>
                   <div className="icon">
-                    <ImportIcon name="Coding1" />
+                  
+                    {/* <ImportIcon name="Coding1" /> */}
                   </div>
                 </button>
 

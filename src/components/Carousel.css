@@ -167,6 +167,7 @@
     display: flex;
     align-items: center;
     text-align: left;
+    font-family: 'ProductSansBold';
   }
   .course_btn .icon {
     /* background-color: red; */
@@ -177,6 +178,10 @@
     display: flex;
     align-items: center;
     transition: 0.2s;
+    font-size: 1.1rem;
+  }
+  .btn_code .icon {
+    font-size: 0.9rem;
   }
 
   
