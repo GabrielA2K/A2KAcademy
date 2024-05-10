@@ -1192,7 +1192,7 @@ video {
   margin-left: calc(38rem * var(--content-scale));
   margin-top: calc(1rem * var(--content-scale));
   border-radius: calc(1.5rem * var(--content-scale));
-  border: 1px solid var(--accent-color);
+  /* border: 1px solid var(--accent-color); */
   padding: calc(0.7rem * var(--content-scale)) calc(0.2rem * var(--content-scale));
 }
 .discipline p,

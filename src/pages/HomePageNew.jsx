@@ -118,6 +118,41 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
                 </div>
                 <div id="top"></div>
                 <Carousel />
+
+                
+                <p className="title_venn font-heavy">Why these <span className='orange'>Future</span>-<span className='blue'>Ready</span> <span className='purple'>Classes</span>?</p>
+                <div className="main_content_layer venn_container">
+              <div className="background_overlay">
+                <div className="dot_overlay"></div>
+              </div>
+              <div className="diagram d1">
+                <p className='font-heavy fontColor-normal center-text'>{"3D Designing &\nPrinting"}</p>
+                <div className="discipline ds1">
+                  <p className="dsp fontColor-normal font-bold">Discipline:</p>
+                  <p className="dsp fontColor-normal font-regular">{"Mechanical Engineering\nManufacturing Engineering"}</p>
+                </div>
+              </div>
+              <div className="diagram d2">
+                <p className='font-heavy fontColor-normal center-text'>{"Physical\nComputing"}</p>
+                <div className="discipline ds2">
+                  <p className="dsp fontColor-normal font-bold">Discipline:</p>
+                  <p className="dsp fontColor-normal font-regular">{"Electrical &\nElectronics Engineering"}</p>
+                </div>
+              </div>
+              <div className="diagram d3">
+                <p className='font-heavy fontColor-normal center-text'>{"World of\nCoding"}</p>
+                <div className="discipline ds3">
+                  <p className="dsp fontColor-normal font-bold">Discipline:</p>
+                  <p className="dsp fontColor-normal font-regular">{"Computer Science\nInformation Technology"}</p>
+                </div>
+              </div>
+              <div className="diagram d4">
+                <p className='font-heavy fontColor-normal center-text'>{"Smart\nProduct"}</p>
+              </div>
+            </div>
+                
+
+
                 
 
 

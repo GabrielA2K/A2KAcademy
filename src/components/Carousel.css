@@ -1,6 +1,6 @@
 .content_new {
     position: relative;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
     display: flex;
     height: fit-content;
     justify-content: center;
@@ -122,25 +122,217 @@
     margin-right: 4rem;
     /* background-color: rgba(0, 0, 0, 0.253); */
     max-width: 40rem;
+    min-height: 25rem;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   h1.heading_new {
     /* transition: 0.5s; */
     font-size: 4rem;
-    color: var(--accent-color);
     line-height: 4.2rem;
   }
+  h1.heading_new[data-active-course="3d"]{
+    color: #EA7000;
+  }
+  h1.heading_new[data-active-course="phys"]{
+    color: #369df1;
+  }
+  h1.heading_new[data-active-course="code"]{
+    color: #7E5BE2;
+  }
+
   p.description_new {
     /* transition: 0.5s; */
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    color: #C6C6C6;
+    margin-bottom: 1.2rem;
     margin-top: 0.6rem;
   }
+
+
+  .course_buttons {
+    /* background-color: red; */
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    margin-bottom: 2rem;
+  }
+  button.course_btn {
+    padding: 0.6rem 1.8rem;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  .course_btn .icon {
+    /* background-color: red; */
+    min-height: 1.1rem;
+    min-width: 1.1rem;
+    margin-left: 0.5rem;
+    fill: var(--fill);
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+  }
+
+  
+
+  /* .btn_3d[data-active="false"] {
+    background-color: white;
+    color: #EA7000;
+  }
+  .btn_phys[data-active="false"] {
+    background-color: white;
+    color: #369df1;
+  }
+  .btn_code[data-active="false"] {
+    background-color: white;
+    color: #7E5BE2;
+  } */
+  .btn_3d[data-active="false"] {
+    color: #EA7000;
+    /* color: white; */
+    opacity: 0.8; 
+    --fill: #EA7000;
+  }
+  .btn_phys[data-active="false"] {
+    color: #369df1;
+    /* color: rgb(235, 235, 235); */
+    opacity: 0.8;
+    --fill: #369df1;
+  }
+  .btn_code[data-active="false"] {
+    color: #7E5BE2;
+    /* color: white; */
+    opacity: 0.8;
+    --fill: #7E5BE2;
+  }
+  .course_btn:hover {
+    opacity: 1;
+  }
+
+  .btn_3d[data-active="true"] {
+    background-color: #EA7000;
+    color: white;
+    box-shadow: 0 0 2rem -0.5rem #EA7000;
+    --fill: white;
+  }
+  .btn_phys[data-active="true"] {
+    background-color: #369df1;
+    color: rgb(235, 235, 235);
+    box-shadow: 0 0 2rem -0.5rem #369df1;
+    --fill: white;
+  }
+  .btn_code[data-active="true"] {
+    background-color: #7E5BE2;
+    color: white;
+    box-shadow: 0 0 2rem -0.5rem #7E5BE2;
+    --fill: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .main_content_layer_new {
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+    min-height: calc(10rem * var(--content-scale));
+    /* background-color: rgba(255, 0, 0, 0.1); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: calc(15rem * var(--content-scale));
+    padding: 0 10vw 0 10vw;
+  }
+  .main_content_layer_new .background_layer {
+    position: absolute;
+    z-index: -1;
+    width: calc(72rem * var(--content-scale));
+    height: calc(30rem * var(--content-scale));
+    overflow: hidden;
+    mask-image: url(../assets/images/softedgemask.png);
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    opacity: 0.3;
+    display: flex;
+    margin-top: -5rem;
+    /* background-color: red; */
+  }
+  .main_content_layer_new .background_overlay {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    /* height: 100%; */
+    top: calc(-5rem * var(--content-scale));
+    left: 0;
+    bottom: calc(-25rem * var(--content-scale));
+    overflow: hidden;
+    mask-image: url(../assets/images/softedgemask.png);
+    mask-size: 120% 100%;
+    mask-position: 50% 0;
+    mask-repeat: no-repeat;
+    opacity: 0.3;
+    display: flex;
+    justify-self: flex-end;
+    /* background-color: red; */
+  }
+  .background_layer img.bg_image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.;
+  }
+  .main_content_layer_new .content_layer {
+  /* background-color: rgba(0, 128, 0, 0.288); */
+  max-width: calc(86rem * var(--content-scale));
+  height: fit-content;
+  min-height: calc(18rem * var(--content-scale));
+  display: flex;
+  flex-direction: column;
+}
+.content_layer.alt p.title,
+.content_layer.alt1 p.title {
+  margin-bottom: 0rem;
+  font-size: 4rem;
+  line-height: 4.2rem;
+  white-space: pre-wrap;
+  text-align: left;
+}
+.content_layer p.body {
+  font-size: 1.4rem;
+  color: #C6C6C6;
+  margin-bottom: 1.2rem;
+  margin-top: 0.6rem;
+}
+.content_layer.alt .title[data-active-course="3d"]{
+  color: #EA7000;
+}
+.content_layer.alt .title[data-active-course="phys"]{
+  color: #369df1;
+}
+.content_layer.alt .title[data-active-course="code"]{
+  color: #7E5BE2;
+}
+
 
 
 
@@ -221,6 +413,47 @@
         opacity: 0.5;
       }
 
+      .course_buttons {
+        /* background-color: red; */
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        margin-bottom: 2rem;
+        /* background-color: red; */
+        justify-content: center;
+      }
+      
+      button.course_btn {
+        
+        padding: 0.6rem 2rem;
+        margin-right: 0.3rem;
+        margin-left: 0.3rem;
+      }
+      
+
+
+  }
+
+  @media only screen and (max-width: 900px) and (max-aspect-ratio: 5/3) {
+    button.course_btn {
+        
+      padding: 0.6rem 2rem;
+      font-size: 0.5rem;
+      margin-right: 0.3rem;
+      margin-left: 0.3rem;
+    }
+    .course_btn .icon {
+      /* background-color: red; */
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-left: 0;
+      fill: var(--fill);
+      display: flex;
+      align-items: center;
+    }
+    .course_btn p {
+      display: none;
+    }
 
   }
 
@@ -313,5 +546,149 @@
         margin-top: 0.5rem;
         margin-bottom: 2.5rem;
       }
+
+
+
+      .course_buttons {
+        /* background-color: red; */
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        margin-bottom: 2rem;
+        /* background-color: red; */
+        justify-content: center;
+      }
+      
+      button.course_btn {
+        
+        padding: 0.6rem 2rem;
+        font-size: 0.5rem;
+        margin-right: 0.3rem;
+        margin-left: 0.3rem;
+      }
+      .course_btn .icon {
+        /* background-color: red; */
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-left: 0;
+        fill: --fill;
+        display: flex;
+        align-items: center;
+      }
+      .course_btn p {
+        display: none;
+      }
+    
+      
+    
+      /* .btn_3d[data-active="false"] {
+        background-color: white;
+        color: #EA7000;
+      }
+      .btn_phys[data-active="false"] {
+        background-color: white;
+        color: #369df1;
+      }
+      .btn_code[data-active="false"] {
+        background-color: white;
+        color: #7E5BE2;
+      } */
+      
+      .course_btn:hover {
+        opacity: 0.8;
+      }
+      .course_btn:active {
+        opacity: 1;
+      }
+
+
+      .main_content_layer_new {
+        position: relative;
+        width: 100vw;
+        height: fit-content;
+        min-height: calc(52rem * var(--content-scale));
+        /* background-color: rgba(255, 0, 0, 0.1); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: calc(15rem * var(--content-scale));
+        padding: 0 10vw 0 10vw;
+      }
+      .main_content_layer_new .background_layer {
+        position: absolute;
+        z-index: -1;
+        width: calc(72rem * var(--content-scale));
+        height: calc(35rem * var(--content-scale));
+        overflow: hidden;
+        mask-image: url(../assets/images/softedgemask.png);
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+        opacity: 0.3;
+        display: flex;
+        margin-top: -4rem;
+        /* background-color: red; */
+      }
+      .main_content_layer_new .background_overlay {
+        position: absolute;
+        z-index: -1;
+        width: 100vw;
+        /* height: 100%; */
+        top: calc(-5rem * var(--content-scale));
+        left: 0;
+        bottom: calc(-25rem * var(--content-scale));
+        overflow: hidden;
+        mask-image: url(../assets/images/softedgemask.png);
+        mask-size: 120% 100%;
+        mask-position: 50% 0;
+        mask-repeat: no-repeat;
+        opacity: 0.3;
+        display: flex;
+        justify-self: flex-end;
+        /* background-color: red; */
+      }
+      .background_layer img.bg_image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.;
+      }
+      .main_content_layer_new .content_layer {
+      /* background-color: rgba(0, 128, 0, 0.288); */
+      max-width: calc(86rem * var(--content-scale));
+      height: fit-content;
+      min-height: calc(18rem * var(--content-scale));
+      display: flex;
+      flex-direction: column;
+    }
+    .content_layer.alt p.title,
+    .content_layer.alt1 p.title {
+      margin-bottom: 0rem;
+      white-space: pre-wrap;
+      text-align: center;
+      font-size: 2.5rem;
+      line-height: 2.8rem;
+    }
+    .content_layer p.body {
+      font-size: 1.4rem;
+      color: #C6C6C6;
+      margin-bottom: 1.2rem;
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      white-space: normal !important;
+    }
+    .content_layer.alt .title[data-active-course="3d"]{
+      color: #EA7000;
+    }
+    .content_layer.alt .title[data-active-course="phys"]{
+      color: #369df1;
+    }
+    .content_layer.alt .title[data-active-course="code"]{
+      color: #7E5BE2;
+    }
+    
 
   }
