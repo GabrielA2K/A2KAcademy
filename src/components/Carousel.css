@@ -193,10 +193,11 @@
     background-color: white;
     color: #7E5BE2;
   } */
+  
   .btn_3d[data-active="false"] {
     color: #EA7000;
     /* color: white; */
-    opacity: 0.8; 
+    opacity: 0.8;
     --fill: #EA7000;
   }
   .btn_phys[data-active="false"] {
