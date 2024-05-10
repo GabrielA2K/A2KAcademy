@@ -549,6 +549,7 @@ p.title_venn {
         line-height: 3.2rem;
         color: #C6C6C6;
         margin-bottom: 4rem;
+        align-self: flex-start;
         margin-left: 2rem;
     }
     

@@ -121,7 +121,7 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
                 <Carousel />
 
                 <div className="curl lower-curl"></div>
-                <p className="title_venn font-heavy">Why these <span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span>?</p>
+                <p className="title_venn font-heavy">Why these <br/><span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span>?</p>
                 <div className="main_content_layer venn_container">
               <div className="background_overlay">
                 <div className="dot_overlay"></div>
