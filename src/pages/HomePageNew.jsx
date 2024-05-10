@@ -120,8 +120,8 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
                 <div id="top"></div>
                 <Carousel />
 
-                
-                <p className="title_venn font-heavy">Why these <span className='orange'>Future</span>-<span className='blue'>Ready</span> <span className='purple'>Classes</span>?</p>
+                <div className="curl lower-curl"></div>
+                <p className="title_venn font-heavy">Why these <span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span>?</p>
                 <div className="main_content_layer venn_container">
               <div className="background_overlay">
                 <div className="dot_overlay"></div>
@@ -151,30 +151,22 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
                 <p className='font-heavy fontColor-normal center-text'>{"Smart\nProduct"}</p>
               </div>
             </div>
-                
 
-
-                
-
-
-
-
-
-
-
-                
-                
-                
-            </div>
-            
-            
-            
-            
-            
             
 
 
-                
+
+
+
+
+
+
+
+
+          </div>
+          <div className="contact_btn">
+            
+          </div>
         </div>
     )
 }
