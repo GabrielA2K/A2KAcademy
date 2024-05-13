@@ -1,0 +1,195 @@
+.avail_card {
+    height: fit-content;
+    width: 20rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* min-height: 20rem; */
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid rgb(157, 157, 157);
+    /* backdrop-filter: blur(200px); */
+    z-index: 100;
+    box-shadow: 0 0 1rem -0.5rem rgba(255, 255, 255, 0.482);
+    padding-bottom: 0.5rem;
+    
+  }
+  
+  .avail_card_image {
+    display: flex;
+    position: relative;
+    /* background-color: red; */
+    width: 100%;
+    height: 11rem;
+    
+    background-size: cover;
+    /* border-radius: 2rem; */
+    /* box-shadow: 0 -1.5rem 2rem 1rem rgba(255, 255, 255, 0.482); */
+    padding: 2rem 0 1rem 2rem;
+    flex-direction: column;
+    /* overflow: hidden; */
+  }
+  .avail_card_image::after {
+    display: fix;
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.95));
+    /* border-radius: 2rem; */
+  }
+  
+  .avail_title {
+    z-index: 1;
+    font-size: 1.7rem;
+    color: white;
+    line-height: 2rem;
+  }
+  .avail_slots_container {
+    z-index: 1;
+    width: 10rem;
+    height: 10rem;
+    /* background-color: rgba(255, 0, 0, 0.357); */
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-self: flex-end;
+    justify-content: center;
+    align-items: center;
+  }
+  .avail_slots_value {
+    width: 100%;
+    height: 3rem;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .avail_slots_capacity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    /* background-color: green; */
+    line-height: 1.2rem;
+  }
+  .avail_slots_main {
+    /* background-color: black; */
+    font-size: 2rem;
+  }
+  .avail_slots_desc {
+    /* background-color: brown; */
+    font-size: 0.6rem;
+  }
+  
+  .avail_slots_const {
+    font-size: 1.2rem;
+    margin-bottom: 0.78rem;
+  }
+  
+  
+  
+  
+  
+  .font-size_cust {
+    font-size: var(--fontSize);
+  }
+  .line-height_cust
+  {
+    line-height: var(--lineHeight);
+  }
+  .avail_slots_title {
+    font-size: 0.75rem;
+  }
+  
+  .avail_card_text_color {
+    color: #D1D1D1;
+    font-size: 0.8rem;
+  }
+  
+  .avail_bottom {
+    width: 100%;
+    height: fit-content;
+    /* background-color: red; */
+    padding: 1rem 1.3rem 1rem 1.3rem;
+  }
+  .age_tag {
+    color: #3B3B3B;
+    padding: 0.3rem 1.2rem;
+    background-color: #AAAAAA;
+    border-radius: 2rem;
+    width: fit-content;
+    /* box-shadow: 0 0 2rem -0.5rem rgba(255, 255, 255, 0.325); */
+  }
+  .age_group {
+    margin-top: 0.3rem;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    /* background-color: red; */
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+  }
+  .pill {
+    color: #3B3B3B;
+    margin-top: 0.3rem;
+    padding: 0.35rem 1.7rem;
+    background-color: #AAAAAA;
+    border-radius: 2rem;
+    width: fit-content;
+    /* box-shadow: 0 0 2rem -0.5rem rgba(255, 255, 255, 0.325); */
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  
+  .schedule_group {
+    margin-top: 0.3rem;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    /* background-color: red; */
+    flex-wrap: wrap;
+    /* gap: 0 0.9rem; */
+    justify-content: space-between;
+    align-self: center;
+    /* align-items: stretch; */
+    /* margin-bottom: 1.2rem; */
+  }
+  .schedule_tag {
+    display: flex;
+    flex-direction: column;
+    color: #3B3B3B;
+    height: fit-content;
+    height: auto;
+    width: 8.4rem;
+    border-radius: 1rem;
+    background-color: #AAAAAA;
+    /* box-shadow: 0 0 2rem -0.5rem rgba(255, 255, 255, 0.325); */
+    padding: 0.5rem 1rem;
+  }
+  .schedule_title {
+    line-height: 0.9rem;
+    font-size: 0.87rem;
+    /* background-color: green; */
+  }
+  .schedule_desc {
+    line-height: 0.7rem;
+    margin-top: 0.1rem;
+    
+    /* background-color: red; */
+  }
+  .schedule_time {
+    margin-top: 0.5rem;
+    text-align: right;
+    line-height: 0.9rem;
+    align-self: flex-end;
+    justify-self: flex-end;
+    /* background-color: blue; */
+  }
+
+
