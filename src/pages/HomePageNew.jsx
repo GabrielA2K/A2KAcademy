@@ -152,7 +152,240 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
               </div>
             </div>
 
-            
+            <p className="title_avail font-heavy"><span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span><br/>Availability</p>
+
+          <div className="avail_cards_container">
+            <div className="overlay_mask">
+              <div className="grid_overlay"></div>
+            </div>
+            <div className="avail_card print">
+              <div className="avail_card_image">
+                <p className="avail_title font-bold">{"3D Designing &\nPrinting"}</p>
+                <div className="avail_slots_container">
+                  <div className="avail_slots_value">
+                    <div className="avail_slots_capacity font-bold">
+                      <div className="avail_slots_main">40</div>
+                      <div className="avail_slots_desc">Students</div>
+                    </div>
+                    
+                    <p className="avail_slots_const font-regular">/Day</p>
+                  </div>
+                  <p className="avail_slots_title font-bold">Available Slots</p>
+                </div>
+              </div>
+              <div className="avail_bottom">
+                <p className="avail_age_title font-bold avail_card_text_color">For Ages</p>
+                <div className="age_group">
+                  <p className="age_tag font-bold">7 to 9</p>
+                  <p className="age_tag font-bold">10 to 14</p>
+                  <p className="age_tag font-bold">15 to 18</p>
+                </div>
+                <p className="avail_duration_title font-bold avail_card_text_color">Class Duration</p>
+                <p className="pill font-bold">2 Hours<span className='font-light'> per Session</span></p>
+
+                <p className="avail_max_size_title font-bold avail_card_text_color">Max Session Size</p>
+                <p className="pill font-bold">5 Students<span className='font-light'> per Instructor</span></p>
+
+                <p className="avail_max_size_title font-bold avail_card_text_color">Schedule</p>
+                <div className="schedule_group">
+                  <div className="schedule_tag font-bold">
+                    <p className="schedule_title font-size_cust" style={{"--fontSize":"0.9rem"}}>School Term</p>
+                    <p className="schedule_desc font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>6 Weekly Sessions every Saturday</p>
+                    <p className="schedule_time font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"10:00 to 12:00\n14:00 to 16:00"}</p>
+                  </div>
+                  
+                  <div className="schedule_tag font-bold">
+                    <p className="schedule_title font-size_cust" style={{"--fontSize":"0.9rem"}}>Non-School Term</p>
+                    <p className="schedule_desc font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"5-day Summer Camp\n "}</p>
+                    <p className="schedule_time font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"10:00 to 12:15\n14:00 to 16:15"}</p>
+                  </div>
+                </div>
+                
+              </div>
+
+              
+              
+            </div>
+
+
+
+
+
+
+
+
+            <div className="avail_card physical">
+              <div className="avail_card_image">
+                <p className="avail_title font-bold">{"Physical\nComputing"}</p>
+                <div className="avail_slots_container">
+                  <div className="avail_slots_value">
+                    <div className="avail_slots_capacity font-bold">
+                      <div className="avail_slots_main">16</div>
+                      <div className="avail_slots_desc">Students</div>
+                    </div>
+                    
+                    <p className="avail_slots_const font-regular">/Day</p>
+                  </div>
+                  <p className="avail_slots_title font-bold">Available Slots</p>
+                </div>
+              </div>
+              <div className="avail_bottom">
+                <p className="avail_age_title font-bold avail_card_text_color">For Ages</p>
+                <div className="age_group">
+                  <p className="age_tag font-bold">10 to 14</p>
+                  <p className="age_tag font-bold">15 to 18</p>
+                </div>
+                <p className="avail_duration_title font-bold avail_card_text_color">Class Duration</p>
+                <p className="pill font-bold">2 Hours<span className='font-light'> per Session</span></p>
+
+                <p className="avail_max_size_title font-bold avail_card_text_color">Max Session Size</p>
+                <p className="pill font-bold">4 Students<span className='font-light'> per Instructor</span></p>
+
+                <p className="avail_max_size_title font-bold avail_card_text_color">Schedule</p>
+                <div className="schedule_group">
+                  <div className="schedule_tag font-bold">
+                    <p className="schedule_title font-size_cust" style={{"--fontSize":"0.9rem"}}>School Term</p>
+                    <p className="schedule_desc font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>6 Weekly Sessions every Saturday</p>
+                    <p className="schedule_time font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"10:00 to 12:00\n14:00 to 16:00"}</p>
+                  </div>
+                  
+                  <div className="schedule_tag font-bold">
+                    <p className="schedule_title font-size_cust" style={{"--fontSize":"0.9rem"}}>Non-School Term</p>
+                    <p className="schedule_desc font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"5-day Summer Camp\n "}</p>
+                    <p className="schedule_time font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"10:00 to 12:15\n14:00 to 16:15"}</p>
+                  </div>
+                </div>
+                
+              </div>
+
+              
+              
+            </div>
+
+
+
+
+
+
+
+
+            <div className="avail_card coding">
+              <div className="avail_card_image">
+                <p className="avail_title font-bold">{"World of\nCoding"}</p>
+                <div className="avail_slots_container">
+                  <div className="avail_slots_value">
+                    <div className="avail_slots_capacity font-bold">
+                      <div className="avail_slots_main">12</div>
+                      <div className="avail_slots_desc">Students</div>
+                    </div>
+                    
+                    <p className="avail_slots_const font-regular">/Day</p>
+                  </div>
+                  <p className="avail_slots_title font-bold">Available Slots</p>
+                </div>
+              </div>
+              <div className="avail_bottom">
+                <p className="avail_age_title font-bold avail_card_text_color">For Ages</p>
+                <div className="age_group">
+                  <p className="age_tag font-bold">10 to 14</p>
+                  <p className="age_tag font-bold">15 to 18</p>
+                </div>
+                <p className="avail_duration_title font-bold avail_card_text_color">Class Duration</p>
+                <p className="pill font-bold">2 Hours<span className='font-light'> per Session</span></p>
+
+                <p className="avail_max_size_title font-bold avail_card_text_color">Max Session Size</p>
+                <p className="pill font-bold">4 Students<span className='font-light'> per Instructor</span></p>
+
+                <p className="avail_schedule_title font-bold avail_card_text_color">Schedule</p>
+                <div className="schedule_group">
+                  <div className="schedule_tag font-bold">
+                    <p className="schedule_title font-size_cust" style={{"--fontSize":"0.9rem"}}>School Term</p>
+                    <p className="schedule_desc font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>6 Weekly Sessions every Saturday</p>
+                    <p className="schedule_time font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"10:00 to 12:00\n14:00 to 16:00"}</p>
+                  </div>
+                  
+                  <div className="schedule_tag font-bold">
+                    <p className="schedule_title font-size_cust" style={{"--fontSize":"0.9rem"}}>Non-School Term</p>
+                    <p className="schedule_desc font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"5-day Summer Camp\n "}</p>
+                    <p className="schedule_time font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"10:00 to 12:15\n14:00 to 16:15"}</p>
+                  </div>
+                </div>
+                
+              </div>
+
+              
+              
+            </div>
+
+
+
+
+
+
+
+
+            <div className="avail_card all-in">
+              <div className="avail_card_image">
+                <p className="avail_title font-bold">{"All-in\nExploring"}</p>
+                <div className="avail_slots_container">
+                  <div className="avail_slots_value">
+                    <div className="avail_slots_capacity font-bold">
+                      <div className="avail_slots_main">10</div>
+                      <div className="avail_slots_desc">Students</div>
+                    </div>
+                    
+                    <p className="avail_slots_const font-regular">/Day</p>
+                  </div>
+                  <p className="avail_slots_title font-bold">Available Slots</p>
+                </div>
+              </div>
+              <div className="avail_bottom">
+                <p className="avail_age_title font-bold avail_card_text_color">For Ages</p>
+                <div className="age_group">
+                  <p className="age_tag font-bold">10 to 14</p>
+                  <p className="age_tag font-bold">15 to 18</p>
+                </div>
+                <p className="avail_duration_title font-bold avail_card_text_color">Class Duration</p>
+                <p className="pill font-bold">2.5 Hours<span className='font-light'> per Session</span></p>
+
+                <p className="avail_max_size_title font-bold avail_card_text_color">Max Session Size</p>
+                <p className="pill font-bold">5 Students<span className='font-light'> per Instructor</span></p>
+
+                <p className="avail_schedule_title font-bold avail_card_text_color">Schedule</p>
+                <div className="schedule_group">
+                  <div className="schedule_tag font-bold">
+                    <p className="schedule_title font-size_cust" style={{"--fontSize":"0.9rem"}}>School Term</p>
+                    <p className="schedule_desc font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>6 Weekly Sessions every Saturday</p>
+                    <p className="schedule_time font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"10:00 to 12:30\n14:00 to 16:40"}</p>
+                  </div>
+                  
+                  <div className="schedule_tag font-bold">
+                    <p className="schedule_title font-size_cust" style={{"--fontSize":"0.9rem"}}>Non-School Term</p>
+                    <p className="schedule_desc font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"5-day Summer Camp\n "}</p>
+                    <p className="schedule_time font-size_cust font-light" style={{"--fontSize":"0.7rem"}}>{"10:00 to 12:30\n14:00 to 16:30"}</p>
+                  </div>
+                </div>
+                
+              </div>
+
+              
+              
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+          
 
 
 
