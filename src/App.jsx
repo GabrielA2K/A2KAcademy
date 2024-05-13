@@ -7,8 +7,8 @@ function App() {
       <>
         <BrowserRouter>
           <Routes>
-            <Route index element={<HomePage />} />
-            <Route path='/new_look' element={<HomePageNew />} />
+            <Route index element={<HomePageNew />} />
+            <Route path='/old_look' element={<HomePage />} />
           </Routes>
         </BrowserRouter>
       </>
