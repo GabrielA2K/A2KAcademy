@@ -265,10 +265,11 @@
 
 p.title_venn {
     font-size: 3.5rem;
-    line-height: 4.2rem;
+    line-height: 4rem;
     color: #C6C6C6;
     margin-bottom: 4rem;
-    margin-top: 10rem;
+    margin-top: 9rem;
+    /* text-align: left; */
 }
 .orange {
     color: #EA7000;
@@ -312,23 +313,43 @@ p.title_venn {
 
   p.title_avail {
     font-size: 3.5rem;
-    line-height: 4.2rem;
+    line-height: 4rem;
     color: #C6C6C6;
-    margin-bottom: 4rem;
-    margin-top: 10rem;
+    margin-bottom: 3rem;
+    margin-top: 9rem;
 }
 
 .avail_cards_container {
+  mask-image: url(../assets/images/softhorizontal.png);
+  mask-size: cover;
   position: relative;
-  width: 100dvw;
+  width: 82dvw;
   padding: 0 10vw;
   display: flex;
-  /* min-height: 10rem; */
+  min-height: 40rem;
   height: fit-content;
   /* background-color: red; */
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+
+  -webkit-overflow-scrolling: touch;
+}
+.avail_card:nth-child(2) {
+  margin-left: 60rem;
+}
+.avail_card:nth-child(5) {
+  margin-right: 20rem;
+}
+
+.avail_card {
+  transition: opacity 0.5s;
+  cursor: pointer;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
 }
 
 .avail_card.print .avail_card_image::after {
@@ -344,7 +365,13 @@ p.title_venn {
   background-image: linear-gradient(135deg, rgba(94, 30, 0, 0.6), rgba(9, 14, 74, 0.848), rgba(19, 3, 42, 0.98));
 }
 
-
+/* .avail_cards_container:hover .avail_card:not(:hover) {
+  opacity: 0.5;
+} */
+.avail_card:hover ~ .avail_card:not(:hover),
+.avail_card:not(:hover):has(~ .avail_card:hover) {
+  opacity: 0.4;
+}
   
 /* .contact_btn:before {
   content: "";
@@ -579,17 +606,29 @@ p.title_venn {
 
 
       p.title_venn {
-        font-size: 3rem;
-        line-height: 3.2rem;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
         color: #C6C6C6;
-        margin-bottom: 4rem;
-        align-self: flex-start;
-        margin-left: 2rem;
+        margin-bottom: 3rem;
+        align-self: center;
+        margin-top: 5.5rem;
+        text-align: left;
+        margin-left: 2.5rem;
     }
     
     .blue {
-      display: block;
+      /* display: block; */
         /* padding-right: 10rem; */
+    }
+    p.title_avail {
+      font-size: 2.5rem;
+        line-height: 2.5rem;
+        color: #C6C6C6;
+        margin-bottom: 3rem;
+        align-self: center;
+        margin-top: 5.5rem;
+        text-align: right;
+        margin-right: 2.5rem;
     }
 
 
@@ -614,6 +653,7 @@ p.title_venn {
       overflow-x: auto;
       overflow-y: hidden;
       scroll-snap-type: x mandatory;
+      mask-image: none;
     }
     .avail_card:nth-child(2) {
       margin-left: 64rem;
@@ -623,8 +663,13 @@ p.title_venn {
     }
     
     .avail_card {
+      transition: opacity 0s;
       flex: 0 0 auto;
       scroll-snap-align: center;
+    }
+    .avail_card:hover ~ .avail_card:not(:hover),
+    .avail_card:not(:hover):has(~ .avail_card:hover) {
+      opacity: 1;
     }
 
   }

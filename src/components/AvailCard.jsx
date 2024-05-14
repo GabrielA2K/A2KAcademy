@@ -6,10 +6,14 @@ import AgePill from "./AgePill"
 
 export default function AvailCard(card) {
 
+  function glide() {
+    document.querySelector(".avail_cards_container").scrollLeft += 20
+  }
+
 
     return (
         <>
-            <div className={"avail_card "+card.classname}>
+            <div className={"avail_card "+card.classname} onClick={(e)=>{document.querySelector(".avail_card."+card.classname).scrollIntoView({behavior:"smooth", block:"nearest", inline:"center"})}}>
               <div className="avail_card_image" style={{backgroundImage: 'url('+card.image+')'}}>
                 <p className="avail_title font-heavy">{card.title}</p>
                 <div className="avail_slots_container">

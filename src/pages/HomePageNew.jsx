@@ -122,7 +122,7 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
                 <Carousel />
 
                 <div className="curl lower-curl"></div>
-                <p className="title_venn font-heavy">Why these <br/><span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span>?</p>
+                <p className="title_venn font-heavy center-text">Why these <br/><span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span>?</p>
                 <div className="main_content_layer venn_container">
               <div className="background_overlay">
                 <div className="dot_overlay"></div>
@@ -154,7 +154,7 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
             </div>
             
             <div className="curl lower-curl"></div>
-            <p className="title_avail font-heavy"><span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span><br/>Availability</p>
+            <p className="title_avail font-heavy center-text"><span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span><br/>Availability</p>
 
           <div className="avail_cards_container">
             <div className="overlay_mask">
