@@ -225,27 +225,37 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
 
           </div>
 
-
-
-
-
-
-
-
-
-
-
-
-          
-
-
-
-
-
-
-
-
-
+          <div className="curl lower-curl"></div>
+          <p className="title_mvv font-heavy center-text">Our <span className='purple'>Mission</span>, <span className='orange'>Vision </span>& <span className='blue'>Values</span></p>
+          <div className="mission_container">
+            <div className="overlay_mask">
+              <div className="dot_overlay"></div>
+            </div>
+            <div className="mission-vision_layout">
+              <div className="mission_card m-v-card">
+                <div className="icon"></div>
+                <p className="m-v_title font-bold">Our Mission</p>
+                <p className="mission_body font-light justify-text">{"We cultivate a dynamic learning environment where aspiring individuals acquire essential computing skills through personalized hands-on instruction from global experts in world-class technical facilities."}</p>
+              </div>
+              <div className="vision_card m-v-card">
+                <div className="icon"></div>
+                <p className="m-v_title font-bold">Our Vision</p>
+                <p className="mission_body font-light justify-text">{"We cultivate a dynamic learning environment where aspiring individuals acquire essential computing skills through personalized hands-on instruction from global experts in world-class technical facilities."}</p>
+              </div>
+              
+            </div>
+            <div className="mission-vision_layout">
+              <div className="values_card m-v-card">
+                <div className="icon"></div>
+                <p className="m-v_title font-bold">Our Mission</p>
+                <p className="mission_body font-light justify-text"><span className="font-heavy">Curiosity</span><br/>fuels our relentless pursuit of knowledge and understanding, propelling us to explore the frontiers of technology.<br/><br/><span className="font-heavy">Kindness</span><br/>forms the cornerstone of our community, where empathy and compassion foster an environment of support and understanding.<br/><br/><span className="font-heavy">Excellence</span><br/>is our standard, driving us to continuously strive for mastery and innovation in all aspects of computing education and beyond.</p>
+              </div>
+              <div className="title_card m-v-card">
+              <p className="title_placeholder font-heavy center-text"> </p>
+              </div>
+              
+            </div>
+          </div>
 
           </div>
           <div className="contact_btn">
