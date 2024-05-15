@@ -286,7 +286,7 @@ p.title_venn {
     position: relative;
     width: 100vw;
     height: fit-content;
-    min-height: 30rem;
+    min-height: auto;
     /* background-color: rgba(255, 0, 0, 0.1); */
     display: flex;
     flex-direction: column;
@@ -340,7 +340,7 @@ p.title_venn {
   -webkit-overflow-scrolling: touch;
 }
 .avail_card:nth-child(2) {
-  margin-left: 60rem;
+  margin-left: 84rem;
 }
 .avail_card:nth-child(5) {
   margin-right: 20rem;
@@ -439,12 +439,12 @@ p.mission_body {
 }
 
 .vision_card .icon {
-  background-color: #472D1B;
-  color: #AA723D;
+  background-color: #793c10;
+  color: #d6904e;
   font-size: 2.5rem;
 }
 .vision_card .m-v_title {
-  background-color: #302014;
+  background-color: #3d200a;
   color: #E9BB8F;
 }
 .values_card {
@@ -603,12 +603,12 @@ p.mission_body {
     }
     
     .vision_card .icon {
-      background-color: #472D1B;
-      color: #AA723D;
+      background-color: #793c10;
+      color: #d6904e;
       font-size: 2.5rem;
     }
     .vision_card .m-v_title {
-      background-color: #302014;
+      background-color: #3d200a;
       color: #E9BB8F;
     }
     .values_card {
@@ -631,6 +631,12 @@ p.mission_body {
     .title_mvv {
       font-size: 2.5rem;
       text-align: center;
+    }
+
+
+    .avail_card:hover ~ .avail_card:not(:hover),
+    .avail_card:not(:hover):has(~ .avail_card:hover) {
+      opacity: 1;
     }
   }
 
@@ -954,12 +960,12 @@ p.mission_body {
     }
     
     .vision_card .icon {
-      background-color: #472D1B;
-      color: #AA723D;
+      background-color: #793c10;
+      color: #d6904e;
       font-size: 2.5rem;
     }
     .vision_card .m-v_title {
-      background-color: #302014;
+      background-color: #3d200a;
       color: #E9BB8F;
     }
     .values_card {

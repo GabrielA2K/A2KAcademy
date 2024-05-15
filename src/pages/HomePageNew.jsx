@@ -124,34 +124,40 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
                 <div className="curl lower-curl"></div>
                 <p className="title_venn font-heavy center-text">Why these <br/><span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span>?</p>
                 <div className="main_content_layer venn_container">
-              <div className="background_overlay">
-                <div className="dot_overlay"></div>
-              </div>
-              <div className="diagram d1">
-                <p className='font-heavy fontColor-normal center-text'>{"3D Designing &\nPrinting"}</p>
-                <div className="discipline ds1">
-                  <p className="dsp fontColor-normal font-bold">Discipline:</p>
-                  <p className="dsp fontColor-normal font-regular">{"Mechanical Engineering\nManufacturing Engineering"}</p>
+                  <div className="background_overlay">
+                    <div className="dot_overlay"></div>
+                  </div>
+                  <div className="diagram d1">
+                    <p className='font-heavy center-text'>{"3D Designing &\nPrinting"}</p>
+                    <div className="discipline ds1">
+                      <p className="dsp font-bold">Discipline:</p>
+                      <p className="dsp font-regular">{"Mechanical Engineering\nManufacturing Engineering"}</p>
+                    </div>
+                  </div>
+                  <div className="diagram d2">
+                    <p className='font-heavy center-text'>{"Physical\nComputing"}</p>
+                    <div className="discipline ds2">
+                      <p className="dsp font-bold">Discipline:</p>
+                      <p className="dsp font-regular">{"Electrical &\nElectronics Engineering"}</p>
+                    </div>
+                  </div>
+                  <div className="diagram d3">
+                    <p className='font-heavy center-text'>{"World of\nCoding"}</p>
+                    <div className="discipline ds3">
+                      <p className="dsp font-bold">Discipline:</p>
+                      <p className="dsp font-regular">{"Computer Science\nInformation Technology"}</p>
+                    </div>
+                  </div>
+                  <div className="diagram d4">
+                    <p className='font-heavy center-text'>{"Smart\nProduct"}</p>
+                  </div>
+                  <div className="venn_text_container">
+                    <p className="venn_text font-light justify-text">• Broadening your child’s appreciation of the applications and benefits of Science, Technology, Engineering and Mathematics (STEM).</p>
+                    <p className="venn_text font-light justify-text">• Equipping your child with a multi-disciplinary approach to problem-solving through realworld applications and project-based learning.</p>
+                    <p className="venn_text font-light justify-text">• Preparing your child for future careers that actively shape technological advancements.</p>
+                  </div>
+                  
                 </div>
-              </div>
-              <div className="diagram d2">
-                <p className='font-heavy fontColor-normal center-text'>{"Physical\nComputing"}</p>
-                <div className="discipline ds2">
-                  <p className="dsp fontColor-normal font-bold">Discipline:</p>
-                  <p className="dsp fontColor-normal font-regular">{"Electrical &\nElectronics Engineering"}</p>
-                </div>
-              </div>
-              <div className="diagram d3">
-                <p className='font-heavy fontColor-normal center-text'>{"World of\nCoding"}</p>
-                <div className="discipline ds3">
-                  <p className="dsp fontColor-normal font-bold">Discipline:</p>
-                  <p className="dsp fontColor-normal font-regular">{"Computer Science\nInformation Technology"}</p>
-                </div>
-              </div>
-              <div className="diagram d4">
-                <p className='font-heavy fontColor-normal center-text'>{"Smart\nProduct"}</p>
-              </div>
-            </div>
             
             <div className="curl lower-curl"></div>
             <p className="title_avail font-heavy center-text"><span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span><br/>Availability</p>
@@ -232,14 +238,15 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
               <div className="dot_overlay"></div>
             </div>
             <div className="mission-vision_layout">
-              <div className="mission_card m-v-card">
-                <div className="icon"></div>
-                <p className="m-v_title font-bold">Our Mission</p>
-                <p className="mission_body font-light justify-text">{"We cultivate a dynamic learning environment where aspiring individuals acquire essential computing skills through personalized hands-on instruction from global experts in world-class technical facilities."}</p>
-              </div>
+              
               <div className="vision_card m-v-card">
                 <div className="icon"></div>
                 <p className="m-v_title font-bold">Our Vision</p>
+                <p className="mission_body font-light justify-text">{"We cultivate a dynamic learning environment where aspiring individuals acquire essential computing skills through personalized hands-on instruction from global experts in world-class technical facilities."}</p>
+              </div>
+              <div className="mission_card m-v-card">
+                <div className="icon"></div>
+                <p className="m-v_title font-bold">Our Mission</p>
                 <p className="mission_body font-light justify-text">{"We cultivate a dynamic learning environment where aspiring individuals acquire essential computing skills through personalized hands-on instruction from global experts in world-class technical facilities."}</p>
               </div>
               
@@ -247,7 +254,7 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
             <div className="mission-vision_layout">
               <div className="values_card m-v-card">
                 <div className="icon"></div>
-                <p className="m-v_title font-bold">Our Mission</p>
+                <p className="m-v_title font-bold">Our Values</p>
                 <p className="mission_body font-light justify-text"><span className="font-heavy">Curiosity</span><br/>fuels our relentless pursuit of knowledge and understanding, propelling us to explore the frontiers of technology.<br/><br/><span className="font-heavy">Kindness</span><br/>forms the cornerstone of our community, where empathy and compassion foster an environment of support and understanding.<br/><br/><span className="font-heavy">Excellence</span><br/>is our standard, driving us to continuously strive for mastery and innovation in all aspects of computing education and beyond.</p>
               </div>
               <div className="title_card m-v-card">
