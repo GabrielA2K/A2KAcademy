@@ -232,7 +232,7 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
           </div>
 
           <div className="curl lower-curl"></div>
-          <p className="title_mvv font-heavy center-text">Our <span className='purple'>Mission</span>, <span className='orange'>Vision </span>& <span className='blue'>Values</span></p>
+          <p className="title_mvv font-heavy center-text">Our <span className='orange'>Vision</span>, <span className='purple'>Mission</span> & <span className='blue'>Values</span></p>
           <div className="mission_container">
             <div className="overlay_mask">
               <div className="dot_overlay"></div>
