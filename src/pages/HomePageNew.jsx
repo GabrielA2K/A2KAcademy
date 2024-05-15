@@ -242,7 +242,7 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
               <div className="vision_card m-v-card">
                 <div className="icon"></div>
                 <p className="m-v_title font-bold">Our Vision</p>
-                <p className="mission_body font-light justify-text">{"We cultivate a dynamic learning environment where aspiring individuals acquire essential computing skills through personalized hands-on instruction from global experts in world-class technical facilities."}</p>
+                <p className="mission_body font-light justify-text">{"To empower a new generation amidst the digital revolution by fostering a community of innovative thinkers and ethical leaders equipped to harness technology for positive social change through their careers."}</p>
               </div>
               <div className="mission_card m-v-card">
                 <div className="icon"></div>
