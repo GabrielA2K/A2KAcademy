@@ -85,12 +85,21 @@ const clickPC1 = () => {selectPhotocard('activePC1')}
 const clickPC2 = () => {selectPhotocard('activePC2')}
 const clickPC3 = () => {selectPhotocard('activePC3')}
 
-
+const [contactIsActive, setContactState] = useState("false")
+const toggleContact = () => {
+  if (contactIsActive == "true") {
+    setContactState("false")
+  }
+  if (contactIsActive == "false") {
+    setContactState("true")
+  }
+}
 
 
 
 
     return(
+      <>
         <div id="body_root">
             <div id="orb_purple"></div>
             <div id="orb_blue"></div>
@@ -263,11 +272,24 @@ const clickPC3 = () => {selectPhotocard('activePC3')}
               
             </div>
           </div>
+          
+          </div>
+
+          <div className="contact_btn" data-active={contactIsActive} onClick={toggleContact}>
+            <div className="icon">
+            
+            </div>
+          </div>
+          <div className="contact_list" data-active={contactIsActive}>
+            <a href="https://wa.me/639278812450" target="_blank" className="contact_entry whatsapp font-heavy"><span className='icon contact_icon'></span>Connect on WhatsApp</a>
+            <a className="contact_entry viber font-heavy"><span className='icon contact_icon'></span>+63 927 881 2450</a>
+            {/* <a href="." className="contact_entry email font-heavy"><span className='icon contact_icon'></span>Email</a> */}
 
           </div>
-          <div className="contact_btn">
-            
-          </div>
         </div>
+        <div className="blurcover" data-active={contactIsActive} onClick={toggleContact}>
+          
+        </div>
+      </>
     )
 }
