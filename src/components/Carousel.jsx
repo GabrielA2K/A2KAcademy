@@ -170,7 +170,7 @@ export default function Carousel(){
                 </button>
 
             </div>
-            <h1 className="heading_new font-heavy" data-active-course={(activeCourse==0?"3d":(activeCourse==1?"phys":"code"))}>{(activeCourse==0?"3D PRINTING":(activeCourse==1?"PHYSICAL COMPUTING":"WORLD OF CODING"))}</h1>
+            <h1 className="heading_new font-heavy" data-active-course={(activeCourse==0?"3d":(activeCourse==1?"phys":"code"))}>{(activeCourse==0?"3D DESIGNING & PRINTING":(activeCourse==1?"PHYSICAL COMPUTING":"WORLD OF CODING"))}</h1>
             <p className="description_new font-light">{(activeCourse==0?print3d_short:(activeCourse==1?physcomp_short:code_short))}</p>
             
           </div>

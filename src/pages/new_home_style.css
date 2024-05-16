@@ -553,7 +553,7 @@ p.mission_body {
 }
 .title_card.m-v-card {
   background-color: rgba(0, 0, 0, 0.7);
-  background-image: url(../assets/images/mvs_card.png);
+  background-image: url(../assets/images/mvs_card.svg);
   background-size: cover;
   background-position: center;
   width: 20rem;

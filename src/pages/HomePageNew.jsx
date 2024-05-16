@@ -241,7 +241,7 @@ const toggleContact = () => {
           </div>
 
           <div className="curl lower-curl"></div>
-          <p className="title_mvv font-heavy center-text">Our <span className='purple'>Mission</span>, <span className='orange'>Vision </span>& <span className='blue'>Values</span></p>
+          <p className="title_mvv font-heavy center-text">Our <span className='orange'>Vision</span>, <span className='purple'>Mission</span> & <span className='blue'>Values</span></p>
           <div className="mission_container">
             <div className="overlay_mask">
               <div className="dot_overlay"></div>
@@ -251,7 +251,7 @@ const toggleContact = () => {
               <div className="vision_card m-v-card">
                 <div className="icon"></div>
                 <p className="m-v_title font-bold">Our Vision</p>
-                <p className="mission_body font-light justify-text">{"We cultivate a dynamic learning environment where aspiring individuals acquire essential computing skills through personalized hands-on instruction from global experts in world-class technical facilities."}</p>
+                <p className="mission_body font-light justify-text">{"To empower a new generation amidst the digital revolution by fostering a community of innovative thinkers and ethical leaders equipped to harness technology for positive social change through their careers."}</p>
               </div>
               <div className="mission_card m-v-card">
                 <div className="icon"></div>
