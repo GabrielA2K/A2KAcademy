@@ -22,3 +22,7 @@
     font-family: icons;
     src: url(icomoon.ttf);
 }
+@font-face{
+    font-family: icons1;
+    src: url(social_icons.ttf);
+}

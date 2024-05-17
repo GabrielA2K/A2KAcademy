@@ -360,6 +360,7 @@ p.title_venn {
     padding: 0rem 2.5rem 0rem 1.5rem;
     border-radius: 2rem;
     min-height: 4rem;
+    /* min-width: 18.5rem; */
   }
   .contact_icon {
     font-size: 2rem;
@@ -370,11 +371,21 @@ p.title_venn {
     color: #34C848;
   }
   .contact_entry.viber {
+    display: none;
     color: #505CCC;
+  }
+  .contact_entry.messenger {
+    color: #ad81ee;
   }
   .contact_entry.email {
     color: #FFB74C;
   }
+  .contact_entry.email .contact_icon {
+      font-size: 1.8rem;
+  }
+  .contact_entry.messenger .contact_icon {
+    font-family: icons1;
+}
 
 
 
@@ -1101,10 +1112,10 @@ p.mission_body {
       /* display: none; */
       transition: 0.5s;
       position: fixed;
-      right: 1.5rem;
-      bottom: 2rem;
-      min-height: 4rem;
-      width: 4rem;
+      right: 1.3rem;
+      bottom: 1.4rem;
+      min-height: 3.6rem;
+      width: 3.6rem;
       border-radius: 4rem;
       background-color: #29292981;
       box-shadow: 0 0 2rem -0.5rem rgba(255, 255, 255, 0);
@@ -1123,7 +1134,7 @@ p.mission_body {
     }
     .contact_btn .icon {
       transition: 0.5s;
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #34c848;
       /* background-color: red; */
     }
@@ -1180,11 +1191,13 @@ p.mission_body {
       color: #34C848;
     }
     .contact_entry.viber {
+      display: flex;
       color: #505CCC;
     }
     .contact_entry.email {
       color: #FFB74C;
     }
+    
   
   
   

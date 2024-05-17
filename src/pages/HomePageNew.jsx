@@ -282,9 +282,9 @@ const toggleContact = () => {
           </div>
           <div className="contact_list" data-active={contactIsActive}>
             <a href="https://wa.me/639278812450" target="_blank" className="contact_entry whatsapp font-heavy"><span className='icon contact_icon'></span>Connect on WhatsApp</a>
-            <a className="contact_entry viber font-heavy"><span className='icon contact_icon'></span>+63 927 881 2450</a>
-            {/* <a href="." className="contact_entry email font-heavy"><span className='icon contact_icon'></span>Email</a> */}
-
+            <a href="https://messenger.com/t/a2kgrouporg" target="_blank" className="contact_entry messenger font-heavy"><span className='icon contact_icon'></span>Connect on Messenger</a>
+            <a href="viber://chat?number=%2B639278812450" className="contact_entry viber font-heavy"><span className='icon contact_icon'></span>Connect on Viber</a>
+            <a onClick={(e) => {window.location.href ='mailto:info@a2kacademy.com';}} className="contact_entry email font-heavy"><span className='icon contact_icon'></span>Send us an Email</a>
           </div>
         </div>
         <div className="blurcover" data-active={contactIsActive} onClick={toggleContact}>
