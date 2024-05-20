@@ -281,10 +281,43 @@ const toggleContact = () => {
             </div>
           </div>
           <div className="contact_list" data-active={contactIsActive}>
-            <a href="https://wa.me/639278812450" target="_blank" className="contact_entry whatsapp font-heavy"><span className='icon contact_icon'></span>Connect on WhatsApp</a>
+            {/* <a href="https://wa.me/639278812450" target="_blank" className="contact_entry whatsapp font-heavy"><span className='icon contact_icon'></span>Connect on WhatsApp</a>
             <a href="https://messenger.com/t/a2kgrouporg" target="_blank" className="contact_entry messenger font-heavy"><span className='icon contact_icon'></span>Connect on Messenger</a>
             <a href="viber://chat?number=%2B639278812450" className="contact_entry viber font-heavy"><span className='icon contact_icon'></span>Connect on Viber</a>
-            <a onClick={(e) => {window.location.href ='mailto:info@a2kacademy.com';}} className="contact_entry email font-heavy"><span className='icon contact_icon'></span>Send us an Email</a>
+            <a onClick={(e) => {window.location.href ='mailto:info@a2kacademy.com';}} className="contact_entry email font-heavy"><span className='icon contact_icon'></span>Send us an Email</a> */}
+            <a href="https://wa.me/639278812450" target="_blank" className="contact_card whatsapp">
+              <div className="contact_card_header">
+                <div className="icon"></div>
+                <p className="contact_holder font-heavy">A2K<br/><span className='font-bold'>Academy</span></p>
+              </div>
+              <p className="contact_main font-bold">+63 927 881 2450</p>
+              <p className="contact_handler font-bold">WhatsApp</p>
+            </a>
+            <a href="https://messenger.com/t/a2kgrouporg" target="_blank" className="contact_card messenger">
+              <div className="contact_card_header">
+                <div className="icon"></div>
+                <p className="contact_holder font-heavy">A2K<br/><span className='font-bold'>Academy</span></p>
+              </div>
+              <p className="contact_main font-bold">fb.me/a2kgrouporg</p>
+              <p className="contact_handler font-bold">Messenger</p>
+            </a>
+            <a href="viber://chat?number=%2B639278812450" target="_blank" className="contact_card viber">
+              <div className="contact_card_header">
+                <div className="icon"></div>
+                <p className="contact_holder font-heavy">A2K<br/><span className='font-bold'>Academy</span></p>
+              </div>
+              <p className="contact_main font-bold">+63 927 881 2450</p>
+              <p className="contact_handler font-bold">Viber</p>
+            </a>
+            <a onClick={(e) => {window.location.href ='mailto:academy@a2kgroup.org';}} className="contact_card email">
+              <div className="contact_card_header">
+                <div className="icon"></div>
+                <p className="contact_holder font-heavy">A2K<br/><span className='font-bold'>Academy</span></p>
+              </div>
+              <p className="contact_main font-bold">academy@a2kgroup.org</p>
+              <p className="contact_handler font-bold">Email</p>
+            </a>
+            
           </div>
         </div>
         <div className="blurcover" data-active={contactIsActive} onClick={toggleContact}>

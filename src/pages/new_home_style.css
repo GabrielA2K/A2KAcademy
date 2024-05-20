@@ -332,19 +332,127 @@ p.title_venn {
     transition: 0.5s;
     display: flex;
     align-items: flex-end;
-    flex-direction: column-reverse;
-    right: -20rem;
+    /* flex-direction: row-reverse; */
+    right: -30rem;
     bottom: 8rem;
     z-index: 99;
     position: fixed;
     /* background-color: red; */
+    /* border: 2px solid red; */
     height: fit-content;
-    width: 18rem;
-    gap: 0.5rem;
+    width: 28rem;
+    justify-content: flex-end;
+    gap: 0.8rem;
+    align-items: stretch;
+    flex-wrap: wrap;
   }
   .contact_list[data-active="true"] {
-    right: 3rem;
+    right: 2.5rem;
   }
+
+  .contact_card {
+    /* background-color: rgba(255, 0, 0, 0.399); */
+    transition: 0.2s;
+    --c-clr: #FFF;
+    background-image: linear-gradient(-45deg, #1b1b1b, #2d2d2d);
+    min-height: 8rem;
+    min-width: 13.5rem;
+    display: flex;
+    border-radius: 1rem;
+    border-top: 3px solid var(--c-clr);
+    /* flex: auto; */
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    box-shadow: 0 0 1rem -0.2rem black;
+  }
+  .contact_card_header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+  }
+  p.contact_holder {
+    color: var(--c-clr);
+    text-align: right;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    opacity: 0.4;
+  }
+  p.contact_holder span {
+    font-size: 0.9rem;
+  }
+  .contact_card_header .icon {
+    /* background-color: red; */
+    color: var(--c-clr);
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+  }
+
+  p.contact_main {
+    background-color: #171515;
+    border-radius: 5rem;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: var(--c-clr);
+  }
+  p.contact_handler {
+    font-size: 0.8rem;
+    /* background-color: red; */
+    line-height: 0.8rem;
+    margin-top: 0.5rem;
+    color: var(--c-clr);
+  }
+  .contact_card.whatsapp {
+    --c-clr: #37B34B;
+  }
+  .contact_card.messenger {
+    --c-clr: #8C6CF1;
+  }
+  .contact_card.viber {
+    --c-clr: #5965D0;
+  }
+  .contact_card.email {
+    cursor: pointer;
+    --c-clr: #FF9B63;
+  }
+  .contact_card.email .contact_main{
+    /* font-size: 0.7rem; */
+  }
+  .contact_card.messenger .contact_card_header .icon {
+    font-family: icons1;
+  }
+
+
+  .contact_card.whatsapp:hover {
+    transition: 0.3s;
+    transform: translateY(-0.2rem);
+    background-image: linear-gradient(-45deg, #1b1b1b, #18391e);
+  }
+  .contact_card.messenger:hover {
+    transition: 0.3s;
+    transform: translateY(-0.2rem);
+    background-image: linear-gradient(-45deg, #1b1b1b, #231b3e);
+  }
+  .contact_card.viber:hover {
+    transition: 0.3s;
+    transform: translateY(-0.2rem);
+    background-image: linear-gradient(-45deg, #1b1b1b, #232644);
+  }
+  .contact_card.email:hover {
+    transition: 0.3s;
+    transform: translateY(-0.2rem);
+    background-image: linear-gradient(-45deg, #1b1b1b, #4e3526);
+  }
+
+
+
+
+
 
   a:active,
   a:hover,
@@ -385,7 +493,11 @@ p.title_venn {
   }
   .contact_entry.messenger .contact_icon {
     font-family: icons1;
-}
+  }
+
+
+
+  
 
 
 
@@ -1154,17 +1266,18 @@ p.mission_body {
       display: flex;
       align-items: center;
       flex-direction: column-reverse;
-      right: -20rem;
-      bottom: 10rem;
+      right: -100dvw;
+      bottom: 8rem;
       z-index: 99;
       position: fixed;
       /* background-color: red; */
       height: fit-content;
-      width: 18rem;
-      gap: 1rem;
+      width: 16rem;
+      /* max-width: 24rem; */
+      gap: 0.8rem;
     }
     .contact_list[data-active="true"] {
-      right: calc(50dvw - 9rem);
+      right: calc(50dvw - 8rem);
     }
   
     a:active,
@@ -1174,6 +1287,7 @@ p.mission_body {
       color: inherit;
       text-decoration: none;
     }
+   
     .contact_entry {
       display: flex;
       align-items: center;
@@ -1197,6 +1311,116 @@ p.mission_body {
     .contact_entry.email {
       color: #FFB74C;
     }
+
+
+
+
+    .contact_card {
+      /* background-color: rgba(255, 0, 0, 0.399); */
+      transition: 0.2s;
+      --c-clr: #FFF;
+      background-image: linear-gradient(-45deg, #1b1b1b, #2d2d2d);
+      min-height: 6rem;
+      min-width: 16rem;
+      max-width: 16rem;
+      display: flex;
+      border-radius: 1rem;
+      border-top: 3px solid var(--c-clr);
+      /* flex: auto; */
+      padding: 1rem;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      box-shadow: 0 0 1rem -0.2rem black;
+    }
+    .contact_card_header {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: 0.5rem;
+      /* background-color: red; */
+    }
+    p.contact_holder {
+      color: var(--c-clr);
+      text-align: right;
+      font-size: 1.2rem;
+      line-height: 0.7rem;
+      opacity: 0.4;
+    }
+    p.contact_holder span {
+      font-size: 0.7rem;
+    }
+    .contact_card_header .icon {
+      /* background-color: red; */
+      color: var(--c-clr);
+      line-height: 2.2rem;
+      font-size: 2.2rem;
+    }
+  
+    p.contact_main {
+      background-color: #171515;
+      border-radius: 5rem;
+      padding: 0.2rem 0.8rem;
+      font-size: 1rem;
+      margin-top: 0.7rem;
+      color: var(--c-clr);
+    }
+    p.contact_handler {
+      font-size: 0.7rem;
+      /* background-color: red; */
+      line-height: 0.7rem;
+      margin-top: 0.5rem;
+      color: var(--c-clr);
+    }
+    .contact_card.whatsapp {
+      --c-clr: #37B34B;
+    }
+    .contact_card.messenger {
+      --c-clr: #8C6CF1;
+    }
+    .contact_card.viber {
+      --c-clr: #5965D0;
+    }
+    .contact_card.email {
+      cursor: pointer;
+      --c-clr: #FF9B63;
+    }
+    .contact_card.email .contact_main{
+      /* font-size: 0.7rem; */
+    }
+    .contact_card.messenger .contact_card_header .icon {
+      font-family: icons1;
+    }
+  
+  
+    .contact_card.whatsapp:hover {
+      transition: 0.3s;
+      transform: translateY(-0.2rem);
+      background-image: linear-gradient(-45deg, #1b1b1b, #18391e);
+    }
+    .contact_card.messenger:hover {
+      transition: 0.3s;
+      transform: translateY(-0.2rem);
+      background-image: linear-gradient(-45deg, #1b1b1b, #231b3e);
+    }
+    .contact_card.viber:hover {
+      transition: 0.3s;
+      transform: translateY(-0.2rem);
+      background-image: linear-gradient(-45deg, #1b1b1b, #232644);
+    }
+    .contact_card.email:hover {
+      transition: 0.3s;
+      transform: translateY(-0.2rem);
+      background-image: linear-gradient(-45deg, #1b1b1b, #4e3526);
+    }
+
+
+
+
+
+    
     
   
   
