@@ -573,6 +573,39 @@ p.mission_body {
     margin-bottom: 3rem;
     margin-top: 9rem;
 }
+#group_link_btn {
+  transition: 0.4s;
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  height: 4.5rem;
+  width: 8.5rem;
+  /* border: 2px solid red; */
+  padding: 1.3rem;
+  background-color: rgba(55, 55, 55, 0.44);
+      box-shadow: 0 0 1rem -0.2rem black;
+  backdrop-filter: blur(20px);
+  border-radius: 100rem;
+  overflow: hidden;
+}
+#group_icon {
+  transition: 0.3s;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  background-image: url(../assets/images/group_icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+}
+#group_link_btn:hover #group_icon {
+  opacity: 1;
+  filter: drop-shadow(0rem 0rem 1rem white);
+}
+#group_link_btn:hover {
+  transform: scale(105%);
+}
 
 /* .contact_btn:before {
   content: "";
@@ -601,7 +634,8 @@ p.mission_body {
   background: inherit;
   border-radius: inherit;
 } */
-      
+  
+
         
 
 
@@ -1165,6 +1199,42 @@ p.mission_body {
       transition: visibility 0.1s opacity 0.3s 0.2s;
       visibility: visible;
       opacity: 1;
+    }
+
+
+    #group_link_btn {
+      transition: 0.4s;
+      position: fixed;
+      top: 1rem;
+      left: calc(50dvw - calc(7.5rem / 2));
+      height: 4rem;
+      width: 7.5rem;
+      /* border: 2px solid red; */
+      padding: 1.1rem;
+      background-color: rgba(38, 38, 38, 0.44);
+      box-shadow: 0 0 1rem -0.2rem black;
+      backdrop-filter: blur(20px);
+      border-radius: 100rem;
+      overflow: hidden;
+      
+    }
+    #group_icon {
+      transition: 0.3s;
+      height: 100%;
+      width: 100%;
+      /* background-color: red; */
+      background-image: url(../assets/images/group_icon.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.5;
+    }
+    #group_link_btn:hover #group_icon {
+      opacity: 1;
+      filter: drop-shadow(0rem 0rem 1rem white);
+    }
+    #group_link_btn:hover {
+      transform: scale(105%);
     }
     
 

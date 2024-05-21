@@ -281,6 +281,10 @@ const toggleContact = () => {
             
             </div>
           </div>
+          <a href="https://a2kgroup.org" id='group_link_btn'>
+            <div id="group_icon"></div>
+          </a>
+
           <div className="contact_list" data-active={contactIsActive}>
             {/* <a href="https://wa.me/639278812450" target="_blank" className="contact_entry whatsapp font-heavy"><span className='icon contact_icon'></span>Connect on WhatsApp</a>
             <a href="https://messenger.com/t/a2kgrouporg" target="_blank" className="contact_entry messenger font-heavy"><span className='icon contact_icon'></span>Connect on Messenger</a>
