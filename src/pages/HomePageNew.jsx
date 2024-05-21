@@ -273,6 +273,11 @@ const toggleContact = () => {
               
             </div>
           </div>
+
+
+          <div className="curl lower-curl"></div>
+          <p className="title_mvv font-heavy center-text">Our <span className='orange'>Training</span> <span className='purple'>Areas</span> & <span className='blue'>Other Spaces</span></p>
+          <div id="blueprint"></div>
           
           </div>
 

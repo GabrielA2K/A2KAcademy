@@ -606,6 +606,18 @@ p.mission_body {
 #group_link_btn:hover {
   transform: scale(105%);
 }
+#blueprint {
+  width: 90dvw;
+  min-height: 35rem;
+  /* background-color: red; */
+  background-image: url(../assets/images/BLUEPRINT.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  /* background-color: red; */
+  margin-bottom: 5rem;
+  margin-top: 4rem;
+}
 
 /* .contact_btn:before {
   content: "";
@@ -1235,6 +1247,19 @@ p.mission_body {
     }
     #group_link_btn:hover {
       transform: scale(105%);
+    }
+
+    #blueprint {
+      width: 90dvw;
+      min-height: 20rem;
+      /* background-color: red; */
+      background-image: url(../assets/images/BLUEPRINT.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center 0;
+      /* background-color: red; */
+      margin-bottom: 5rem;
+      margin-top: 2rem;
     }
     
 
