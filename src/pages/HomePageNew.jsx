@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 import './new_home_style.css'
 import '../App.css'
 import ImportIcon from '../assets/ImportIcon'
@@ -96,7 +97,7 @@ const toggleContact = () => {
   }
 }
 
-
+const {ref:logoRef, inView:logoIsInView} = useInView();
 
 
     return(
@@ -112,7 +113,7 @@ const toggleContact = () => {
                     </div>
                 </div>
                 <div className="logo_container">
-                    <div className="logo">
+                    <div className="logo" ref={logoRef}>
                         <ImportIcon name={'Academy-Logo'} />
                     </div>
                 </div>
@@ -286,8 +287,11 @@ const toggleContact = () => {
             
             </div>
           </div>
-          <a href="https://a2kgroup.org" id='group_link_btn'>
-            <div id="group_icon"></div>
+          <a href="https://a2kgroup.org" id='group_link_btn' data-show={logoIsInView?"true":"false"}>
+            <div id="group_icon_wrapper">
+              <div id="group_icon"></div>
+            </div>
+            
           </a>
 
           <div className="contact_list" data-active={contactIsActive}>
