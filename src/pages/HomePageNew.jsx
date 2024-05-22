@@ -287,7 +287,7 @@ const {ref:logoRef, inView:logoIsInView} = useInView();
             
             </div>
           </div>
-          <a href="https://a2kgroup.org" id='group_link_btn' data-show={logoIsInView?"true":"false"}>
+          <a href="https://a2kgroup.org" id='group_link_btn' data-minimized={logoIsInView?"false":"true"}>
             <div id="group_icon_wrapper">
               <div id="group_icon"></div>
             </div>

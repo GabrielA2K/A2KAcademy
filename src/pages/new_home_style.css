@@ -614,18 +614,18 @@ p.mission_body {
 #group_link_btn:hover {
   transform: scale(105%);
 }
-#group_link_btn[data-show="false"] {
+#group_link_btn[data-minimized="true"] {
   transform: translate(-6rem, -0.5rem) scale(85%);
 }
-#group_link_btn[data-show="false"] #group_icon_wrapper {
+#group_link_btn[data-minimized="true"] #group_icon_wrapper {
   opacity: 1;
   width: 2rem;
 
 }
-#group_link_btn[data-show="false"]:hover {
+#group_link_btn[data-minimized="true"]:hover {
   transform: translate(-0.8rem, -0.5rem) scale(100%);
 }
-#group_link_btn[data-show="false"]:hover #group_icon_wrapper {
+#group_link_btn[data-minimized="true"]:hover #group_icon_wrapper {
   opacity: 1;
   width: 100%;
 }
@@ -1299,18 +1299,18 @@ p.mission_body {
 
 
 
-    #group_link_btn[data-show="false"] {
+    #group_link_btn[data-minimized="true"] {
       transform: translate(-50dvw, -0.5rem) scale(85%);
     }
-    #group_link_btn[data-show="false"] #group_icon_wrapper {
+    #group_link_btn[data-minimized="true"] #group_icon_wrapper {
       opacity: 1;
       width: 2rem;
     
     }
-    #group_link_btn[data-show="false"]:hover {
+    #group_link_btn[data-minimized="true"]:hover {
       transform: translate(-50dvw, -0.5rem) scale(100%);
     }
-    #group_link_btn[data-show="false"]:hover #group_icon_wrapper {
+    #group_link_btn[data-minimized="true"]:hover #group_icon_wrapper {
       opacity: 1;
       width: 2rem;
     }
