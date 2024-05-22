@@ -574,7 +574,7 @@ p.mission_body {
     margin-top: 9rem;
 }
 #group_link_btn {
-  transition: 0.4s;
+  transition: 0.5s;
   position: fixed;
   top: 1.5rem;
   left: 1.5rem;
@@ -589,7 +589,7 @@ p.mission_body {
   overflow: hidden;
 }
 #group_icon_wrapper {
-  transition: 0.3s;
+  transition: 0.5s;
   height: 100%;
   width: 100%;
   margin-left: auto;
@@ -597,7 +597,7 @@ p.mission_body {
   /* background-color: red; */
 }
 #group_icon {
-  transition: 0.3s;
+  transition: 0.5s;
   height: 100%;
   width: 100%;
   /* background-color: red; */
