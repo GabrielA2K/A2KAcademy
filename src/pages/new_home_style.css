@@ -573,6 +573,58 @@ p.mission_body {
     margin-bottom: 3rem;
     margin-top: 9rem;
 }
+
+.m-v-card[data-is-in-view="false"] {
+  transition: 0.3s;
+  opacity: 0;
+  transform: scale(90%) translateY(1rem);
+}
+
+.m-v-card[data-is-in-view="false"] .icon{
+  transition: 0.3s;
+  opacity: 0;
+  transform: scale(90%) translateY(1rem);
+}
+.m-v-card[data-is-in-view="false"] .m-v_title{
+  transition: 0.3s;
+  opacity: 0;
+  transform: scale(90%) translateY(1rem);
+}
+.m-v-card[data-is-in-view="false"] .mission_body{
+  transition: 0.3s;
+  opacity: 0;
+  transform: scale(90%) translateY(1rem);
+}
+
+
+
+
+.m-v-card[data-is-in-view="true"] {
+  transition: 0.3s 0.15s;
+  opacity: 1;
+  transform: scale(100%) translateY(0rem);
+}
+
+.m-v-card[data-is-in-view="true"] .icon{
+  transition: 0.3s 0.1s;
+  opacity: 1;
+  transform: scale(100%) translateY(0rem);
+}
+.m-v-card[data-is-in-view="true"] .m-v_title{
+  transition: 0.3s 0.2s;
+  opacity: 1;
+  transform: scale(100%) translateY(0rem);
+}
+.m-v-card[data-is-in-view="true"] .mission_body{
+  transition: 0.3s 0.3s;
+  opacity: 1;
+  transform: scale(100%) translateY(0rem);
+}
+
+
+
+
+
 #group_link_btn {
   transition: 0.5s;
   position: fixed;

@@ -98,6 +98,9 @@ const toggleContact = () => {
 }
 
 const {ref:logoRef, inView:logoIsInView} = useInView();
+const {ref:missionRef, inView:missionIsVisible} = useInView();
+const {ref:visionRef, inView:visionIsVisible} = useInView();
+const {ref:valuesRef, inView:valuesIsVisible} = useInView();
 
 
     return(
@@ -250,12 +253,12 @@ const {ref:logoRef, inView:logoIsInView} = useInView();
             </div>
             <div className="mission-vision_layout">
               
-              <div className="vision_card m-v-card">
+              <div className="vision_card m-v-card" ref={visionRef} data-is-in-view={visionIsVisible?"true":"false"}>
                 <div className="icon"></div>
                 <p className="m-v_title font-bold">Our Vision</p>
                 <p className="mission_body font-light justify-text">{"To empower a new generation amidst the digital revolution by fostering a community of innovative thinkers and ethical leaders equipped to harness technology for positive social change through their careers."}</p>
               </div>
-              <div className="mission_card m-v-card">
+              <div className="mission_card m-v-card" ref={missionRef} data-is-in-view={missionIsVisible?"true":"false"}>
                 <div className="icon"></div>
                 <p className="m-v_title font-bold">Our Mission</p>
                 <p className="mission_body font-light justify-text">{"We cultivate a dynamic learning environment where aspiring individuals acquire essential computing skills through personalized hands-on instruction from global experts in world-class technical facilities."}</p>
@@ -263,7 +266,7 @@ const {ref:logoRef, inView:logoIsInView} = useInView();
               
             </div>
             <div className="mission-vision_layout">
-              <div className="values_card m-v-card">
+              <div className="values_card m-v-card" ref={valuesRef} data-is-in-view={valuesIsVisible?"true":"false"}>
                 <div className="icon"></div>
                 <p className="m-v_title font-bold">Our Values</p>
                 <p className="mission_body font-light justify-text"><span className="font-heavy">Curiosity</span><br/>fuels our relentless pursuit of knowledge and understanding, propelling us to explore the frontiers of technology.<br/><br/><span className="font-heavy">Kindness</span><br/>forms the cornerstone of our community, where empathy and compassion foster an environment of support and understanding.<br/><br/><span className="font-heavy">Excellence</span><br/>is our standard, driving us to continuously strive for mastery and innovation in all aspects of computing education and beyond.</p>
