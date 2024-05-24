@@ -246,6 +246,16 @@ const {ref:valuesRef, inView:valuesIsVisible} = useInView();
           </div>
 
           <div className="curl lower-curl"></div>
+          <p className="title_mvv font-heavy center-text">Our <span className='orange'>Training</span> <span className='purple'>Areas</span> & <span className='blue'>Other Spaces</span></p>
+          <div className="main_content_layer venn_container blueprint_container">
+                  <div className="background_overlay">
+                    <div className="grid_overlay"></div>
+                  </div>
+          
+          <div id="blueprint"></div>
+          </div>
+
+          <div className="curl lower-curl"></div>
           <p className="title_mvv font-heavy center-text">Our <span className='orange'>Vision</span>, <span className='purple'>Mission</span> & <span className='blue'>Values</span></p>
           <div className="mission_container">
             <div className="overlay_mask">
@@ -279,9 +289,6 @@ const {ref:valuesRef, inView:valuesIsVisible} = useInView();
           </div>
 
 
-          <div className="curl lower-curl"></div>
-          <p className="title_mvv font-heavy center-text">Our <span className='orange'>Training</span> <span className='purple'>Areas</span> & <span className='blue'>Other Spaces</span></p>
-          <div id="blueprint"></div>
           
           </div>
 

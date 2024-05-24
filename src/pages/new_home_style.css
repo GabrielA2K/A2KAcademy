@@ -685,7 +685,7 @@ p.mission_body {
 
 #blueprint {
   width: 90dvw;
-  min-height: 35rem;
+  min-height: 38dvw;
   /* background-color: red; */
   background-image: url(../assets/images/BLUEPRINT.svg);
   background-size: contain;
@@ -1337,15 +1337,15 @@ p.mission_body {
 
     #blueprint {
       width: 90dvw;
-      min-height: 20rem;
+      min-height: 38dvw;
       /* background-color: red; */
       background-image: url(../assets/images/BLUEPRINT.svg);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center 0;
       /* background-color: red; */
-      margin-bottom: 5rem;
-      margin-top: 2rem;
+      margin-bottom: 0rem;
+      margin-top: 0rem;
     }
 
 
