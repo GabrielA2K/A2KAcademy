@@ -604,6 +604,9 @@ p.mission_body {
   opacity: 1;
   transform: scale(100%) translateY(0rem);
 }
+.title_card.m-v-card[data-is-in-view="true"] {
+  opacity: 0.6;
+}
 
 .m-v-card[data-is-in-view="true"] .icon{
   transition: 0.3s 0.1s;
@@ -639,6 +642,7 @@ p.mission_body {
   backdrop-filter: blur(20px);
   border-radius: 100rem;
   overflow: hidden;
+  /* display: none; */
 }
 #group_icon_wrapper {
   transition: 0.5s;

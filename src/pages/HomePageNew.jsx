@@ -101,6 +101,7 @@ const {ref:logoRef, inView:logoIsInView} = useInView();
 const {ref:missionRef, inView:missionIsVisible} = useInView();
 const {ref:visionRef, inView:visionIsVisible} = useInView();
 const {ref:valuesRef, inView:valuesIsVisible} = useInView();
+const {ref:mvvRef, inView:mvvIsVisible} = useInView();
 
 
     return(
@@ -281,7 +282,7 @@ const {ref:valuesRef, inView:valuesIsVisible} = useInView();
                 <p className="m-v_title font-bold">Our Values</p>
                 <p className="mission_body font-light justify-text"><span className="font-heavy">Curiosity</span><br/>fuels our relentless pursuit of knowledge and understanding, propelling us to explore the frontiers of technology.<br/><br/><span className="font-heavy">Kindness</span><br/>forms the cornerstone of our community, where empathy and compassion foster an environment of support and understanding.<br/><br/><span className="font-heavy">Excellence</span><br/>is our standard, driving us to continuously strive for mastery and innovation in all aspects of computing education and beyond.</p>
               </div>
-              <div className="title_card m-v-card">
+              <div className="title_card m-v-card" ref={mvvRef} data-is-in-view={mvvIsVisible?"true":"false"}>
               <p className="title_placeholder font-heavy center-text"> </p>
               </div>
               
