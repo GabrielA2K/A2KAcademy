@@ -49,7 +49,7 @@ export default function AvailCard(card) {
                   
                   <div className="schedule_tag font-heavy">
                     <p className="schedule_title font-size_cust" style={{"--fontSize":"0.9rem"}}>Non-School Term</p>
-                    <p className="schedule_desc font-size_cust font-regular" style={{"--fontSize":"0.65rem"}}>{"5-day Summer Camp"}</p>
+                    <p className="schedule_desc font-size_cust font-regular" style={{"--fontSize":"0.65rem"}}>{"12-day Summer Camp"}</p>
                     <p className="schedule_time font-size_cust font-bold" style={{"--fontSize":"0.7rem"}}>{card.time3+"\n"+card.time4}</p>
                   </div>
                 </div>
