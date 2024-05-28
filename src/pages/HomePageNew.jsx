@@ -195,8 +195,8 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
               max={"5 Students"}
               time1={"10:00 to 12:00"}
               time2={"14:00 to 16:00"}
-              time3={"10:00 to 12:15"}
-              time4={"14:00 to 16:15"}
+              time3={"10:00 to 12:00"}
+              time4={"14:00 to 16:00"}
             />
 
             <AvailCard 
@@ -210,8 +210,8 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
               max={"4 Students"}
               time1={"10:00 to 12:00"}
               time2={"14:00 to 16:00"}
-              time3={"10:00 to 12:15"}
-              time4={"14:00 to 16:15"}
+              time3={"10:00 to 12:00"}
+              time4={"14:00 to 16:00"}
             />
 
             <AvailCard 
@@ -225,8 +225,8 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
               max={"4 Students"}
               time1={"10:00 to 12:00"}
               time2={"14:00 to 16:00"}
-              time3={"10:00 to 12:15"}
-              time4={"14:00 to 16:15"}
+              time3={"10:00 to 12:00"}
+              time4={"14:00 to 16:00"}
             />
 
             <AvailCard 
@@ -238,10 +238,10 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
                       {age: "15 to 18"}]} 
               duration={"2.5 Hours"}
               max={"5 Students"}
-              time1={"10:00 to 12:30"}
-              time2={"14:00 to 16:40"}
-              time3={"10:00 to 12:30"}
-              time4={"14:00 to 16:30"}
+              time1={"10:00 to 12:00"}
+              time2={"14:00 to 16:00"}
+              time3={"10:00 to 12:00"}
+              time4={"14:00 to 16:00"}
             />
 
           </div>
