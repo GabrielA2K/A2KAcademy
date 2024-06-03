@@ -698,7 +698,69 @@ p.mission_body {
   /* background-color: red; */
   margin-bottom: 5rem;
   margin-top: 4rem;
+  cursor: crosshair;
 }
+.conference.room {
+  transition: 0.3s;
+  height: 13dvw;
+  width: 10.8dvw;
+  margin-top: 20dvw;
+  margin-left: 10dvw;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-gallery {
+  transition: 0.3s;
+  height: 12dvw;
+  width: 21dvw;
+  /* background-color: rgb(26, 25, 35); */
+  background-image: linear-gradient(
+    125deg,
+    #28130A,
+    #1A0E1D,
+    #0C0E1F
+  );
+  margin-left: 12dvw;
+  margin-top: -13.5dvw;
+  border-radius: 1dvw;
+  /* box-shadow: 0 0 13dvw 3dvw rgb(0, 0, 0); */
+  border: 1px solid white;
+  opacity: 0;
+  transform: translateY(1dvw);
+  pointer-events: none;
+  visibility: hidden;
+  cursor: auto;
+}
+.pinpoint {
+  transition: 0.3s;
+  height: 0;
+  width: 0;
+  border-top: 1dvw solid white;
+  border-inline: 1dvw solid transparent;
+  opacity: 0;
+  transform: translateY(1dvw);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.room:hover .pinpoint,
+.room:hover .image-gallery {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+.room:hover .image-gallery {
+  transform: translateY(0);
+}
+.room:hover {
+  transform: scale(130%);
+  box-shadow: 0 0 100dvw 100dvw rgba(0, 0, 0, 0.75);
+}
+
+
 
 /* .contact_btn:before {
   content: "";

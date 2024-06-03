@@ -253,7 +253,14 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
                     <div className="grid_overlay"></div>
                   </div>
           
-          <div id="blueprint"></div>
+          <div id="blueprint">
+            <div className="conference room">
+              <div className="image-gallery">
+                
+              </div>
+              <div className="pinpoint"></div>
+            </div>
+          </div>
           </div>
 
           <div className="curl lower-curl"></div>
