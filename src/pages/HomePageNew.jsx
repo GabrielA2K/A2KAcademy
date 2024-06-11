@@ -256,10 +256,41 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
           <div id="blueprint">
             <div className="conference room">
               <div className="image-gallery">
-                
+                <div className="roomname_wrapper"><p>Conference Room</p></div>
               </div>
               <div className="pinpoint"></div>
             </div>
+
+            <div className="trainingHub room">
+              <div className="image-gallery">
+                <div className="roomname_wrapper"><p>Training Hub</p></div>
+              </div>
+              <div className="pinpoint"></div>
+            </div>
+
+            <div className="collabSpace room">
+              <div className="image-gallery">
+                <div className="roomname_wrapper"><p>Collab Space</p></div>
+              </div>
+              <div className="pinpoint"></div>
+            </div>
+
+            <div className="makerLab room">
+              <div className="image-gallery">
+                <div className="roomname_wrapper"><p>Maker Lab</p></div>
+              </div>
+              <div className="pinpoint"></div>
+            </div>
+
+
+
+
+
+
+
+
+
+
           </div>
           </div>
 
