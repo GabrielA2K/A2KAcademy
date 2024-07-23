@@ -446,7 +446,12 @@ p.title_venn {
   text-shadow: 0rem 0rem 12px black;
 }
 
-
+/* .left-symbol {
+  position: absolute;
+  min-height: 2rem;
+  min-width: 2rem;
+  background-color: red;
+} */
 
 
 .avail_cards_container {

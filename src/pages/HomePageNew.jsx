@@ -254,13 +254,18 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
                 time3={"10:00 to 12:00"}
                 time4={"14:00 to 16:00"}
               />
-              <div className="left-symbol">
+              
+            </div>
+
+              <div className="left-symbol" onClick={(e)=>{
+                // console.log(document.querySelector('.avail_cards_container'))
+                // document.querySelector('.avail_cards_container').scrollTo({left:200, behavior:'smooth'});
+              }}>
 
               </div>
-              <div className="right-symbol">
+              <div className="right-symbol" >
                 
               </div>
-            </div>
 
           </div>
           

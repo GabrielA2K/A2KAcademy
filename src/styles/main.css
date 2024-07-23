@@ -388,7 +388,7 @@
 
 .discipline {
   background-color: rgba(0, 0, 0, 0.434);
-  width: calc(15.5rem * var(--content-scale));
+  width: calc(18rem * var(--content-scale));
   height: fit-content;
   position: absolute;
   
@@ -398,15 +398,15 @@
 }
 .discipline p,
 .discipline:has(~ .diagram.d4:hover) > p {
-  font-size: calc(1rem * var(--content-scale)) !important;
+  font-size: calc(1.3rem * var(--content-scale)) !important;
   
-  line-height: calc(1rem * var(--content-scale));
+  line-height: calc(1.4rem * var(--content-scale));
   white-space: pre-wrap;
 }
 
 .discipline.ds1 {
-  margin-left: calc(38rem * var(--content-scale));
-  margin-top: calc(1rem * var(--content-scale));
+  margin-left: calc(40rem * var(--content-scale));
+  margin-top: calc(0rem * var(--content-scale));
 }
 .discipline.ds1 p.dsp {
   margin-top: calc(0.2rem * var(--content-scale)) !important;
@@ -414,7 +414,7 @@
 }
 
 .discipline.ds2 {
-  margin-left: calc(-39.5rem * var(--content-scale));
+  margin-left: calc(-42rem * var(--content-scale));
   margin-top: calc(2rem * var(--content-scale));
 }
 .discipline.ds2 p.dsp {
@@ -423,7 +423,7 @@
 }
 
 .discipline.ds3 {
-  margin-left: calc(44rem * var(--content-scale));
+  margin-left: calc(47rem * var(--content-scale));
   margin-top: calc(10rem * var(--content-scale));
 }
 .discipline.ds3 p.dsp {

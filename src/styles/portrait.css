@@ -177,10 +177,25 @@
   opacity: 0.15;
 }
 
+.venn_text_container {
+  transition: 0.4s;
+  margin-top: calc(50rem * var(--content-scale))!important;
+  margin-bottom: -2rem;
+  height: fit-content;
+  width: auto;
+  /* background-color: red; */
+}
+.diagram:hover ~ .venn_text_container {
+  margin-top: calc(68rem * var(--content-scale)) !important;
+}
 
 
+  
+  }
 
 
+  @media screen and (max-width: 1020px) {
+    
 .venn_container {
   position: relative;
   width: 100vw;
@@ -375,7 +390,7 @@
 
 .venn_text_container {
   transition: 0.4s;
-  margin-top: calc(50rem * var(--content-scale));
+  margin-top: calc(26rem * var(--content-scale));
   margin-bottom: -2rem;
   height: fit-content;
   width: auto;
@@ -384,13 +399,13 @@
 .venn_text {
   text-align: left;
   margin-top: 1rem;
+  max-width: 36rem;
 }
 .diagram:hover ~ .venn_text_container {
-  margin-top: calc(68rem * var(--content-scale));
+  margin-top: calc(36rem * var(--content-scale));
 }
 .diagram:hover + .venn_text_container {
   margin-top: calc(50rem * var(--content-scale));
 }
 
-  
   }
