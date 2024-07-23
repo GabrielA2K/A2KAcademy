@@ -102,6 +102,7 @@ const {ref:missionRef, inView:missionIsVisible} = useInView();
 const {ref:visionRef, inView:visionIsVisible} = useInView();
 const {ref:valuesRef, inView:valuesIsVisible} = useInView();
 const {ref:mvvRef, inView:mvvIsVisible} = useInView();
+let avail_scroll = 0
 
 
     return(
@@ -181,12 +182,12 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
               <div className="grid_overlay"></div>
             </div>
             <div className="avail_cards_container" onScroll={(e)=>{
-              
-              if (e.target.scrollLeft == 0) {
+              avail_scroll = e.target.scrollLeft;
+              if (avail_scroll == 0) {
                 document.querySelector('.avail_cards_section').dataset.position = "start"
-              } else if (e.target.scrollLeft > 0 && e.target.scrollLeft <= 1000) {
+              } else if (avail_scroll > 0 && avail_scroll <= 1000) {
                 document.querySelector('.avail_cards_section').dataset.position = "mid"
-              } else if (e.target.scrollLeft > 1000) (
+              } else if (avail_scroll > 1000) (
                 document.querySelector('.avail_cards_section').dataset.position = "end"
               )
               
@@ -258,12 +259,13 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
             </div>
 
               <div className="left-symbol" onClick={(e)=>{
-                // console.log(document.querySelector('.avail_cards_container'))
-                // document.querySelector('.avail_cards_container').scrollTo({left:200, behavior:'smooth'});
+                document.querySelector('.avail_cards_container').scrollTo({left:avail_scroll-300, behavior:'smooth'});
               }}>
 
               </div>
-              <div className="right-symbol" >
+              <div className="right-symbol" onClick={(e)=>{
+                document.querySelector('.avail_cards_container').scrollTo({left:avail_scroll+300, behavior:'smooth'});
+              }}>
                 
               </div>
 
