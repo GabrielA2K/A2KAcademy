@@ -181,8 +181,7 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
               <div className="grid_overlay"></div>
             </div>
             <div className="avail_cards_container" onScroll={(e)=>{
-              console.log(e.target.scrollLeft)
-              console.log(document.querySelector('.avail_cards_section').dataset.position)
+              
               if (e.target.scrollLeft == 0) {
                 document.querySelector('.avail_cards_section').dataset.position = "start"
               } else if (e.target.scrollLeft > 0 && e.target.scrollLeft <= 1000) {
@@ -345,6 +344,31 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
               </div>
               
             </div>
+          </div>
+
+          <div className="footer">
+            <div className="logo_group">
+              <div className="footer_logo">
+                <ImportIcon name={'Academy-Logo'} />
+              </div>
+              <p>Transforming Services through Digitalization</p>
+            </div>
+            <div className="social_media_group">
+              <p>Social Media</p>
+              <div className="social_links_group">
+                <a target="_blank" href="https://www.facebook.com/a2kgrouporg"></a>
+                <a target="_blank" href="https://www.instagram.com/a2kgrouporg"></a>
+                <a target="_blank" href="https://ph.linkedin.com/company/a2k-group-org"></a>
+              </div>
+            </div>
+            <div className="email_subscribe_group">
+              <p>Email Subscription</p>
+              <p className='desc'>Get the latest updates on tech products, courses, workshops, internship opportunities and services.</p>
+              <a target="_blank" href="https://forms.office.com/pages/responsepage.aspx?id=DXR2qw5GlEKT4tcLIjfimbrnszaf5cRPkPYNB2_MO7VURFZMVUY5VDYwNkkyU1JJNjJQWk1CN1ExUCQlQCN0PWcu&origin=lprLink">Subscribe</a>
+            </div>
+            
+            
+
           </div>
 
 
