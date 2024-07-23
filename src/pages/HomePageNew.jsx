@@ -356,7 +356,7 @@ let avail_scroll = 0
           <div className="footer">
             <div className="logo_group">
               <div className="footer_logo">
-                <ImportIcon name={'Academy-Logo'} />
+                {/* <ImportIcon name={'Academy-Logo'} /> */}
               </div>
               <p>Transforming Services through Digitalization</p>
             </div>
