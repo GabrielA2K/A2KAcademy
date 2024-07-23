@@ -421,7 +421,7 @@ p.title_venn {
   height: 100%;
   /* background-color: rgba(0, 0, 0, 0.253); */
   position: absolute;
-  right: 0;
+  right: 3dvw;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -437,7 +437,7 @@ p.title_venn {
   height: 100%;
   /* background-color: rgba(0, 0, 0, 0.253); */
   position: absolute;
-  left: 0;
+  left: 3dvw;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -445,11 +445,21 @@ p.title_venn {
   color: rgba(255, 255, 255, 0.5);
   text-shadow: 0rem 0rem 12px black;
 }
+@media screen and (max-width: 700px) {
+  .avail_cards_section::before {
+    left: 0;
+  }
+  .avail_cards_section::after {
+    right: 0;
+  }
+}
+
+
 
 .left-symbol {
   position: absolute;
   min-height: 6rem;
-  min-width: 3.5rem;
+  min-width: 6rem;
   background-color: transparent;
   left: 0;
   top: calc(50% - 3rem);
@@ -458,11 +468,18 @@ p.title_venn {
 .right-symbol {
   position: absolute;
   min-height: 6rem;
-  min-width: 3.5rem;
+  min-width: 6rem;
   background-color: transparent;
   right: 0;
   top: calc(50% - 3rem);
   z-index: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .left-symbol::before,
+  .right-symbol {
+    min-width: 3.5rem;
+  }
 }
 
 
