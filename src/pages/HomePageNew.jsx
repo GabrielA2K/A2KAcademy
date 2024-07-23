@@ -183,11 +183,11 @@ let avail_scroll = 0
             </div>
             <div className="avail_cards_container" onScroll={(e)=>{
               avail_scroll = e.target.scrollLeft;
-              if (avail_scroll == 0) {
+              if (avail_scroll <= 320) {
                 document.querySelector('.avail_cards_section').dataset.position = "start"
-              } else if (avail_scroll > 0 && avail_scroll <= 1000) {
+              } else if (avail_scroll > 320 && avail_scroll <= 1020) {
                 document.querySelector('.avail_cards_section').dataset.position = "mid"
-              } else if (avail_scroll > 1000) (
+              } else if (avail_scroll > 1020) (
                 document.querySelector('.avail_cards_section').dataset.position = "end"
               )
               
