@@ -1,16 +1,19 @@
+div:has(.avail_card) {
+  --scaling: 0.8;
+}
+
 .avail_card {
     height: fit-content;
-    width: 20rem;
+    width: calc(20rem * var(--scaling));
     background-color: rgba(0, 0, 0, 0.4);
     /* min-height: 20rem; */
-    border-radius: 2rem;
+    border-radius: calc(2rem * var(--scaling));
     overflow: hidden;
     border: 1px solid rgb(157, 157, 157);
     /* backdrop-filter: blur(200px); */
     z-index: 100;
-    box-shadow: 0 0 1rem -0.5rem rgba(255, 255, 255, 0.482);
-    padding-bottom: 0.5rem;
-    
+    box-shadow: 0 0 calc(1rem * var(--scaling)) calc(-0.5rem * var(--scaling)) rgba(255, 255, 255, 0.482);
+    padding-bottom: calc(0.5rem * var(--scaling));
   }
   
   .avail_card_image {
@@ -18,12 +21,12 @@
     position: relative;
     /* background-color: red; */
     width: 100%;
-    height: 11rem;
+    height: calc(11rem * var(--scaling));
     
     background-size: cover;
     /* border-radius: 2rem; */
     /* box-shadow: 0 -1.5rem 2rem 1rem rgba(255, 255, 255, 0.482); */
-    padding: 2rem 0 1rem 2rem;
+    padding: calc(2rem * var(--scaling)) 0 calc(1rem * var(--scaling)) calc(2rem * var(--scaling));
     flex-direction: column;
     /* overflow: hidden; */
   }
@@ -41,14 +44,14 @@
   
   .avail_title {
     z-index: 1;
-    font-size: 1.7rem;
+    font-size: calc(1.7rem * var(--scaling));
     color: white;
-    line-height: 2rem;
+    line-height: calc(2rem * var(--scaling));
   }
   .avail_slots_container {
     z-index: 1;
-    width: 10rem;
-    height: 10rem;
+    width: calc(10rem * var(--scaling));
+    height: calc(10rem * var(--scaling));
     /* background-color: rgba(255, 0, 0, 0.357); */
     align-self: flex-end;
     display: flex;
@@ -60,7 +63,7 @@
   }
   .avail_slots_value {
     width: 100%;
-    height: 3rem;
+    height: calc(3rem * var(--scaling));
     /* background-color: red; */
     display: flex;
     align-items: center;
@@ -71,22 +74,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 3rem;
+    width: calc(3rem * var(--scaling));
     /* background-color: green; */
-    line-height: 1.2rem;
+    line-height: calc(1.2rem * var(--scaling));
   }
   .avail_slots_main {
     /* background-color: black; */
-    font-size: 2rem;
+    font-size: calc(2rem * var(--scaling));
   }
   .avail_slots_desc {
     /* background-color: brown; */
-    font-size: 0.6rem;
+    font-size: calc(0.6rem * var(--scaling));
   }
   
   .avail_slots_const {
-    font-size: 1.2rem;
-    margin-bottom: 0.78rem;
+    font-size: calc(1.2rem * var(--scaling));
+    margin-bottom: calc(0.78rem * var(--scaling));
   }
   
   
@@ -94,67 +97,67 @@
   
   
   .font-size_cust {
-    font-size: var(--fontSize);
+    font-size: calc(var(--fontSize) * var(--scaling));
   }
   .line-height_cust
   {
-    line-height: var(--lineHeight);
+    line-height: calc(var(--lineHeight) * var(--scaling));
   }
   .avail_slots_title {
-    font-size: 0.75rem;
+    font-size: calc(0.75rem * var(--scaling));
   }
   
   .avail_card_text_color {
     color: #D1D1D1;
-    font-size: 0.8rem;
+    font-size: calc(0.8rem * var(--scaling));
   }
   
   .avail_bottom {
     width: 100%;
     height: fit-content;
     /* background-color: red; */
-    padding: 1rem 1.3rem 1rem 1.3rem;
+    padding: calc(1rem * var(--scaling)) calc(1.3rem * var(--scaling)) calc(1rem * var(--scaling)) calc(1.3rem * var(--scaling));
   }
   .age_tag {
     color: #3B3B3B;
-    padding: 0.3rem 1.2rem;
+    padding: calc(0.3rem * var(--scaling)) calc(1.2rem * var(--scaling));
     background-color: #AAAAAA;
-    border-radius: 2rem;
+    border-radius: calc(2rem * var(--scaling));
     width: fit-content;
     /* box-shadow: 0 0 2rem -0.5rem rgba(255, 255, 255, 0.325); */
   }
   .age_group {
-    margin-top: 0.3rem;
+    margin-top: calc(0.3rem * var(--scaling));
     display: flex;
     height: fit-content;
     width: 100%;
     /* background-color: red; */
     flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: 0.8rem;
-    font-size: 0.8rem;
+    gap: calc(0.4rem * var(--scaling));
+    margin-bottom: calc(0.8rem * var(--scaling));
+    font-size: calc(0.8rem * var(--scaling));
   }
   .pill {
     color: #3B3B3B;
-    margin-top: 0.3rem;
-    padding: 0.35rem 1.7rem;
+    margin-top: calc(0.3rem * var(--scaling));
+    padding: calc(0.35rem * var(--scaling)) calc(1.7rem * var(--scaling));
     background-color: #AAAAAA;
-    border-radius: 2rem;
+    border-radius: calc(2rem * var(--scaling));
     width: fit-content;
     /* box-shadow: 0 0 2rem -0.5rem rgba(255, 255, 255, 0.325); */
-    margin-bottom: 0.8rem;
-    font-size: 0.8rem;
+    margin-bottom: calc(0.8rem * var(--scaling));
+    font-size: calc(0.8rem * var(--scaling));
   }
   
   
   .schedule_group {
-    margin-top: 0.3rem;
+    margin-top: calc(0.3rem * var(--scaling));
     display: flex;
     height: fit-content;
     width: 100%;
     /* background-color: red; */
-    flex-wrap: wrap;
-    /* gap: 0 0.9rem; */
+    flex-wrap: nowrap;
+    gap: 0 0.4rem;
     justify-content: space-between;
     align-self: center;
     /* align-items: stretch; */
@@ -166,27 +169,28 @@
     color: #3B3B3B;
     height: fit-content;
     height: auto;
-    width: 8.4rem;
-    border-radius: 1rem;
+    width: 100%;
+    border-radius: calc(1rem * var(--scaling));
     background-color: #AAAAAA;
     /* box-shadow: 0 0 2rem -0.5rem rgba(255, 255, 255, 0.325); */
-    padding: 0.5rem 1rem;
+    padding: calc(0.5rem * var(--scaling)) calc(1rem * var(--scaling));
   }
   .schedule_title {
-    line-height: 0.9rem;
-    font-size: 0.78rem;
+    line-height: calc(0.9rem * var(--scaling));
+    font-size: calc(0.78rem * var(--scaling));
     /* background-color: green; */
   }
   .schedule_desc {
-    line-height: 0.7rem;
-    margin-top: 0.1rem;
+    line-height: calc(0.7rem * var(--scaling));
+    margin-top: calc(0.1rem * var(--scaling));
+    height: calc(calc(0.7rem * var(--scaling)) * 2);
     
     /* background-color: red; */
   }
   .schedule_time {
-    margin-top: 0.5rem;
+    margin-top: calc(0.5rem * var(--scaling));
     text-align: right;
-    line-height: 0.9rem;
+    line-height: calc(0.9rem * var(--scaling));
     align-self: flex-end;
     justify-self: flex-end;
     /* background-color: blue; */

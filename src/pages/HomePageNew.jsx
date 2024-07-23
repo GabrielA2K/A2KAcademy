@@ -176,75 +176,95 @@ const {ref:mvvRef, inView:mvvIsVisible} = useInView();
             
             <div className="curl lower-curl"></div>
             <p className="title_avail font-heavy center-text"><span className='orange'>Future</span>-<span className='blue'>Ready </span><span className='purple'>Classes</span><br/>Availability</p>
-
-          <div className="avail_cards_container">
+          <div className="avail_cards_section" data-position="start">
             <div className="overlay_mask">
               <div className="grid_overlay"></div>
             </div>
+            <div className="avail_cards_container" onScroll={(e)=>{
+              console.log(e.target.scrollLeft)
+              console.log(document.querySelector('.avail_cards_section').dataset.position)
+              if (e.target.scrollLeft == 0) {
+                document.querySelector('.avail_cards_section').dataset.position = "start"
+              } else if (e.target.scrollLeft > 0 && e.target.scrollLeft <= 1000) {
+                document.querySelector('.avail_cards_section').dataset.position = "mid"
+              } else if (e.target.scrollLeft > 1000) (
+                document.querySelector('.avail_cards_section').dataset.position = "end"
+              )
+              
+            }}>
+              
 
 
-            <AvailCard 
-              classname={"print"}
-              image={kids3dprint}
-              title={"3D Designing &\nPrinting"}
-              slot={"40"}
-              ages={[{age: "7 to 9"},
-                      {age: "10 to 14"},
-                      {age: "15 to 18"}]} 
-              duration={"2 Hours"}
-              max={"5 Students"}
-              time1={"10:00 to 12:00"}
-              time2={"14:00 to 16:00"}
-              time3={"10:00 to 12:00"}
-              time4={"14:00 to 16:00"}
-            />
+              <AvailCard 
+                classname={"print"}
+                image={kids3dprint}
+                title={"3D Designing &\nPrinting"}
+                slot={"40"}
+                ages={[{age: "7 to 9"},
+                        {age: "10 to 14"},
+                        {age: "15 to 18"}]} 
+                duration={"2 Hours"}
+                max={"5 Students"}
+                time1={"10:00 to 12:00"}
+                time2={"14:00 to 16:00"}
+                time3={"10:00 to 12:00"}
+                time4={"14:00 to 16:00"}
+              />
 
-            <AvailCard 
-              classname={"physical"}
-              image={kidsphysicalcomputing}
-              title={"Physical\nComputing"}
-              slot={"16"}
-              ages={[{age: "10 to 14"},
-                      {age: "15 to 18"}]} 
-              duration={"2 Hours"}
-              max={"4 Students"}
-              time1={"10:00 to 12:00"}
-              time2={"14:00 to 16:00"}
-              time3={"10:00 to 12:00"}
-              time4={"14:00 to 16:00"}
-            />
+              <AvailCard 
+                classname={"physical"}
+                image={kidsphysicalcomputing}
+                title={"Physical\nComputing"}
+                slot={"16"}
+                ages={[{age: "10 to 14"},
+                        {age: "15 to 18"}]} 
+                duration={"2 Hours"}
+                max={"4 Students"}
+                time1={"10:00 to 12:00"}
+                time2={"14:00 to 16:00"}
+                time3={"10:00 to 12:00"}
+                time4={"14:00 to 16:00"}
+              />
 
-            <AvailCard 
-              classname={"coding"}
-              image={kidscoding}
-              title={"World of\nCoding"}
-              slot={"12"}
-              ages={[{age: "10 to 14"},
-                      {age: "15 to 18"}]} 
-              duration={"2 Hours"}
-              max={"4 Students"}
-              time1={"10:00 to 12:00"}
-              time2={"14:00 to 16:00"}
-              time3={"10:00 to 12:00"}
-              time4={"14:00 to 16:00"}
-            />
+              <AvailCard 
+                classname={"coding"}
+                image={kidscoding}
+                title={"World of\nCoding"}
+                slot={"12"}
+                ages={[{age: "10 to 14"},
+                        {age: "15 to 18"}]} 
+                duration={"2 Hours"}
+                max={"4 Students"}
+                time1={"10:00 to 12:00"}
+                time2={"14:00 to 16:00"}
+                time3={"10:00 to 12:00"}
+                time4={"14:00 to 16:00"}
+              />
 
-            <AvailCard 
-              classname={"all-in"}
-              image={samplecoding}
-              title={"All-in\nExploring"}
-              slot={"10"}
-              ages={[{age: "10 to 14"},
-                      {age: "15 to 18"}]} 
-              duration={"2.5 Hours"}
-              max={"5 Students"}
-              time1={"10:00 to 12:00"}
-              time2={"14:00 to 16:00"}
-              time3={"10:00 to 12:00"}
-              time4={"14:00 to 16:00"}
-            />
+              <AvailCard 
+                classname={"all-in"}
+                image={samplecoding}
+                title={"All-in\nExploring"}
+                slot={"10"}
+                ages={[{age: "10 to 14"},
+                        {age: "15 to 18"}]} 
+                duration={"2.5 Hours"}
+                max={"5 Students"}
+                time1={"10:00 to 12:00"}
+                time2={"14:00 to 16:00"}
+                time3={"10:00 to 12:00"}
+                time4={"14:00 to 16:00"}
+              />
+              <div className="left-symbol">
+
+              </div>
+              <div className="right-symbol">
+                
+              </div>
+            </div>
 
           </div>
+          
 
           <div className="curl lower-curl"></div>
           <p className="title_mvv font-heavy center-text">Our <span className='orange'>Training</span> <span className='purple'>Areas</span> & <span className='blue'>Other Spaces</span></p>
