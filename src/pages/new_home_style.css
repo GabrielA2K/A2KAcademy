@@ -565,6 +565,11 @@ p.title_venn {
   transform-origin: bottom;
   transform: scale(130%);
 } */
+
+.end-card {
+  min-height: 0;
+  min-width: 0;
+}
  
 
 @media screen and (min-width: 1101px) {
@@ -592,6 +597,8 @@ p.title_venn {
     opacity: 0;
   }
 }
+
+
 
 
 

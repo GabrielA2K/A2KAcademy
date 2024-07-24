@@ -255,6 +255,7 @@ let avail_scroll = 0
                 time3={"10:00 to 12:00"}
                 time4={"14:00 to 16:00"}
               />
+              <div className="end-card"></div>
               
             </div>
 
@@ -424,7 +425,6 @@ let avail_scroll = 0
               details={"academy@a2kgroup.org"}
               handler={"Email"}
             />
-            
             
           </div>
         </div>
