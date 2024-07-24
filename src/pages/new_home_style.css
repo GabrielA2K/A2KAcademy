@@ -567,8 +567,8 @@ p.title_venn {
 } */
 
 .end-card {
-  min-height: 1rem;
-  min-width: 1rem;
+  min-height: 1px;
+  min-width: 1px;
 }
  
 
