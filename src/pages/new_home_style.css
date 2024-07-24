@@ -625,10 +625,10 @@ p.title_venn {
     margin-block: 0.5rem;
   }
 
-  .avail_card:nth-child(1) {
+  .avail_card.print {
     margin-left: calc(50vw);
   }
-  .avail_card:nth-child(4) {
+  .avail_card.all-in {
     margin-right: calc(50vw);
   }
 
@@ -1565,10 +1565,10 @@ p.mission_body {
       /* mask-size: 100%;
       mask-position: center; */
     }
-    .avail_card:nth-child(1) {
+    .avail_card.print {
       margin-left: calc(50vw);
     }
-    .avail_card:nth-child(4) {
+    .avail_card.all-in {
       margin-right: calc(50vw);
     }
     
